@@ -37,7 +37,7 @@ def symbolic_link_generator_fun(txt_file,path_original_file,path_symbolic_link):
 # symbolic_link_generator_fun(input_file,original_file_path,symbolic_link_path)
 
 original_file_path = "/proj/genomeanalysis2023/Genome_Analysis/4_Tean_Teh_2017/transcriptome/untrimmed/"
-symbolic_link_path = "/home/joed4996/Genome_analysis_local_rep/data/transcriptomic_data/untrimmed/"
+symbolic_link_path = "/home/joed4996/Genome_analysis_local_rep/data/raw_external_data/transcriptomic_data/untrimmed/"
 input_file = "untrimmed_transcriptomic_data.txt"
 symbolic_link_generator_fun(input_file,original_file_path,symbolic_link_path)
 
