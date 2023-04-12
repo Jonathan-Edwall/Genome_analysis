@@ -1,0 +1,1 @@
+In this folder all of the raw, genomic data will be stored

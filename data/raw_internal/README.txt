@@ -1,0 +1,1 @@
+In this folder all raw internal data will be stored

@@ -1,0 +1,1 @@
+In this folder all the external raw data will be stored

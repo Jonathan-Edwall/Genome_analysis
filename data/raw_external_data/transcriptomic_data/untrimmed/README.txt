@@ -1,0 +1,1 @@
+In this folder all of the raw, untrimmed transcriptomic data will be stored
