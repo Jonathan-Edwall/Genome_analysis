@@ -1,0 +1,3 @@
+SRR6037732_scaffold_06.fq.gz
+SRR6037732_scaffold_10.fq.gz
+SRR6037732_scaffold_11.fq.gz

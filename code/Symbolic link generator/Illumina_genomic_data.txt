@@ -1,0 +1,12 @@
+SRR6058604_scaffold_06.1P.fastq.gz
+SRR6058604_scaffold_06.1U.fastq.gz
+SRR6058604_scaffold_06.2P.fastq.gz
+SRR6058604_scaffold_06.2U.fastq.gz
+SRR6058604_scaffold_10.1P.fastq.gz
+SRR6058604_scaffold_10.1U.fastq.gz
+SRR6058604_scaffold_10.2P.fastq.gz
+SRR6058604_scaffold_10.2U.fastq.gz
+SRR6058604_scaffold_11.1P.fastq.gz
+SRR6058604_scaffold_11.1U.fastq.gz
+SRR6058604_scaffold_11.2P.fastq.gz
+SRR6058604_scaffold_11.2U.fastq.gz
