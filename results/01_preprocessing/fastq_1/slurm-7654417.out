@@ -1,0 +1,99 @@
+#!/bin/bash -l
+#SBATCH -A uppmax2023-2-8 -M snowy # Specifying the project ID for Genome Analysis
+#SBATCH -p core
+#SBATCH -n 2
+#SBATCH -t 01:00:00 # 1 hour job?
+#SBATCH -J fastqc_first # Job_name
+#SBATCH --mail-type=ALL
+#SBATCH --mail-user jonathan.edwall.4996@student.uu.se
+
+cat $0
+echo USER = $USER
+echo QOS = $SLURM_JOB_QOS
+
+# Loading the modules
+module load bioinfo-tools FastQC
+
+#Changing the working directory
+
+cd /home/joed4996/Genome_analysis_local_rep/data/raw_external_data/genomic_data/illumina_data
+
+fastqc -t 2 -o /home/joed4996/Genome_analysis_local_rep/results/01_preprocessing/fastq_1 SRR6058604_scaffold_10.1P.fastq.gz SRR6058604_scaffold_10.2P.fastq.gz
+
+#fastqc \
+#-t 2 \
+#-o /home/joed4996/Genome_analysis_local_rep/results/01_preprocessing/fastq_1  \ 
+#-f SRR6058604_scaffold_10.1P.fastq.gz SRR6058604_scaffold_10.2P.fastq.gz 
+
+
+#SNIC_TMP # Changing working directory to node-local storage
+
+ls -l # Checking if outputs was generated
+
+module list # Useful for keeping track of the versions used
+echo JOB = $SLURM_JOBID # makes the individual runs easier to identify
+USER = joed4996
+QOS = normal
+Started analysis of SRR6058604_scaffold_10.1P.fastq.gz
+Started analysis of SRR6058604_scaffold_10.2P.fastq.gz
+Approx 5% complete for SRR6058604_scaffold_10.1P.fastq.gz
+Approx 5% complete for SRR6058604_scaffold_10.2P.fastq.gz
+Approx 10% complete for SRR6058604_scaffold_10.1P.fastq.gz
+Approx 10% complete for SRR6058604_scaffold_10.2P.fastq.gz
+Approx 15% complete for SRR6058604_scaffold_10.1P.fastq.gz
+Approx 15% complete for SRR6058604_scaffold_10.2P.fastq.gz
+Approx 20% complete for SRR6058604_scaffold_10.1P.fastq.gz
+Approx 20% complete for SRR6058604_scaffold_10.2P.fastq.gz
+Approx 25% complete for SRR6058604_scaffold_10.2P.fastq.gz
+Approx 25% complete for SRR6058604_scaffold_10.1P.fastq.gz
+Approx 30% complete for SRR6058604_scaffold_10.2P.fastq.gz
+Approx 30% complete for SRR6058604_scaffold_10.1P.fastq.gz
+Approx 35% complete for SRR6058604_scaffold_10.2P.fastq.gz
+Approx 35% complete for SRR6058604_scaffold_10.1P.fastq.gz
+Approx 40% complete for SRR6058604_scaffold_10.2P.fastq.gz
+Approx 40% complete for SRR6058604_scaffold_10.1P.fastq.gz
+Approx 45% complete for SRR6058604_scaffold_10.2P.fastq.gz
+Approx 45% complete for SRR6058604_scaffold_10.1P.fastq.gz
+Approx 50% complete for SRR6058604_scaffold_10.2P.fastq.gz
+Approx 50% complete for SRR6058604_scaffold_10.1P.fastq.gz
+Approx 55% complete for SRR6058604_scaffold_10.2P.fastq.gz
+Approx 55% complete for SRR6058604_scaffold_10.1P.fastq.gz
+Approx 60% complete for SRR6058604_scaffold_10.2P.fastq.gz
+Approx 60% complete for SRR6058604_scaffold_10.1P.fastq.gz
+Approx 65% complete for SRR6058604_scaffold_10.2P.fastq.gz
+Approx 65% complete for SRR6058604_scaffold_10.1P.fastq.gz
+Approx 70% complete for SRR6058604_scaffold_10.2P.fastq.gz
+Approx 70% complete for SRR6058604_scaffold_10.1P.fastq.gz
+Approx 75% complete for SRR6058604_scaffold_10.2P.fastq.gz
+Approx 75% complete for SRR6058604_scaffold_10.1P.fastq.gz
+Approx 80% complete for SRR6058604_scaffold_10.2P.fastq.gz
+Approx 80% complete for SRR6058604_scaffold_10.1P.fastq.gz
+Approx 85% complete for SRR6058604_scaffold_10.2P.fastq.gz
+Approx 85% complete for SRR6058604_scaffold_10.1P.fastq.gz
+Approx 90% complete for SRR6058604_scaffold_10.2P.fastq.gz
+Approx 90% complete for SRR6058604_scaffold_10.1P.fastq.gz
+Approx 95% complete for SRR6058604_scaffold_10.2P.fastq.gz
+Approx 95% complete for SRR6058604_scaffold_10.1P.fastq.gz
+Analysis complete for SRR6058604_scaffold_10.2P.fastq.gz
+Analysis complete for SRR6058604_scaffold_10.1P.fastq.gz
+total 52
+-rw-rw-r-- 1 joed4996 joed4996  91 Apr 12 20:17 README.txt
+lrwxrwxrwx 1 joed4996 joed4996 105 Apr 12 20:42 SRR6058604_scaffold_06.1P.fastq.gz -> /proj/genomeanalysis2023/Genome_Analysis/4_Tean_Teh_2017/illumina_data/SRR6058604_scaffold_06.1P.fastq.gz
+lrwxrwxrwx 1 joed4996 joed4996 105 Apr 12 20:42 SRR6058604_scaffold_06.1U.fastq.gz -> /proj/genomeanalysis2023/Genome_Analysis/4_Tean_Teh_2017/illumina_data/SRR6058604_scaffold_06.1U.fastq.gz
+lrwxrwxrwx 1 joed4996 joed4996 105 Apr 12 20:42 SRR6058604_scaffold_06.2P.fastq.gz -> /proj/genomeanalysis2023/Genome_Analysis/4_Tean_Teh_2017/illumina_data/SRR6058604_scaffold_06.2P.fastq.gz
+lrwxrwxrwx 1 joed4996 joed4996 105 Apr 12 20:42 SRR6058604_scaffold_06.2U.fastq.gz -> /proj/genomeanalysis2023/Genome_Analysis/4_Tean_Teh_2017/illumina_data/SRR6058604_scaffold_06.2U.fastq.gz
+lrwxrwxrwx 1 joed4996 joed4996 105 Apr 12 20:42 SRR6058604_scaffold_10.1P.fastq.gz -> /proj/genomeanalysis2023/Genome_Analysis/4_Tean_Teh_2017/illumina_data/SRR6058604_scaffold_10.1P.fastq.gz
+lrwxrwxrwx 1 joed4996 joed4996 105 Apr 12 20:42 SRR6058604_scaffold_10.1U.fastq.gz -> /proj/genomeanalysis2023/Genome_Analysis/4_Tean_Teh_2017/illumina_data/SRR6058604_scaffold_10.1U.fastq.gz
+lrwxrwxrwx 1 joed4996 joed4996 105 Apr 12 20:42 SRR6058604_scaffold_10.2P.fastq.gz -> /proj/genomeanalysis2023/Genome_Analysis/4_Tean_Teh_2017/illumina_data/SRR6058604_scaffold_10.2P.fastq.gz
+lrwxrwxrwx 1 joed4996 joed4996 105 Apr 12 20:42 SRR6058604_scaffold_10.2U.fastq.gz -> /proj/genomeanalysis2023/Genome_Analysis/4_Tean_Teh_2017/illumina_data/SRR6058604_scaffold_10.2U.fastq.gz
+lrwxrwxrwx 1 joed4996 joed4996 105 Apr 12 20:42 SRR6058604_scaffold_11.1P.fastq.gz -> /proj/genomeanalysis2023/Genome_Analysis/4_Tean_Teh_2017/illumina_data/SRR6058604_scaffold_11.1P.fastq.gz
+lrwxrwxrwx 1 joed4996 joed4996 105 Apr 12 20:42 SRR6058604_scaffold_11.1U.fastq.gz -> /proj/genomeanalysis2023/Genome_Analysis/4_Tean_Teh_2017/illumina_data/SRR6058604_scaffold_11.1U.fastq.gz
+lrwxrwxrwx 1 joed4996 joed4996 105 Apr 12 20:42 SRR6058604_scaffold_11.2P.fastq.gz -> /proj/genomeanalysis2023/Genome_Analysis/4_Tean_Teh_2017/illumina_data/SRR6058604_scaffold_11.2P.fastq.gz
+lrwxrwxrwx 1 joed4996 joed4996 105 Apr 12 20:42 SRR6058604_scaffold_11.2U.fastq.gz -> /proj/genomeanalysis2023/Genome_Analysis/4_Tean_Teh_2017/illumina_data/SRR6058604_scaffold_11.2U.fastq.gz
+
+Currently Loaded Modules:
+  1) bioinfo-tools   2) FastQC/0.11.9
+
+ 
+
+JOB = 7654417
