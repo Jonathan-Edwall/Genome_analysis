@@ -1,0 +1,46 @@
+All statistics are based on contigs of size >= 500 bp, unless otherwise noted (e.g., "# contigs (>= 0 bp)" and "Total length (>= 0 bp)" include all contigs).
+
+Assembly                     pilon_assembly_improvement
+# contigs (>= 0 bp)          688                       
+# contigs (>= 1000 bp)       688                       
+# contigs (>= 5000 bp)       596                       
+# contigs (>= 10000 bp)      456                       
+# contigs (>= 25000 bp)      170                       
+# contigs (>= 50000 bp)      92                        
+Total length (>= 0 bp)       26279748                  
+Total length (>= 1000 bp)    26279748                  
+Total length (>= 5000 bp)    25984908                  
+Total length (>= 10000 bp)   24906596                  
+Total length (>= 25000 bp)   20525590                  
+Total length (>= 50000 bp)   17928984                  
+# contigs                    688                       
+Largest contig               788557                    
+Total length                 26279748                  
+Reference length             715230256                 
+GC (%)                       31.70                     
+Reference GC (%)             32.64                     
+N50                          180832                    
+N75                          29024                     
+L50                          40                        
+L75                          140                       
+# misassemblies              266                       
+# misassembled contigs       144                       
+Misassembled contigs length  10323389                  
+# local misassemblies        447                       
+# scaffold gap ext. mis.     0                         
+# scaffold gap loc. mis.     0                         
+# unaligned mis. contigs     29                        
+# unaligned contigs          7 + 166 part              
+Unaligned length             1051695                   
+Genome fraction (%)          3.070                     
+Duplication ratio            1.154                     
+# N's per 100 kbp            0.00                      
+# mismatches per 100 kbp     590.51                    
+# indels per 100 kbp         196.47                    
+Largest alignment            788557                    
+Total aligned length         25149133                  
+NA50                         102674                    
+NGA50                        -                         
+NA75                         22528                     
+LA50                         56                        
+LA75                         203                       

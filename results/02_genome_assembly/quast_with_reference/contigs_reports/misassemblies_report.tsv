@@ -1,0 +1,21 @@
+Assembly	pilon_assembly_improvement
+# misassemblies	266
+  # contig misassemblies	266
+    # c. relocations	130
+    # c. translocations	134
+    # c. inversions	2
+  # scaffold misassemblies	0
+    # s. relocations	0
+    # s. translocations	0
+    # s. inversions	0
+# misassembled contigs	144
+Misassembled contigs length	10323389
+# local misassemblies	447
+# scaffold gap ext. mis.	0
+# scaffold gap loc. mis.	0
+# unaligned mis. contigs	29
+# mismatches	129108
+# indels	42955
+    # indels (<= 5 bp)	40203
+    # indels (> 5 bp)	2752
+Indels length	98430
