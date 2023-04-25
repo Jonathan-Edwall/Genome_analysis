@@ -12,14 +12,14 @@ echo USER = $USER
 echo QOS = $SLURM_JOB_QOS
 
 
-#cd $HOME
+cd $HOME
 # Loading the modules
 module load bioinfo-tools quast
 
 #bwa_dir=$HOME/Genome_analysis_local_rep/results/02_genome_assembly/bwa/
 
-assembly_dir=/domus/h1/joed4996/Genome_analysis_local_rep/results/02_genome_assembly/canu/
-#assembly_dir=/domus/h1/joed4996/Genome_analysis_local_rep/results/02_genome_assembly/pilon/
+canu_assembly_dir=/domus/h1/joed4996/Genome_analysis_local_rep/results/02_genome_assembly/canu
+pilon_assembly_dir=/domus/h1/joed4996/Genome_analysis_local_rep/results/02_genome_assembly/pilon
 
 
 Result_dir=$HOME/Genome_analysis_local_rep/results/02_genome_assembly/quast # Results will be in this directory
@@ -28,7 +28,8 @@ Result_dir=$HOME/Genome_analysis_local_rep/results/02_genome_assembly/quast # Re
 quast.py \
 --est-ref-size 24200000 \
 --output-dir $Result_dir  \
-$assembly_dir/canu_assembly.contigs.fasta
+$canu_assembly_dir/canu_assembly.contigs.fasta \
+$pilon_assembly_dir/pilon_assembly_improvement.fasta
 
 
 # --est-ref-size 24200000 ==> Estimated reference size of 24.2 Mb (for computing NGx metrics without a reference)
