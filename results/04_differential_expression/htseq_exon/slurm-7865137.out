@@ -1,0 +1,592 @@
+#!/bin/bash -l
+#SBATCH -A uppmax2023-2-8 -M snowy # Specifying the project ID for Genome Analysis
+#SBATCH -p core
+#SBATCH -n 4
+#SBATCH -t 03:00:00  # Unclear how long the job will take
+#SBATCH -J htseq_exon_durian # Job_name
+#SBATCH --mail-type=ALL
+#SBATCH --mail-user jonathan.edwall.4996@student.uu.se
+
+cat $0
+echo USER = $USER
+echo QOS = $SLURM_JOB_QOS
+
+
+# Changing directory to working directory (output files will also be saved in this directory)
+cd /proj/genomeanalysis2023/nobackup/work/jonathane/htseq/
+
+#export $HOME/Genome_analysis_local_rep/results/04_differential_expression/htseq
+
+# Loading the modules
+module load bioinfo-tools htseq
+module load bioinfo-tools samtools
+
+
+#samtools index monthong_aril_1Aligned.sortedByCoord.out.bam monthong_aril_1Aligned.sortedByCoord.out.bai
+
+
+
+
+mapped_rna_dir=/proj/genomeanalysis2023/nobackup/work/jonathane/star_diff_expression
+
+#gene_feature_file_dir=$HOME/Genome_analysis_local_rep/results/03_genome_annotation/braker_softmasked
+gene_feature_file_dir=$HOME/Genome_analysis_local_rep/results/03_genome_annotation/braker_softmasked/GeneMark-ET
+
+
+#htseq-count [options ] \ <alignment_files> \ <gff_file>
+
+##########################################
+#### Monthong cultivar
+##########################################
+
+
+#1: Monthong: Aril 1
+# Mapping the RNA (cDNA) to the masked assembly
+htseq-count --format bam --order pos --stranded no --nonunique none --type exon --idattr gene_id \
+$mapped_rna_dir/monthong_aril_1_*.sortedByCoord.out.bam \
+$gene_feature_file_dir/genemark.gtf \
+> monthong_aril_1_counts.txt
+
+
+#2: Monthong: Aril 2
+# Mapping the RNA (cDNA) to the masked assembly
+htseq-count --format bam --order pos --stranded no --nonunique none --type exon --idattr gene_id \
+$mapped_rna_dir/monthong_aril_2_*.sortedByCoord.out.bam \
+$gene_feature_file_dir/genemark.gtf \
+> monthong_aril_2_counts.txt
+ 
+
+#3: Monthong: Aril 3
+# Mapping the RNA (cDNA) to the masked assembly
+htseq-count --format bam --order pos --stranded no --nonunique none --type exon --idattr gene_id \
+$mapped_rna_dir/monthong_aril_3_*.sortedByCoord.out.bam \
+$gene_feature_file_dir/genemark.gtf \
+> monthong_aril_3_counts.txt
+
+##########################################
+#### Musang king cultivar
+##########################################
+
+#4: Musang king: Leaf
+# Mapping the RNA (cDNA) to the masked assembly
+htseq-count --format bam --order pos --stranded no --nonunique none --type exon --idattr gene_id \
+$mapped_rna_dir/musang_king_leaf_*.sortedByCoord.out.bam \
+$gene_feature_file_dir/genemark.gtf \
+> musang_king_leaf_counts.txt
+
+
+#5: Musang King: Root
+# Mapping the RNA (cDNA) to the masked assembly
+htseq-count --format bam --order pos --stranded no --nonunique none --type exon --idattr gene_id \
+$mapped_rna_dir/musang_king_root_*.sortedByCoord.out.bam \
+$gene_feature_file_dir/genemark.gtf \
+> musang_king_root_counts.txt
+
+
+#6: Musang King: Stem
+# Mapping the RNA (cDNA) to the masked assembly
+htseq-count --format bam --order pos --stranded no --nonunique none --type exon --idattr gene_id \
+$mapped_rna_dir/musang_king_stem_*.sortedByCoord.out.bam \
+$gene_feature_file_dir/genemark.gtf \
+> musang_king_stem_counts.txt
+
+
+#7:   Musang King: Aril 1
+# Mapping the RNA (cDNA) to the masked assembly
+htseq-count --format bam --order pos --stranded no --nonunique none --type exon --idattr gene_id \
+$mapped_rna_dir/musang_king_aril_1_*.sortedByCoord.out.bam \
+$gene_feature_file_dir/genemark.gtf \
+> musang_king_aril_1_counts.txt
+
+
+#8: Musang King: Musang King: Aril 2
+# Mapping the RNA (cDNA) to the masked assembly
+htseq-count --format bam --order pos --stranded no --nonunique none --type exon --idattr gene_id \
+$mapped_rna_dir/musang_king_aril_2_*.sortedByCoord.out.bam \
+$gene_feature_file_dir/genemark.gtf \
+> musang_king_aril_2_counts.txt
+
+#9: Musang King: Musang King: Aril 3
+# Mapping the RNA (cDNA) to the masked assembly
+htseq-count --format bam --order pos --stranded no --nonunique none --type exon --idattr gene_id \
+$mapped_rna_dir/musang_king_aril_3_*.sortedByCoord.out.bam \
+$gene_feature_file_dir/genemark.gtf \
+> musang_king_aril_3_counts.txt
+
+
+
+
+
+ls -l # Checking if outputs was generated
+module list # Useful for keeping track of the versions used
+echo JOB = $SLURM_JOBID # makes the individual runs easier to identify
+
+USER = joed4996
+QOS = normal
+/var/spool/slurmd/job7865137/slurm_script: line 16: cd: /proj/genomeanalysis2023/nobackup/work/jonathane/htseq/: No such file or directory
+43767 GFF lines processed.
+100000 alignment record pairs processed.
+200000 alignment record pairs processed.
+300000 alignment record pairs processed.
+400000 alignment record pairs processed.
+500000 alignment record pairs processed.
+600000 alignment record pairs processed.
+700000 alignment record pairs processed.
+800000 alignment record pairs processed.
+900000 alignment record pairs processed.
+1000000 alignment record pairs processed.
+1100000 alignment record pairs processed.
+1200000 alignment record pairs processed.
+1300000 alignment record pairs processed.
+1400000 alignment record pairs processed.
+1500000 alignment record pairs processed.
+1600000 alignment record pairs processed.
+1700000 alignment record pairs processed.
+1800000 alignment record pairs processed.
+Warning: Mate records missing for 254 records; first such record: <SAM_Alignment object: Paired-end read 'SRR6156069.21767878.1' aligned to tig00000001_pilon:[223140,224014)/+>.
+1840964 alignment record pairs processed.
+43767 GFF lines processed.
+100000 alignment record pairs processed.
+200000 alignment record pairs processed.
+300000 alignment record pairs processed.
+400000 alignment record pairs processed.
+500000 alignment record pairs processed.
+600000 alignment record pairs processed.
+700000 alignment record pairs processed.
+800000 alignment record pairs processed.
+900000 alignment record pairs processed.
+1000000 alignment record pairs processed.
+1100000 alignment record pairs processed.
+1200000 alignment record pairs processed.
+1300000 alignment record pairs processed.
+1400000 alignment record pairs processed.
+1500000 alignment record pairs processed.
+1600000 alignment record pairs processed.
+Warning: Mate records missing for 165 records; first such record: <SAM_Alignment object: Paired-end read 'SRR6156066.26425842.1' aligned to tig00000001_pilon:[138684,138810)/+>.
+1684700 alignment record pairs processed.
+43767 GFF lines processed.
+100000 alignment record pairs processed.
+200000 alignment record pairs processed.
+300000 alignment record pairs processed.
+400000 alignment record pairs processed.
+500000 alignment record pairs processed.
+600000 alignment record pairs processed.
+700000 alignment record pairs processed.
+800000 alignment record pairs processed.
+900000 alignment record pairs processed.
+Warning: Mate records missing for 17 records; first such record: <SAM_Alignment object: Paired-end read 'SRR6156067.1845524.1' aligned to tig00000013_pilon:[482721,482822)/+>.
+963069 alignment record pairs processed.
+43767 GFF lines processed.
+100000 alignment record pairs processed.
+200000 alignment record pairs processed.
+300000 alignment record pairs processed.
+400000 alignment record pairs processed.
+500000 alignment record pairs processed.
+600000 alignment record pairs processed.
+700000 alignment record pairs processed.
+800000 alignment record pairs processed.
+900000 alignment record pairs processed.
+1000000 alignment record pairs processed.
+1100000 alignment record pairs processed.
+1200000 alignment record pairs processed.
+1300000 alignment record pairs processed.
+1400000 alignment record pairs processed.
+1500000 alignment record pairs processed.
+1600000 alignment record pairs processed.
+1700000 alignment record pairs processed.
+1800000 alignment record pairs processed.
+1900000 alignment record pairs processed.
+2000000 alignment record pairs processed.
+2100000 alignment record pairs processed.
+2200000 alignment record pairs processed.
+2300000 alignment record pairs processed.
+2400000 alignment record pairs processed.
+2500000 alignment record pairs processed.
+2600000 alignment record pairs processed.
+2700000 alignment record pairs processed.
+2800000 alignment record pairs processed.
+2900000 alignment record pairs processed.
+Warning: Mate records missing for 47 records; first such record: <SAM_Alignment object: Paired-end read 'SRR6040092.6697309.1' aligned to tig00000001_pilon:[138682,138783)/+>.
+2950850 alignment record pairs processed.
+43767 GFF lines processed.
+100000 alignment record pairs processed.
+200000 alignment record pairs processed.
+300000 alignment record pairs processed.
+400000 alignment record pairs processed.
+500000 alignment record pairs processed.
+600000 alignment record pairs processed.
+700000 alignment record pairs processed.
+800000 alignment record pairs processed.
+900000 alignment record pairs processed.
+1000000 alignment record pairs processed.
+1100000 alignment record pairs processed.
+1200000 alignment record pairs processed.
+1300000 alignment record pairs processed.
+1400000 alignment record pairs processed.
+1500000 alignment record pairs processed.
+1600000 alignment record pairs processed.
+1700000 alignment record pairs processed.
+1800000 alignment record pairs processed.
+1900000 alignment record pairs processed.
+Warning: Mate records missing for 24 records; first such record: <SAM_Alignment object: Paired-end read 'SRR6040093.2270643.1' aligned to tig00000001_pilon:[154425,154526)/+>.
+1962226 alignment record pairs processed.
+43767 GFF lines processed.
+100000 alignment record pairs processed.
+200000 alignment record pairs processed.
+300000 alignment record pairs processed.
+400000 alignment record pairs processed.
+500000 alignment record pairs processed.
+600000 alignment record pairs processed.
+700000 alignment record pairs processed.
+800000 alignment record pairs processed.
+900000 alignment record pairs processed.
+1000000 alignment record pairs processed.
+1100000 alignment record pairs processed.
+1200000 alignment record pairs processed.
+1300000 alignment record pairs processed.
+1400000 alignment record pairs processed.
+1500000 alignment record pairs processed.
+1600000 alignment record pairs processed.
+1700000 alignment record pairs processed.
+1800000 alignment record pairs processed.
+1900000 alignment record pairs processed.
+2000000 alignment record pairs processed.
+2100000 alignment record pairs processed.
+2200000 alignment record pairs processed.
+2300000 alignment record pairs processed.
+2400000 alignment record pairs processed.
+2500000 alignment record pairs processed.
+2600000 alignment record pairs processed.
+2700000 alignment record pairs processed.
+2800000 alignment record pairs processed.
+2900000 alignment record pairs processed.
+3000000 alignment record pairs processed.
+3100000 alignment record pairs processed.
+3200000 alignment record pairs processed.
+3300000 alignment record pairs processed.
+3400000 alignment record pairs processed.
+3500000 alignment record pairs processed.
+3600000 alignment record pairs processed.
+3700000 alignment record pairs processed.
+3800000 alignment record pairs processed.
+3900000 alignment record pairs processed.
+4000000 alignment record pairs processed.
+4100000 alignment record pairs processed.
+4200000 alignment record pairs processed.
+4300000 alignment record pairs processed.
+4400000 alignment record pairs processed.
+4500000 alignment record pairs processed.
+4600000 alignment record pairs processed.
+Warning: Mate records missing for 39 records; first such record: <SAM_Alignment object: Paired-end read 'SRR6040096.18790232.1' aligned to tig00000018_pilon:[228547,228648)/->.
+4636416 alignment record pairs processed.
+43767 GFF lines processed.
+100000 alignment record pairs processed.
+200000 alignment record pairs processed.
+300000 alignment record pairs processed.
+400000 alignment record pairs processed.
+500000 alignment record pairs processed.
+600000 alignment record pairs processed.
+700000 alignment record pairs processed.
+800000 alignment record pairs processed.
+900000 alignment record pairs processed.
+1000000 alignment record pairs processed.
+1100000 alignment record pairs processed.
+1200000 alignment record pairs processed.
+1300000 alignment record pairs processed.
+1400000 alignment record pairs processed.
+1500000 alignment record pairs processed.
+1600000 alignment record pairs processed.
+1700000 alignment record pairs processed.
+1800000 alignment record pairs processed.
+1900000 alignment record pairs processed.
+2000000 alignment record pairs processed.
+2100000 alignment record pairs processed.
+2200000 alignment record pairs processed.
+2300000 alignment record pairs processed.
+2400000 alignment record pairs processed.
+2500000 alignment record pairs processed.
+2600000 alignment record pairs processed.
+2700000 alignment record pairs processed.
+2800000 alignment record pairs processed.
+2900000 alignment record pairs processed.
+3000000 alignment record pairs processed.
+3100000 alignment record pairs processed.
+3200000 alignment record pairs processed.
+3300000 alignment record pairs processed.
+3400000 alignment record pairs processed.
+3500000 alignment record pairs processed.
+3600000 alignment record pairs processed.
+3700000 alignment record pairs processed.
+3800000 alignment record pairs processed.
+3900000 alignment record pairs processed.
+4000000 alignment record pairs processed.
+4100000 alignment record pairs processed.
+4200000 alignment record pairs processed.
+4300000 alignment record pairs processed.
+4400000 alignment record pairs processed.
+4500000 alignment record pairs processed.
+4600000 alignment record pairs processed.
+4700000 alignment record pairs processed.
+4800000 alignment record pairs processed.
+4900000 alignment record pairs processed.
+5000000 alignment record pairs processed.
+5100000 alignment record pairs processed.
+5200000 alignment record pairs processed.
+5300000 alignment record pairs processed.
+5400000 alignment record pairs processed.
+5500000 alignment record pairs processed.
+5600000 alignment record pairs processed.
+5700000 alignment record pairs processed.
+5800000 alignment record pairs processed.
+5900000 alignment record pairs processed.
+6000000 alignment record pairs processed.
+6100000 alignment record pairs processed.
+6200000 alignment record pairs processed.
+6300000 alignment record pairs processed.
+6400000 alignment record pairs processed.
+6500000 alignment record pairs processed.
+6600000 alignment record pairs processed.
+6700000 alignment record pairs processed.
+6800000 alignment record pairs processed.
+6900000 alignment record pairs processed.
+7000000 alignment record pairs processed.
+7100000 alignment record pairs processed.
+7200000 alignment record pairs processed.
+7300000 alignment record pairs processed.
+7400000 alignment record pairs processed.
+7500000 alignment record pairs processed.
+7600000 alignment record pairs processed.
+7700000 alignment record pairs processed.
+7800000 alignment record pairs processed.
+7900000 alignment record pairs processed.
+8000000 alignment record pairs processed.
+8100000 alignment record pairs processed.
+8200000 alignment record pairs processed.
+8300000 alignment record pairs processed.
+8400000 alignment record pairs processed.
+8500000 alignment record pairs processed.
+8600000 alignment record pairs processed.
+8700000 alignment record pairs processed.
+8800000 alignment record pairs processed.
+8900000 alignment record pairs processed.
+9000000 alignment record pairs processed.
+9100000 alignment record pairs processed.
+9200000 alignment record pairs processed.
+9300000 alignment record pairs processed.
+9400000 alignment record pairs processed.
+9500000 alignment record pairs processed.
+9600000 alignment record pairs processed.
+9700000 alignment record pairs processed.
+9800000 alignment record pairs processed.
+9900000 alignment record pairs processed.
+10000000 alignment record pairs processed.
+10100000 alignment record pairs processed.
+10200000 alignment record pairs processed.
+10300000 alignment record pairs processed.
+10400000 alignment record pairs processed.
+10500000 alignment record pairs processed.
+10600000 alignment record pairs processed.
+10700000 alignment record pairs processed.
+10800000 alignment record pairs processed.
+10900000 alignment record pairs processed.
+11000000 alignment record pairs processed.
+11100000 alignment record pairs processed.
+11200000 alignment record pairs processed.
+11300000 alignment record pairs processed.
+11400000 alignment record pairs processed.
+11500000 alignment record pairs processed.
+11600000 alignment record pairs processed.
+11700000 alignment record pairs processed.
+11800000 alignment record pairs processed.
+11900000 alignment record pairs processed.
+12000000 alignment record pairs processed.
+12100000 alignment record pairs processed.
+12200000 alignment record pairs processed.
+12300000 alignment record pairs processed.
+12400000 alignment record pairs processed.
+12500000 alignment record pairs processed.
+12600000 alignment record pairs processed.
+12700000 alignment record pairs processed.
+12800000 alignment record pairs processed.
+12900000 alignment record pairs processed.
+Warning: Mate records missing for 212 records; first such record: <SAM_Alignment object: Paired-end read 'SRR6040095.56946416.1' aligned to tig00000001_pilon:[138699,138800)/+>.
+12920867 alignment record pairs processed.
+43767 GFF lines processed.
+100000 alignment record pairs processed.
+200000 alignment record pairs processed.
+300000 alignment record pairs processed.
+400000 alignment record pairs processed.
+500000 alignment record pairs processed.
+600000 alignment record pairs processed.
+700000 alignment record pairs processed.
+800000 alignment record pairs processed.
+900000 alignment record pairs processed.
+1000000 alignment record pairs processed.
+1100000 alignment record pairs processed.
+1200000 alignment record pairs processed.
+1300000 alignment record pairs processed.
+1400000 alignment record pairs processed.
+1500000 alignment record pairs processed.
+1600000 alignment record pairs processed.
+1700000 alignment record pairs processed.
+1800000 alignment record pairs processed.
+1900000 alignment record pairs processed.
+2000000 alignment record pairs processed.
+2100000 alignment record pairs processed.
+2200000 alignment record pairs processed.
+2300000 alignment record pairs processed.
+2400000 alignment record pairs processed.
+2500000 alignment record pairs processed.
+2600000 alignment record pairs processed.
+2700000 alignment record pairs processed.
+2800000 alignment record pairs processed.
+2900000 alignment record pairs processed.
+3000000 alignment record pairs processed.
+3100000 alignment record pairs processed.
+3200000 alignment record pairs processed.
+3300000 alignment record pairs processed.
+3400000 alignment record pairs processed.
+3500000 alignment record pairs processed.
+3600000 alignment record pairs processed.
+3700000 alignment record pairs processed.
+3800000 alignment record pairs processed.
+3900000 alignment record pairs processed.
+4000000 alignment record pairs processed.
+4100000 alignment record pairs processed.
+4200000 alignment record pairs processed.
+4300000 alignment record pairs processed.
+4400000 alignment record pairs processed.
+4500000 alignment record pairs processed.
+4600000 alignment record pairs processed.
+4700000 alignment record pairs processed.
+4800000 alignment record pairs processed.
+4900000 alignment record pairs processed.
+5000000 alignment record pairs processed.
+5100000 alignment record pairs processed.
+5200000 alignment record pairs processed.
+5300000 alignment record pairs processed.
+5400000 alignment record pairs processed.
+5500000 alignment record pairs processed.
+5600000 alignment record pairs processed.
+5700000 alignment record pairs processed.
+5800000 alignment record pairs processed.
+5900000 alignment record pairs processed.
+6000000 alignment record pairs processed.
+6100000 alignment record pairs processed.
+6200000 alignment record pairs processed.
+6300000 alignment record pairs processed.
+6400000 alignment record pairs processed.
+6500000 alignment record pairs processed.
+6600000 alignment record pairs processed.
+6700000 alignment record pairs processed.
+6800000 alignment record pairs processed.
+6900000 alignment record pairs processed.
+7000000 alignment record pairs processed.
+7100000 alignment record pairs processed.
+7200000 alignment record pairs processed.
+7300000 alignment record pairs processed.
+7400000 alignment record pairs processed.
+7500000 alignment record pairs processed.
+7600000 alignment record pairs processed.
+7700000 alignment record pairs processed.
+7800000 alignment record pairs processed.
+7900000 alignment record pairs processed.
+8000000 alignment record pairs processed.
+8100000 alignment record pairs processed.
+8200000 alignment record pairs processed.
+8300000 alignment record pairs processed.
+8400000 alignment record pairs processed.
+8500000 alignment record pairs processed.
+8600000 alignment record pairs processed.
+8700000 alignment record pairs processed.
+8800000 alignment record pairs processed.
+8900000 alignment record pairs processed.
+9000000 alignment record pairs processed.
+9100000 alignment record pairs processed.
+9200000 alignment record pairs processed.
+9300000 alignment record pairs processed.
+9400000 alignment record pairs processed.
+9500000 alignment record pairs processed.
+9600000 alignment record pairs processed.
+9700000 alignment record pairs processed.
+9800000 alignment record pairs processed.
+9900000 alignment record pairs processed.
+10000000 alignment record pairs processed.
+10100000 alignment record pairs processed.
+10200000 alignment record pairs processed.
+10300000 alignment record pairs processed.
+10400000 alignment record pairs processed.
+10500000 alignment record pairs processed.
+10600000 alignment record pairs processed.
+10700000 alignment record pairs processed.
+10800000 alignment record pairs processed.
+10900000 alignment record pairs processed.
+11000000 alignment record pairs processed.
+11100000 alignment record pairs processed.
+11200000 alignment record pairs processed.
+11300000 alignment record pairs processed.
+11400000 alignment record pairs processed.
+11500000 alignment record pairs processed.
+11600000 alignment record pairs processed.
+11700000 alignment record pairs processed.
+11800000 alignment record pairs processed.
+11900000 alignment record pairs processed.
+12000000 alignment record pairs processed.
+12100000 alignment record pairs processed.
+12200000 alignment record pairs processed.
+12300000 alignment record pairs processed.
+12400000 alignment record pairs processed.
+12500000 alignment record pairs processed.
+12600000 alignment record pairs processed.
+12700000 alignment record pairs processed.
+12800000 alignment record pairs processed.
+12900000 alignment record pairs processed.
+13000000 alignment record pairs processed.
+13100000 alignment record pairs processed.
+13200000 alignment record pairs processed.
+13300000 alignment record pairs processed.
+13400000 alignment record pairs processed.
+13500000 alignment record pairs processed.
+13600000 alignment record pairs processed.
+13700000 alignment record pairs processed.
+13800000 alignment record pairs processed.
+13900000 alignment record pairs processed.
+14000000 alignment record pairs processed.
+14100000 alignment record pairs processed.
+14200000 alignment record pairs processed.
+14300000 alignment record pairs processed.
+14400000 alignment record pairs processed.
+14500000 alignment record pairs processed.
+Warning: Mate records missing for 167 records; first such record: <SAM_Alignment object: Paired-end read 'SRR6040094.7616841.1' aligned to tig00000013_pilon:[267265,267526)/->.
+14536746 alignment record pairs processed.
+43767 GFF lines processed.
+100000 alignment record pairs processed.
+200000 alignment record pairs processed.
+300000 alignment record pairs processed.
+400000 alignment record pairs processed.
+500000 alignment record pairs processed.
+600000 alignment record pairs processed.
+700000 alignment record pairs processed.
+Warning: Mate records missing for 5 records; first such record: <SAM_Alignment object: Paired-end read 'SRR6040097.16697851.1' aligned to tig00000013_pilon:[200846,200947)/->.
+729747 alignment record pairs processed.
+total 281
+drwxrwsr-x 2 joed4996 p_genomeanalysis2023  4096 May 14 19:21 htseq_cds
+drwxrwsr-x 2 joed4996 p_genomeanalysis2023  4096 May 15 20:44 htseq_gene_id
+-rw-rw-r-- 1 joed4996 p_genomeanalysis2023 28276 May 15 21:06 monthong_aril_1_counts.txt
+-rw-rw-r-- 1 joed4996 p_genomeanalysis2023 28295 May 15 21:11 monthong_aril_2_counts.txt
+-rw-rw-r-- 1 joed4996 p_genomeanalysis2023 27931 May 15 21:14 monthong_aril_3_counts.txt
+-rw-rw-r-- 1 joed4996 p_genomeanalysis2023 29720 May 15 22:19 musang_king_aril_1_counts.txt
+-rw-rw-r-- 1 joed4996 p_genomeanalysis2023 28567 May 15 23:02 musang_king_aril_2_counts.txt
+-rw-rw-r-- 1 joed4996 p_genomeanalysis2023 28065 May 15 23:04 musang_king_aril_3_counts.txt
+-rw-rw-r-- 1 joed4996 p_genomeanalysis2023 28851 May 15 21:23 musang_king_leaf_counts.txt
+-rw-rw-r-- 1 joed4996 p_genomeanalysis2023 28897 May 15 21:28 musang_king_root_counts.txt
+-rw-rw-r-- 1 joed4996 p_genomeanalysis2023 28832 May 15 21:41 musang_king_stem_counts.txt
+-rw-rw-r-- 1 joed4996 p_genomeanalysis2023 24209 May 15 23:04 slurm-7865137.out
+drwxrwsr-x 3 joed4996 p_genomeanalysis2023  4096 May 12 19:57 star_diff_expression
+
+Currently Loaded Modules:
+  1) bioinfo-tools   2) htseq/2.0.2   3) samtools/1.17
+
+ 
+
+JOB = 7865137
