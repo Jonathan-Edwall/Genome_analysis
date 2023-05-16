@@ -22,7 +22,8 @@ module load braker
 module load biopython/1.80-py3.10.8
 
 
-getAnnoFastaFromJoingenes.py -g genome.fa -f augustus.hints.gtf -o test_get_Anno_Fasta
+#getAnnoFastaFromJoingenes.py -g genome.fa -f augustus.hints.gtf -o test_get_Anno_Fasta
+getAnnoFastaFromJoingenes.py -g genome.fa -f GeneMark-ET/genemark.gtf -o get_Anno_Fasta
 
 
 
