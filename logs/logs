@@ -1,0 +1,63 @@
+Vecka 15
+Gjorde:
+        • 1: Update: retrieving the data
+        • ¤¤¤ #1:  Canu ¤¤¤   (6h 48 min)
+        • ¤¤ #2:  Fastqc - first run ¤¤
+        • #3: Trimmomatic (4 min)
+        • ¤¤ #4:  Fastqc - second run ¤¤ (1 min)
+
+Vecka 16
+#5:  BWA (1h 7 min)
+        • bwa - manual
+        • Batch scripts - lab 1
+
+
+Ladda upp scripten jag gjort denna veckan
+#6: Pilon (57 min)
+
+#7: Quast (10 min med referens, annars 20 sek)
+Tar man canu eller pilon assembly i quast?
+Hitta referensgenom för quast
+Referens assembly
+
+
+
+Vecka 17
+#8 Repeatmasker
+#9 - Trimming before Star
+
+#10 - Star 
+        • Notera att jag behövde konvertera SAM till BAM för braker, inuti batchjobbet!!
+#11 - Braker
+Ska man använda Eggnogmapper efter braker????
+
+
+Vecka 18
+#8 Repeatmasker
+        • Måndag: gjorde om körning så vi har softmasked assembly
+#10 - Star 
+        • Måndag: gjorde om körning så vi har för softmasked assembly
+#11 - Braker
+        • Måndag: gjorde om körning så vi har softmasked assembly´
+        • Måndag: skapade en protein.fa-fil, som jag kunde använda i Eggnog-mapper
+#12 - Eggnogmapper
+        • Måndag: Körde via internet mha.  protein.fa-fil från braker
+        Vad är det för intressant output, förutom out.emapper.decorated.gff??
+        Hur ska jag visualisera gff-filen???? Försöker med IGV, men går ej så bra
+
+
+Vecka 19
+        • Börjar med differential gene expression!
+        3. Differential gene expression
+        
+#13 - Star (on each of the samples)
+        • Minnet är slut i min home repository. Verkar som jag kommer behöva lagra datan i project directory, dvs:  
+        /proj/genomeanalysis2023/nobackup/work/
+        
+#14 - Htseq
+
+Vecka 20
+#16 Deseq 2
+        • PCA-plot: Biological replicates borde vara nära varandra (är ej det)
+
+
