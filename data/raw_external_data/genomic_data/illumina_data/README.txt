@@ -1,1 +1,0 @@
-In this folder all of the external raw genomic short read data from illumina will be stored

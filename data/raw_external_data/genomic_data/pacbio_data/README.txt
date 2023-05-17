@@ -1,1 +1,0 @@
-In this folder all of the external raw genomic long read data from Pacbio will be stored

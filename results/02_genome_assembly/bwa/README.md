@@ -1,0 +1,2 @@
+# BWA
+This directory contains the slurmoutput from the hybrid assembly (polishing the long read assembly with more accurate short reads) which was achieved by  mapping the short read genomic data on the canu assembly, using bwa

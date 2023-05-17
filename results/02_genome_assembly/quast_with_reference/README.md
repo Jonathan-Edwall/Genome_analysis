@@ -1,0 +1,3 @@
+# Quast - Comparing the final draft assembly from pilon with the reference assembly from Tean Teh et al. 2017
+This directory contains the results from the quast run where the pilon assembly was compared with the reference assembly from Tean Teh et al. 2017.
+<b> The output in this folder is wrong , because in this quast run, a single chromosome was compared against the whole genome assembly that was made by Tean Teh et al. 2017, which resulted in a misleading result. </b>

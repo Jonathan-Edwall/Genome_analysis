@@ -1,0 +1,3 @@
+# Trimmomatic  
+This directory contains the output slurmfile of the trimming that was done on the RNA-seq data from library WTS_D1_MSK_ARIL1 (SRR6040095).
+This trimming was done to ensure the reads had the best quality possible, before they were later used in step 10 (where these rna-seq reads were mapped to the genome assembly using STAR) and step 11 (where the mapped RNA-seq bam-file from STAR was used in BRAKER to generate a structural annotation of the assembly) in the project.

@@ -1,0 +1,2 @@
+# Canu 
+This directory contains the slurmoutput from the canu run. In this run, a first assembly draft was done by assembling the long read genomic PacBio data coming from chromosome 10 of Musang king (SRR6037732) 
