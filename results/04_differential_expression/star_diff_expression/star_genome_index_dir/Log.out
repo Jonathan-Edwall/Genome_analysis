@@ -1,0 +1,1429 @@
+STAR version=2.7.9a
+STAR compilation time,server,dir=2021-10-20T18:01:41+0200 rackham5.uppmax.uu.se:/sw/bioinfo/star/2.7.9a/src/STAR-2.7.9a/source
+##### Command Line:
+STAR --genomeFastaFiles /home/joed4996/Genome_analysis_local_rep/results/03_genome_annotation/repeatmasker_softmasked//pilon_assembly_improvement.fasta.masked --genomeDir /proj/genomeanalysis2023/nobackup/work/jonathane/star_diff_expression/star_genome_index_dir/ --runMode genomeGenerate --genomeSAindexNbases 11
+##### Initial USER parameters from Command Line:
+###### All USER parameters from Command Line:
+genomeFastaFiles              /home/joed4996/Genome_analysis_local_rep/results/03_genome_annotation/repeatmasker_softmasked//pilon_assembly_improvement.fasta.masked        ~RE-DEFINED
+genomeDir                     /proj/genomeanalysis2023/nobackup/work/jonathane/star_diff_expression/star_genome_index_dir/     ~RE-DEFINED
+runMode                       genomeGenerate        ~RE-DEFINED
+genomeSAindexNbases           11     ~RE-DEFINED
+##### Finished reading parameters from all sources
+
+##### Final user re-defined parameters-----------------:
+runMode                           genomeGenerate   
+genomeDir                         /proj/genomeanalysis2023/nobackup/work/jonathane/star_diff_expression/star_genome_index_dir/
+genomeFastaFiles                  /home/joed4996/Genome_analysis_local_rep/results/03_genome_annotation/repeatmasker_softmasked//pilon_assembly_improvement.fasta.masked   
+genomeSAindexNbases               11
+
+-------------------------------
+##### Final effective command line:
+STAR   --runMode genomeGenerate      --genomeDir /proj/genomeanalysis2023/nobackup/work/jonathane/star_diff_expression/star_genome_index_dir/   --genomeFastaFiles /home/joed4996/Genome_analysis_local_rep/results/03_genome_annotation/repeatmasker_softmasked//pilon_assembly_improvement.fasta.masked      --genomeSAindexNbases 11
+----------------------------------------
+
+Number of fastq files for each mate = 1
+ParametersSolo: --soloCellFilterType CellRanger2.2 filtering parameters:  3000 0.99 10
+Finished loading and checking parameters
+--genomeDir directory exists and will be overwritten: /proj/genomeanalysis2023/nobackup/work/jonathane/star_diff_expression/star_genome_index_dir/
+May 12 19:47:42 ... starting to generate Genome files
+/home/joed4996/Genome_analysis_local_rep/results/03_genome_annotation/repeatmasker_softmasked//pilon_assembly_improvement.fasta.masked : chr # 0  "tig00000001_pilon" chrStart: 0
+/home/joed4996/Genome_analysis_local_rep/results/03_genome_annotation/repeatmasker_softmasked//pilon_assembly_improvement.fasta.masked : chr # 1  "tig00000002_pilon" chrStart: 1048576
+/home/joed4996/Genome_analysis_local_rep/results/03_genome_annotation/repeatmasker_softmasked//pilon_assembly_improvement.fasta.masked : chr # 2  "tig00000003_pilon" chrStart: 1835008
+/home/joed4996/Genome_analysis_local_rep/results/03_genome_annotation/repeatmasker_softmasked//pilon_assembly_improvement.fasta.masked : chr # 3  "tig00000004_pilon" chrStart: 2097152
+/home/joed4996/Genome_analysis_local_rep/results/03_genome_annotation/repeatmasker_softmasked//pilon_assembly_improvement.fasta.masked : chr # 4  "tig00000005_pilon" chrStart: 2359296
+/home/joed4996/Genome_analysis_local_rep/results/03_genome_annotation/repeatmasker_softmasked//pilon_assembly_improvement.fasta.masked : chr # 5  "tig00000007_pilon" chrStart: 2621440
+/home/joed4996/Genome_analysis_local_rep/results/03_genome_annotation/repeatmasker_softmasked//pilon_assembly_improvement.fasta.masked : chr # 6  "tig00000009_pilon" chrStart: 2883584
+/home/joed4996/Genome_analysis_local_rep/results/03_genome_annotation/repeatmasker_softmasked//pilon_assembly_improvement.fasta.masked : chr # 7  "tig00000011_pilon" chrStart: 3145728
+/home/joed4996/Genome_analysis_local_rep/results/03_genome_annotation/repeatmasker_softmasked//pilon_assembly_improvement.fasta.masked : chr # 8  "tig00000013_pilon" chrStart: 3932160
+/home/joed4996/Genome_analysis_local_rep/results/03_genome_annotation/repeatmasker_softmasked//pilon_assembly_improvement.fasta.masked : chr # 9  "tig00000015_pilon" chrStart: 4718592
+/home/joed4996/Genome_analysis_local_rep/results/03_genome_annotation/repeatmasker_softmasked//pilon_assembly_improvement.fasta.masked : chr # 10  "tig00000016_pilon" chrStart: 4980736
+/home/joed4996/Genome_analysis_local_rep/results/03_genome_annotation/repeatmasker_softmasked//pilon_assembly_improvement.fasta.masked : chr # 11  "tig00000017_pilon" chrStart: 5505024
+/home/joed4996/Genome_analysis_local_rep/results/03_genome_annotation/repeatmasker_softmasked//pilon_assembly_improvement.fasta.masked : chr # 12  "tig00000018_pilon" chrStart: 5767168
+/home/joed4996/Genome_analysis_local_rep/results/03_genome_annotation/repeatmasker_softmasked//pilon_assembly_improvement.fasta.masked : chr # 13  "tig00000019_pilon" chrStart: 6553600
+/home/joed4996/Genome_analysis_local_rep/results/03_genome_annotation/repeatmasker_softmasked//pilon_assembly_improvement.fasta.masked : chr # 14  "tig00000021_pilon" chrStart: 6815744
+/home/joed4996/Genome_analysis_local_rep/results/03_genome_annotation/repeatmasker_softmasked//pilon_assembly_improvement.fasta.masked : chr # 15  "tig00000024_pilon" chrStart: 7077888
+/home/joed4996/Genome_analysis_local_rep/results/03_genome_annotation/repeatmasker_softmasked//pilon_assembly_improvement.fasta.masked : chr # 16  "tig00000025_pilon" chrStart: 7864320
+/home/joed4996/Genome_analysis_local_rep/results/03_genome_annotation/repeatmasker_softmasked//pilon_assembly_improvement.fasta.masked : chr # 17  "tig00000026_pilon" chrStart: 8388608
+/home/joed4996/Genome_analysis_local_rep/results/03_genome_annotation/repeatmasker_softmasked//pilon_assembly_improvement.fasta.masked : chr # 18  "tig00000027_pilon" chrStart: 8650752
+/home/joed4996/Genome_analysis_local_rep/results/03_genome_annotation/repeatmasker_softmasked//pilon_assembly_improvement.fasta.masked : chr # 19  "tig00000028_pilon" chrStart: 9175040
+/home/joed4996/Genome_analysis_local_rep/results/03_genome_annotation/repeatmasker_softmasked//pilon_assembly_improvement.fasta.masked : chr # 20  "tig00000029_pilon" chrStart: 9437184
+/home/joed4996/Genome_analysis_local_rep/results/03_genome_annotation/repeatmasker_softmasked//pilon_assembly_improvement.fasta.masked : chr # 21  "tig00000030_pilon" chrStart: 9699328
+/home/joed4996/Genome_analysis_local_rep/results/03_genome_annotation/repeatmasker_softmasked//pilon_assembly_improvement.fasta.masked : chr # 22  "tig00000031_pilon" chrStart: 9961472
+/home/joed4996/Genome_analysis_local_rep/results/03_genome_annotation/repeatmasker_softmasked//pilon_assembly_improvement.fasta.masked : chr # 23  "tig00000033_pilon" chrStart: 10223616
+/home/joed4996/Genome_analysis_local_rep/results/03_genome_annotation/repeatmasker_softmasked//pilon_assembly_improvement.fasta.masked : chr # 24  "tig00000035_pilon" chrStart: 10747904
+/home/joed4996/Genome_analysis_local_rep/results/03_genome_annotation/repeatmasker_softmasked//pilon_assembly_improvement.fasta.masked : chr # 25  "tig00000036_pilon" chrStart: 11010048
+/home/joed4996/Genome_analysis_local_rep/results/03_genome_annotation/repeatmasker_softmasked//pilon_assembly_improvement.fasta.masked : chr # 26  "tig00000038_pilon" chrStart: 11534336
+/home/joed4996/Genome_analysis_local_rep/results/03_genome_annotation/repeatmasker_softmasked//pilon_assembly_improvement.fasta.masked : chr # 27  "tig00000039_pilon" chrStart: 12058624
+/home/joed4996/Genome_analysis_local_rep/results/03_genome_annotation/repeatmasker_softmasked//pilon_assembly_improvement.fasta.masked : chr # 28  "tig00000041_pilon" chrStart: 12582912
+/home/joed4996/Genome_analysis_local_rep/results/03_genome_annotation/repeatmasker_softmasked//pilon_assembly_improvement.fasta.masked : chr # 29  "tig00000042_pilon" chrStart: 13107200
+/home/joed4996/Genome_analysis_local_rep/results/03_genome_annotation/repeatmasker_softmasked//pilon_assembly_improvement.fasta.masked : chr # 30  "tig00000043_pilon" chrStart: 13631488
+/home/joed4996/Genome_analysis_local_rep/results/03_genome_annotation/repeatmasker_softmasked//pilon_assembly_improvement.fasta.masked : chr # 31  "tig00000045_pilon" chrStart: 13893632
+/home/joed4996/Genome_analysis_local_rep/results/03_genome_annotation/repeatmasker_softmasked//pilon_assembly_improvement.fasta.masked : chr # 32  "tig00000047_pilon" chrStart: 14417920
+/home/joed4996/Genome_analysis_local_rep/results/03_genome_annotation/repeatmasker_softmasked//pilon_assembly_improvement.fasta.masked : chr # 33  "tig00000048_pilon" chrStart: 14680064
+/home/joed4996/Genome_analysis_local_rep/results/03_genome_annotation/repeatmasker_softmasked//pilon_assembly_improvement.fasta.masked : chr # 34  "tig00000049_pilon" chrStart: 15204352
+/home/joed4996/Genome_analysis_local_rep/results/03_genome_annotation/repeatmasker_softmasked//pilon_assembly_improvement.fasta.masked : chr # 35  "tig00000050_pilon" chrStart: 15728640
+/home/joed4996/Genome_analysis_local_rep/results/03_genome_annotation/repeatmasker_softmasked//pilon_assembly_improvement.fasta.masked : chr # 36  "tig00000052_pilon" chrStart: 16252928
+/home/joed4996/Genome_analysis_local_rep/results/03_genome_annotation/repeatmasker_softmasked//pilon_assembly_improvement.fasta.masked : chr # 37  "tig00000053_pilon" chrStart: 16515072
+/home/joed4996/Genome_analysis_local_rep/results/03_genome_annotation/repeatmasker_softmasked//pilon_assembly_improvement.fasta.masked : chr # 38  "tig00000054_pilon" chrStart: 16777216
+/home/joed4996/Genome_analysis_local_rep/results/03_genome_annotation/repeatmasker_softmasked//pilon_assembly_improvement.fasta.masked : chr # 39  "tig00000055_pilon" chrStart: 17039360
+/home/joed4996/Genome_analysis_local_rep/results/03_genome_annotation/repeatmasker_softmasked//pilon_assembly_improvement.fasta.masked : chr # 40  "tig00000057_pilon" chrStart: 17301504
+/home/joed4996/Genome_analysis_local_rep/results/03_genome_annotation/repeatmasker_softmasked//pilon_assembly_improvement.fasta.masked : chr # 41  "tig00000058_pilon" chrStart: 17825792
+/home/joed4996/Genome_analysis_local_rep/results/03_genome_annotation/repeatmasker_softmasked//pilon_assembly_improvement.fasta.masked : chr # 42  "tig00000059_pilon" chrStart: 18087936
+/home/joed4996/Genome_analysis_local_rep/results/03_genome_annotation/repeatmasker_softmasked//pilon_assembly_improvement.fasta.masked : chr # 43  "tig00000060_pilon" chrStart: 18350080
+/home/joed4996/Genome_analysis_local_rep/results/03_genome_annotation/repeatmasker_softmasked//pilon_assembly_improvement.fasta.masked : chr # 44  "tig00000061_pilon" chrStart: 18612224
+/home/joed4996/Genome_analysis_local_rep/results/03_genome_annotation/repeatmasker_softmasked//pilon_assembly_improvement.fasta.masked : chr # 45  "tig00000062_pilon" chrStart: 18874368
+/home/joed4996/Genome_analysis_local_rep/results/03_genome_annotation/repeatmasker_softmasked//pilon_assembly_improvement.fasta.masked : chr # 46  "tig00000063_pilon" chrStart: 19136512
+/home/joed4996/Genome_analysis_local_rep/results/03_genome_annotation/repeatmasker_softmasked//pilon_assembly_improvement.fasta.masked : chr # 47  "tig00000064_pilon" chrStart: 19398656
+/home/joed4996/Genome_analysis_local_rep/results/03_genome_annotation/repeatmasker_softmasked//pilon_assembly_improvement.fasta.masked : chr # 48  "tig00000065_pilon" chrStart: 19660800
+/home/joed4996/Genome_analysis_local_rep/results/03_genome_annotation/repeatmasker_softmasked//pilon_assembly_improvement.fasta.masked : chr # 49  "tig00000066_pilon" chrStart: 19922944
+/home/joed4996/Genome_analysis_local_rep/results/03_genome_annotation/repeatmasker_softmasked//pilon_assembly_improvement.fasta.masked : chr # 50  "tig00000067_pilon" chrStart: 20185088
+/home/joed4996/Genome_analysis_local_rep/results/03_genome_annotation/repeatmasker_softmasked//pilon_assembly_improvement.fasta.masked : chr # 51  "tig00000068_pilon" chrStart: 20447232
+/home/joed4996/Genome_analysis_local_rep/results/03_genome_annotation/repeatmasker_softmasked//pilon_assembly_improvement.fasta.masked : chr # 52  "tig00000069_pilon" chrStart: 20709376
+/home/joed4996/Genome_analysis_local_rep/results/03_genome_annotation/repeatmasker_softmasked//pilon_assembly_improvement.fasta.masked : chr # 53  "tig00000071_pilon" chrStart: 20971520
+/home/joed4996/Genome_analysis_local_rep/results/03_genome_annotation/repeatmasker_softmasked//pilon_assembly_improvement.fasta.masked : chr # 54  "tig00000072_pilon" chrStart: 21233664
+/home/joed4996/Genome_analysis_local_rep/results/03_genome_annotation/repeatmasker_softmasked//pilon_assembly_improvement.fasta.masked : chr # 55  "tig00000074_pilon" chrStart: 21757952
+/home/joed4996/Genome_analysis_local_rep/results/03_genome_annotation/repeatmasker_softmasked//pilon_assembly_improvement.fasta.masked : chr # 56  "tig00000075_pilon" chrStart: 22020096
+/home/joed4996/Genome_analysis_local_rep/results/03_genome_annotation/repeatmasker_softmasked//pilon_assembly_improvement.fasta.masked : chr # 57  "tig00000076_pilon" chrStart: 22282240
+/home/joed4996/Genome_analysis_local_rep/results/03_genome_annotation/repeatmasker_softmasked//pilon_assembly_improvement.fasta.masked : chr # 58  "tig00000077_pilon" chrStart: 22544384
+/home/joed4996/Genome_analysis_local_rep/results/03_genome_annotation/repeatmasker_softmasked//pilon_assembly_improvement.fasta.masked : chr # 59  "tig00000078_pilon" chrStart: 22806528
+/home/joed4996/Genome_analysis_local_rep/results/03_genome_annotation/repeatmasker_softmasked//pilon_assembly_improvement.fasta.masked : chr # 60  "tig00000079_pilon" chrStart: 23068672
+/home/joed4996/Genome_analysis_local_rep/results/03_genome_annotation/repeatmasker_softmasked//pilon_assembly_improvement.fasta.masked : chr # 61  "tig00000081_pilon" chrStart: 23330816
+/home/joed4996/Genome_analysis_local_rep/results/03_genome_annotation/repeatmasker_softmasked//pilon_assembly_improvement.fasta.masked : chr # 62  "tig00000082_pilon" chrStart: 23592960
+/home/joed4996/Genome_analysis_local_rep/results/03_genome_annotation/repeatmasker_softmasked//pilon_assembly_improvement.fasta.masked : chr # 63  "tig00000083_pilon" chrStart: 23855104
+/home/joed4996/Genome_analysis_local_rep/results/03_genome_annotation/repeatmasker_softmasked//pilon_assembly_improvement.fasta.masked : chr # 64  "tig00000084_pilon" chrStart: 24117248
+/home/joed4996/Genome_analysis_local_rep/results/03_genome_annotation/repeatmasker_softmasked//pilon_assembly_improvement.fasta.masked : chr # 65  "tig00000085_pilon" chrStart: 24379392
+/home/joed4996/Genome_analysis_local_rep/results/03_genome_annotation/repeatmasker_softmasked//pilon_assembly_improvement.fasta.masked : chr # 66  "tig00000086_pilon" chrStart: 24641536
+/home/joed4996/Genome_analysis_local_rep/results/03_genome_annotation/repeatmasker_softmasked//pilon_assembly_improvement.fasta.masked : chr # 67  "tig00000090_pilon" chrStart: 24903680
+/home/joed4996/Genome_analysis_local_rep/results/03_genome_annotation/repeatmasker_softmasked//pilon_assembly_improvement.fasta.masked : chr # 68  "tig00000091_pilon" chrStart: 25165824
+/home/joed4996/Genome_analysis_local_rep/results/03_genome_annotation/repeatmasker_softmasked//pilon_assembly_improvement.fasta.masked : chr # 69  "tig00000092_pilon" chrStart: 25427968
+/home/joed4996/Genome_analysis_local_rep/results/03_genome_annotation/repeatmasker_softmasked//pilon_assembly_improvement.fasta.masked : chr # 70  "tig00000093_pilon" chrStart: 25690112
+/home/joed4996/Genome_analysis_local_rep/results/03_genome_annotation/repeatmasker_softmasked//pilon_assembly_improvement.fasta.masked : chr # 71  "tig00000094_pilon" chrStart: 25952256
+/home/joed4996/Genome_analysis_local_rep/results/03_genome_annotation/repeatmasker_softmasked//pilon_assembly_improvement.fasta.masked : chr # 72  "tig00000095_pilon" chrStart: 26214400
+/home/joed4996/Genome_analysis_local_rep/results/03_genome_annotation/repeatmasker_softmasked//pilon_assembly_improvement.fasta.masked : chr # 73  "tig00000096_pilon" chrStart: 26476544
+/home/joed4996/Genome_analysis_local_rep/results/03_genome_annotation/repeatmasker_softmasked//pilon_assembly_improvement.fasta.masked : chr # 74  "tig00000098_pilon" chrStart: 26738688
+/home/joed4996/Genome_analysis_local_rep/results/03_genome_annotation/repeatmasker_softmasked//pilon_assembly_improvement.fasta.masked : chr # 75  "tig00000099_pilon" chrStart: 27000832
+/home/joed4996/Genome_analysis_local_rep/results/03_genome_annotation/repeatmasker_softmasked//pilon_assembly_improvement.fasta.masked : chr # 76  "tig00000100_pilon" chrStart: 27262976
+/home/joed4996/Genome_analysis_local_rep/results/03_genome_annotation/repeatmasker_softmasked//pilon_assembly_improvement.fasta.masked : chr # 77  "tig00000101_pilon" chrStart: 27525120
+/home/joed4996/Genome_analysis_local_rep/results/03_genome_annotation/repeatmasker_softmasked//pilon_assembly_improvement.fasta.masked : chr # 78  "tig00000104_pilon" chrStart: 27787264
+/home/joed4996/Genome_analysis_local_rep/results/03_genome_annotation/repeatmasker_softmasked//pilon_assembly_improvement.fasta.masked : chr # 79  "tig00000105_pilon" chrStart: 28049408
+/home/joed4996/Genome_analysis_local_rep/results/03_genome_annotation/repeatmasker_softmasked//pilon_assembly_improvement.fasta.masked : chr # 80  "tig00000106_pilon" chrStart: 28311552
+/home/joed4996/Genome_analysis_local_rep/results/03_genome_annotation/repeatmasker_softmasked//pilon_assembly_improvement.fasta.masked : chr # 81  "tig00000108_pilon" chrStart: 28573696
+/home/joed4996/Genome_analysis_local_rep/results/03_genome_annotation/repeatmasker_softmasked//pilon_assembly_improvement.fasta.masked : chr # 82  "tig00000110_pilon" chrStart: 28835840
+/home/joed4996/Genome_analysis_local_rep/results/03_genome_annotation/repeatmasker_softmasked//pilon_assembly_improvement.fasta.masked : chr # 83  "tig00000111_pilon" chrStart: 29097984
+/home/joed4996/Genome_analysis_local_rep/results/03_genome_annotation/repeatmasker_softmasked//pilon_assembly_improvement.fasta.masked : chr # 84  "tig00000112_pilon" chrStart: 29360128
+/home/joed4996/Genome_analysis_local_rep/results/03_genome_annotation/repeatmasker_softmasked//pilon_assembly_improvement.fasta.masked : chr # 85  "tig00000114_pilon" chrStart: 29622272
+/home/joed4996/Genome_analysis_local_rep/results/03_genome_annotation/repeatmasker_softmasked//pilon_assembly_improvement.fasta.masked : chr # 86  "tig00000115_pilon" chrStart: 29884416
+/home/joed4996/Genome_analysis_local_rep/results/03_genome_annotation/repeatmasker_softmasked//pilon_assembly_improvement.fasta.masked : chr # 87  "tig00000116_pilon" chrStart: 30146560
+/home/joed4996/Genome_analysis_local_rep/results/03_genome_annotation/repeatmasker_softmasked//pilon_assembly_improvement.fasta.masked : chr # 88  "tig00000117_pilon" chrStart: 30408704
+/home/joed4996/Genome_analysis_local_rep/results/03_genome_annotation/repeatmasker_softmasked//pilon_assembly_improvement.fasta.masked : chr # 89  "tig00000118_pilon" chrStart: 30670848
+/home/joed4996/Genome_analysis_local_rep/results/03_genome_annotation/repeatmasker_softmasked//pilon_assembly_improvement.fasta.masked : chr # 90  "tig00000120_pilon" chrStart: 30932992
+/home/joed4996/Genome_analysis_local_rep/results/03_genome_annotation/repeatmasker_softmasked//pilon_assembly_improvement.fasta.masked : chr # 91  "tig00000123_pilon" chrStart: 31195136
+/home/joed4996/Genome_analysis_local_rep/results/03_genome_annotation/repeatmasker_softmasked//pilon_assembly_improvement.fasta.masked : chr # 92  "tig00000125_pilon" chrStart: 31457280
+/home/joed4996/Genome_analysis_local_rep/results/03_genome_annotation/repeatmasker_softmasked//pilon_assembly_improvement.fasta.masked : chr # 93  "tig00000127_pilon" chrStart: 31719424
+/home/joed4996/Genome_analysis_local_rep/results/03_genome_annotation/repeatmasker_softmasked//pilon_assembly_improvement.fasta.masked : chr # 94  "tig00000128_pilon" chrStart: 31981568
+/home/joed4996/Genome_analysis_local_rep/results/03_genome_annotation/repeatmasker_softmasked//pilon_assembly_improvement.fasta.masked : chr # 95  "tig00000129_pilon" chrStart: 32243712
+/home/joed4996/Genome_analysis_local_rep/results/03_genome_annotation/repeatmasker_softmasked//pilon_assembly_improvement.fasta.masked : chr # 96  "tig00000130_pilon" chrStart: 32505856
+/home/joed4996/Genome_analysis_local_rep/results/03_genome_annotation/repeatmasker_softmasked//pilon_assembly_improvement.fasta.masked : chr # 97  "tig00000132_pilon" chrStart: 32768000
+/home/joed4996/Genome_analysis_local_rep/results/03_genome_annotation/repeatmasker_softmasked//pilon_assembly_improvement.fasta.masked : chr # 98  "tig00000133_pilon" chrStart: 33030144
+/home/joed4996/Genome_analysis_local_rep/results/03_genome_annotation/repeatmasker_softmasked//pilon_assembly_improvement.fasta.masked : chr # 99  "tig00000135_pilon" chrStart: 33292288
+/home/joed4996/Genome_analysis_local_rep/results/03_genome_annotation/repeatmasker_softmasked//pilon_assembly_improvement.fasta.masked : chr # 100  "tig00000136_pilon" chrStart: 33554432
+/home/joed4996/Genome_analysis_local_rep/results/03_genome_annotation/repeatmasker_softmasked//pilon_assembly_improvement.fasta.masked : chr # 101  "tig00000137_pilon" chrStart: 33816576
+/home/joed4996/Genome_analysis_local_rep/results/03_genome_annotation/repeatmasker_softmasked//pilon_assembly_improvement.fasta.masked : chr # 102  "tig00000139_pilon" chrStart: 34078720
+/home/joed4996/Genome_analysis_local_rep/results/03_genome_annotation/repeatmasker_softmasked//pilon_assembly_improvement.fasta.masked : chr # 103  "tig00000140_pilon" chrStart: 34340864
+/home/joed4996/Genome_analysis_local_rep/results/03_genome_annotation/repeatmasker_softmasked//pilon_assembly_improvement.fasta.masked : chr # 104  "tig00000141_pilon" chrStart: 34603008
+/home/joed4996/Genome_analysis_local_rep/results/03_genome_annotation/repeatmasker_softmasked//pilon_assembly_improvement.fasta.masked : chr # 105  "tig00000142_pilon" chrStart: 34865152
+/home/joed4996/Genome_analysis_local_rep/results/03_genome_annotation/repeatmasker_softmasked//pilon_assembly_improvement.fasta.masked : chr # 106  "tig00000143_pilon" chrStart: 35127296
+/home/joed4996/Genome_analysis_local_rep/results/03_genome_annotation/repeatmasker_softmasked//pilon_assembly_improvement.fasta.masked : chr # 107  "tig00000144_pilon" chrStart: 35389440
+/home/joed4996/Genome_analysis_local_rep/results/03_genome_annotation/repeatmasker_softmasked//pilon_assembly_improvement.fasta.masked : chr # 108  "tig00000145_pilon" chrStart: 35651584
+/home/joed4996/Genome_analysis_local_rep/results/03_genome_annotation/repeatmasker_softmasked//pilon_assembly_improvement.fasta.masked : chr # 109  "tig00000146_pilon" chrStart: 35913728
+/home/joed4996/Genome_analysis_local_rep/results/03_genome_annotation/repeatmasker_softmasked//pilon_assembly_improvement.fasta.masked : chr # 110  "tig00000147_pilon" chrStart: 36175872
+/home/joed4996/Genome_analysis_local_rep/results/03_genome_annotation/repeatmasker_softmasked//pilon_assembly_improvement.fasta.masked : chr # 111  "tig00000149_pilon" chrStart: 36438016
+/home/joed4996/Genome_analysis_local_rep/results/03_genome_annotation/repeatmasker_softmasked//pilon_assembly_improvement.fasta.masked : chr # 112  "tig00000151_pilon" chrStart: 36700160
+/home/joed4996/Genome_analysis_local_rep/results/03_genome_annotation/repeatmasker_softmasked//pilon_assembly_improvement.fasta.masked : chr # 113  "tig00000152_pilon" chrStart: 36962304
+/home/joed4996/Genome_analysis_local_rep/results/03_genome_annotation/repeatmasker_softmasked//pilon_assembly_improvement.fasta.masked : chr # 114  "tig00000153_pilon" chrStart: 37224448
+/home/joed4996/Genome_analysis_local_rep/results/03_genome_annotation/repeatmasker_softmasked//pilon_assembly_improvement.fasta.masked : chr # 115  "tig00000155_pilon" chrStart: 37486592
+/home/joed4996/Genome_analysis_local_rep/results/03_genome_annotation/repeatmasker_softmasked//pilon_assembly_improvement.fasta.masked : chr # 116  "tig00000156_pilon" chrStart: 37748736
+/home/joed4996/Genome_analysis_local_rep/results/03_genome_annotation/repeatmasker_softmasked//pilon_assembly_improvement.fasta.masked : chr # 117  "tig00000157_pilon" chrStart: 38010880
+/home/joed4996/Genome_analysis_local_rep/results/03_genome_annotation/repeatmasker_softmasked//pilon_assembly_improvement.fasta.masked : chr # 118  "tig00000159_pilon" chrStart: 38273024
+/home/joed4996/Genome_analysis_local_rep/results/03_genome_annotation/repeatmasker_softmasked//pilon_assembly_improvement.fasta.masked : chr # 119  "tig00000160_pilon" chrStart: 38535168
+/home/joed4996/Genome_analysis_local_rep/results/03_genome_annotation/repeatmasker_softmasked//pilon_assembly_improvement.fasta.masked : chr # 120  "tig00000161_pilon" chrStart: 38797312
+/home/joed4996/Genome_analysis_local_rep/results/03_genome_annotation/repeatmasker_softmasked//pilon_assembly_improvement.fasta.masked : chr # 121  "tig00000162_pilon" chrStart: 39059456
+/home/joed4996/Genome_analysis_local_rep/results/03_genome_annotation/repeatmasker_softmasked//pilon_assembly_improvement.fasta.masked : chr # 122  "tig00000163_pilon" chrStart: 39321600
+/home/joed4996/Genome_analysis_local_rep/results/03_genome_annotation/repeatmasker_softmasked//pilon_assembly_improvement.fasta.masked : chr # 123  "tig00000166_pilon" chrStart: 39583744
+/home/joed4996/Genome_analysis_local_rep/results/03_genome_annotation/repeatmasker_softmasked//pilon_assembly_improvement.fasta.masked : chr # 124  "tig00000167_pilon" chrStart: 39845888
+/home/joed4996/Genome_analysis_local_rep/results/03_genome_annotation/repeatmasker_softmasked//pilon_assembly_improvement.fasta.masked : chr # 125  "tig00000168_pilon" chrStart: 40108032
+/home/joed4996/Genome_analysis_local_rep/results/03_genome_annotation/repeatmasker_softmasked//pilon_assembly_improvement.fasta.masked : chr # 126  "tig00000169_pilon" chrStart: 40370176
+/home/joed4996/Genome_analysis_local_rep/results/03_genome_annotation/repeatmasker_softmasked//pilon_assembly_improvement.fasta.masked : chr # 127  "tig00000171_pilon" chrStart: 40632320
+/home/joed4996/Genome_analysis_local_rep/results/03_genome_annotation/repeatmasker_softmasked//pilon_assembly_improvement.fasta.masked : chr # 128  "tig00000173_pilon" chrStart: 40894464
+/home/joed4996/Genome_analysis_local_rep/results/03_genome_annotation/repeatmasker_softmasked//pilon_assembly_improvement.fasta.masked : chr # 129  "tig00000175_pilon" chrStart: 41156608
+/home/joed4996/Genome_analysis_local_rep/results/03_genome_annotation/repeatmasker_softmasked//pilon_assembly_improvement.fasta.masked : chr # 130  "tig00000176_pilon" chrStart: 41418752
+/home/joed4996/Genome_analysis_local_rep/results/03_genome_annotation/repeatmasker_softmasked//pilon_assembly_improvement.fasta.masked : chr # 131  "tig00000178_pilon" chrStart: 41680896
+/home/joed4996/Genome_analysis_local_rep/results/03_genome_annotation/repeatmasker_softmasked//pilon_assembly_improvement.fasta.masked : chr # 132  "tig00000179_pilon" chrStart: 41943040
+/home/joed4996/Genome_analysis_local_rep/results/03_genome_annotation/repeatmasker_softmasked//pilon_assembly_improvement.fasta.masked : chr # 133  "tig00000180_pilon" chrStart: 42205184
+/home/joed4996/Genome_analysis_local_rep/results/03_genome_annotation/repeatmasker_softmasked//pilon_assembly_improvement.fasta.masked : chr # 134  "tig00000182_pilon" chrStart: 42467328
+/home/joed4996/Genome_analysis_local_rep/results/03_genome_annotation/repeatmasker_softmasked//pilon_assembly_improvement.fasta.masked : chr # 135  "tig00000183_pilon" chrStart: 42729472
+/home/joed4996/Genome_analysis_local_rep/results/03_genome_annotation/repeatmasker_softmasked//pilon_assembly_improvement.fasta.masked : chr # 136  "tig00000185_pilon" chrStart: 42991616
+/home/joed4996/Genome_analysis_local_rep/results/03_genome_annotation/repeatmasker_softmasked//pilon_assembly_improvement.fasta.masked : chr # 137  "tig00000187_pilon" chrStart: 43253760
+/home/joed4996/Genome_analysis_local_rep/results/03_genome_annotation/repeatmasker_softmasked//pilon_assembly_improvement.fasta.masked : chr # 138  "tig00000188_pilon" chrStart: 43515904
+/home/joed4996/Genome_analysis_local_rep/results/03_genome_annotation/repeatmasker_softmasked//pilon_assembly_improvement.fasta.masked : chr # 139  "tig00000189_pilon" chrStart: 43778048
+/home/joed4996/Genome_analysis_local_rep/results/03_genome_annotation/repeatmasker_softmasked//pilon_assembly_improvement.fasta.masked : chr # 140  "tig00000190_pilon" chrStart: 44040192
+/home/joed4996/Genome_analysis_local_rep/results/03_genome_annotation/repeatmasker_softmasked//pilon_assembly_improvement.fasta.masked : chr # 141  "tig00000191_pilon" chrStart: 44302336
+/home/joed4996/Genome_analysis_local_rep/results/03_genome_annotation/repeatmasker_softmasked//pilon_assembly_improvement.fasta.masked : chr # 142  "tig00000193_pilon" chrStart: 44564480
+/home/joed4996/Genome_analysis_local_rep/results/03_genome_annotation/repeatmasker_softmasked//pilon_assembly_improvement.fasta.masked : chr # 143  "tig00000194_pilon" chrStart: 44826624
+/home/joed4996/Genome_analysis_local_rep/results/03_genome_annotation/repeatmasker_softmasked//pilon_assembly_improvement.fasta.masked : chr # 144  "tig00000195_pilon" chrStart: 45088768
+/home/joed4996/Genome_analysis_local_rep/results/03_genome_annotation/repeatmasker_softmasked//pilon_assembly_improvement.fasta.masked : chr # 145  "tig00000196_pilon" chrStart: 45350912
+/home/joed4996/Genome_analysis_local_rep/results/03_genome_annotation/repeatmasker_softmasked//pilon_assembly_improvement.fasta.masked : chr # 146  "tig00000198_pilon" chrStart: 45613056
+/home/joed4996/Genome_analysis_local_rep/results/03_genome_annotation/repeatmasker_softmasked//pilon_assembly_improvement.fasta.masked : chr # 147  "tig00000199_pilon" chrStart: 45875200
+/home/joed4996/Genome_analysis_local_rep/results/03_genome_annotation/repeatmasker_softmasked//pilon_assembly_improvement.fasta.masked : chr # 148  "tig00000201_pilon" chrStart: 46137344
+/home/joed4996/Genome_analysis_local_rep/results/03_genome_annotation/repeatmasker_softmasked//pilon_assembly_improvement.fasta.masked : chr # 149  "tig00000203_pilon" chrStart: 46399488
+/home/joed4996/Genome_analysis_local_rep/results/03_genome_annotation/repeatmasker_softmasked//pilon_assembly_improvement.fasta.masked : chr # 150  "tig00000205_pilon" chrStart: 46661632
+/home/joed4996/Genome_analysis_local_rep/results/03_genome_annotation/repeatmasker_softmasked//pilon_assembly_improvement.fasta.masked : chr # 151  "tig00000206_pilon" chrStart: 46923776
+/home/joed4996/Genome_analysis_local_rep/results/03_genome_annotation/repeatmasker_softmasked//pilon_assembly_improvement.fasta.masked : chr # 152  "tig00000208_pilon" chrStart: 47185920
+/home/joed4996/Genome_analysis_local_rep/results/03_genome_annotation/repeatmasker_softmasked//pilon_assembly_improvement.fasta.masked : chr # 153  "tig00000210_pilon" chrStart: 47448064
+/home/joed4996/Genome_analysis_local_rep/results/03_genome_annotation/repeatmasker_softmasked//pilon_assembly_improvement.fasta.masked : chr # 154  "tig00000211_pilon" chrStart: 47710208
+/home/joed4996/Genome_analysis_local_rep/results/03_genome_annotation/repeatmasker_softmasked//pilon_assembly_improvement.fasta.masked : chr # 155  "tig00000212_pilon" chrStart: 47972352
+/home/joed4996/Genome_analysis_local_rep/results/03_genome_annotation/repeatmasker_softmasked//pilon_assembly_improvement.fasta.masked : chr # 156  "tig00000215_pilon" chrStart: 48234496
+/home/joed4996/Genome_analysis_local_rep/results/03_genome_annotation/repeatmasker_softmasked//pilon_assembly_improvement.fasta.masked : chr # 157  "tig00000216_pilon" chrStart: 48496640
+/home/joed4996/Genome_analysis_local_rep/results/03_genome_annotation/repeatmasker_softmasked//pilon_assembly_improvement.fasta.masked : chr # 158  "tig00000217_pilon" chrStart: 48758784
+/home/joed4996/Genome_analysis_local_rep/results/03_genome_annotation/repeatmasker_softmasked//pilon_assembly_improvement.fasta.masked : chr # 159  "tig00000218_pilon" chrStart: 49020928
+/home/joed4996/Genome_analysis_local_rep/results/03_genome_annotation/repeatmasker_softmasked//pilon_assembly_improvement.fasta.masked : chr # 160  "tig00000219_pilon" chrStart: 49283072
+/home/joed4996/Genome_analysis_local_rep/results/03_genome_annotation/repeatmasker_softmasked//pilon_assembly_improvement.fasta.masked : chr # 161  "tig00000220_pilon" chrStart: 49545216
+/home/joed4996/Genome_analysis_local_rep/results/03_genome_annotation/repeatmasker_softmasked//pilon_assembly_improvement.fasta.masked : chr # 162  "tig00000221_pilon" chrStart: 49807360
+/home/joed4996/Genome_analysis_local_rep/results/03_genome_annotation/repeatmasker_softmasked//pilon_assembly_improvement.fasta.masked : chr # 163  "tig00000222_pilon" chrStart: 50069504
+/home/joed4996/Genome_analysis_local_rep/results/03_genome_annotation/repeatmasker_softmasked//pilon_assembly_improvement.fasta.masked : chr # 164  "tig00000223_pilon" chrStart: 50331648
+/home/joed4996/Genome_analysis_local_rep/results/03_genome_annotation/repeatmasker_softmasked//pilon_assembly_improvement.fasta.masked : chr # 165  "tig00000225_pilon" chrStart: 50593792
+/home/joed4996/Genome_analysis_local_rep/results/03_genome_annotation/repeatmasker_softmasked//pilon_assembly_improvement.fasta.masked : chr # 166  "tig00000226_pilon" chrStart: 50855936
+/home/joed4996/Genome_analysis_local_rep/results/03_genome_annotation/repeatmasker_softmasked//pilon_assembly_improvement.fasta.masked : chr # 167  "tig00000227_pilon" chrStart: 51118080
+/home/joed4996/Genome_analysis_local_rep/results/03_genome_annotation/repeatmasker_softmasked//pilon_assembly_improvement.fasta.masked : chr # 168  "tig00000228_pilon" chrStart: 51380224
+/home/joed4996/Genome_analysis_local_rep/results/03_genome_annotation/repeatmasker_softmasked//pilon_assembly_improvement.fasta.masked : chr # 169  "tig00000230_pilon" chrStart: 51642368
+/home/joed4996/Genome_analysis_local_rep/results/03_genome_annotation/repeatmasker_softmasked//pilon_assembly_improvement.fasta.masked : chr # 170  "tig00000231_pilon" chrStart: 51904512
+/home/joed4996/Genome_analysis_local_rep/results/03_genome_annotation/repeatmasker_softmasked//pilon_assembly_improvement.fasta.masked : chr # 171  "tig00000232_pilon" chrStart: 52166656
+/home/joed4996/Genome_analysis_local_rep/results/03_genome_annotation/repeatmasker_softmasked//pilon_assembly_improvement.fasta.masked : chr # 172  "tig00000234_pilon" chrStart: 52428800
+/home/joed4996/Genome_analysis_local_rep/results/03_genome_annotation/repeatmasker_softmasked//pilon_assembly_improvement.fasta.masked : chr # 173  "tig00000236_pilon" chrStart: 52690944
+/home/joed4996/Genome_analysis_local_rep/results/03_genome_annotation/repeatmasker_softmasked//pilon_assembly_improvement.fasta.masked : chr # 174  "tig00000238_pilon" chrStart: 52953088
+/home/joed4996/Genome_analysis_local_rep/results/03_genome_annotation/repeatmasker_softmasked//pilon_assembly_improvement.fasta.masked : chr # 175  "tig00000239_pilon" chrStart: 53215232
+/home/joed4996/Genome_analysis_local_rep/results/03_genome_annotation/repeatmasker_softmasked//pilon_assembly_improvement.fasta.masked : chr # 176  "tig00000240_pilon" chrStart: 53477376
+/home/joed4996/Genome_analysis_local_rep/results/03_genome_annotation/repeatmasker_softmasked//pilon_assembly_improvement.fasta.masked : chr # 177  "tig00000242_pilon" chrStart: 53739520
+/home/joed4996/Genome_analysis_local_rep/results/03_genome_annotation/repeatmasker_softmasked//pilon_assembly_improvement.fasta.masked : chr # 178  "tig00000244_pilon" chrStart: 54001664
+/home/joed4996/Genome_analysis_local_rep/results/03_genome_annotation/repeatmasker_softmasked//pilon_assembly_improvement.fasta.masked : chr # 179  "tig00000245_pilon" chrStart: 54263808
+/home/joed4996/Genome_analysis_local_rep/results/03_genome_annotation/repeatmasker_softmasked//pilon_assembly_improvement.fasta.masked : chr # 180  "tig00000246_pilon" chrStart: 54525952
+/home/joed4996/Genome_analysis_local_rep/results/03_genome_annotation/repeatmasker_softmasked//pilon_assembly_improvement.fasta.masked : chr # 181  "tig00000247_pilon" chrStart: 54788096
+/home/joed4996/Genome_analysis_local_rep/results/03_genome_annotation/repeatmasker_softmasked//pilon_assembly_improvement.fasta.masked : chr # 182  "tig00000250_pilon" chrStart: 55050240
+/home/joed4996/Genome_analysis_local_rep/results/03_genome_annotation/repeatmasker_softmasked//pilon_assembly_improvement.fasta.masked : chr # 183  "tig00000252_pilon" chrStart: 55312384
+/home/joed4996/Genome_analysis_local_rep/results/03_genome_annotation/repeatmasker_softmasked//pilon_assembly_improvement.fasta.masked : chr # 184  "tig00000254_pilon" chrStart: 55574528
+/home/joed4996/Genome_analysis_local_rep/results/03_genome_annotation/repeatmasker_softmasked//pilon_assembly_improvement.fasta.masked : chr # 185  "tig00000255_pilon" chrStart: 55836672
+/home/joed4996/Genome_analysis_local_rep/results/03_genome_annotation/repeatmasker_softmasked//pilon_assembly_improvement.fasta.masked : chr # 186  "tig00000257_pilon" chrStart: 56098816
+/home/joed4996/Genome_analysis_local_rep/results/03_genome_annotation/repeatmasker_softmasked//pilon_assembly_improvement.fasta.masked : chr # 187  "tig00000258_pilon" chrStart: 56360960
+/home/joed4996/Genome_analysis_local_rep/results/03_genome_annotation/repeatmasker_softmasked//pilon_assembly_improvement.fasta.masked : chr # 188  "tig00000259_pilon" chrStart: 56623104
+/home/joed4996/Genome_analysis_local_rep/results/03_genome_annotation/repeatmasker_softmasked//pilon_assembly_improvement.fasta.masked : chr # 189  "tig00000260_pilon" chrStart: 56885248
+/home/joed4996/Genome_analysis_local_rep/results/03_genome_annotation/repeatmasker_softmasked//pilon_assembly_improvement.fasta.masked : chr # 190  "tig00000262_pilon" chrStart: 57147392
+/home/joed4996/Genome_analysis_local_rep/results/03_genome_annotation/repeatmasker_softmasked//pilon_assembly_improvement.fasta.masked : chr # 191  "tig00000263_pilon" chrStart: 57409536
+/home/joed4996/Genome_analysis_local_rep/results/03_genome_annotation/repeatmasker_softmasked//pilon_assembly_improvement.fasta.masked : chr # 192  "tig00000264_pilon" chrStart: 57671680
+/home/joed4996/Genome_analysis_local_rep/results/03_genome_annotation/repeatmasker_softmasked//pilon_assembly_improvement.fasta.masked : chr # 193  "tig00000266_pilon" chrStart: 57933824
+/home/joed4996/Genome_analysis_local_rep/results/03_genome_annotation/repeatmasker_softmasked//pilon_assembly_improvement.fasta.masked : chr # 194  "tig00000267_pilon" chrStart: 58195968
+/home/joed4996/Genome_analysis_local_rep/results/03_genome_annotation/repeatmasker_softmasked//pilon_assembly_improvement.fasta.masked : chr # 195  "tig00000268_pilon" chrStart: 58458112
+/home/joed4996/Genome_analysis_local_rep/results/03_genome_annotation/repeatmasker_softmasked//pilon_assembly_improvement.fasta.masked : chr # 196  "tig00000269_pilon" chrStart: 58720256
+/home/joed4996/Genome_analysis_local_rep/results/03_genome_annotation/repeatmasker_softmasked//pilon_assembly_improvement.fasta.masked : chr # 197  "tig00000271_pilon" chrStart: 58982400
+/home/joed4996/Genome_analysis_local_rep/results/03_genome_annotation/repeatmasker_softmasked//pilon_assembly_improvement.fasta.masked : chr # 198  "tig00000272_pilon" chrStart: 59244544
+/home/joed4996/Genome_analysis_local_rep/results/03_genome_annotation/repeatmasker_softmasked//pilon_assembly_improvement.fasta.masked : chr # 199  "tig00000274_pilon" chrStart: 59506688
+/home/joed4996/Genome_analysis_local_rep/results/03_genome_annotation/repeatmasker_softmasked//pilon_assembly_improvement.fasta.masked : chr # 200  "tig00000276_pilon" chrStart: 59768832
+/home/joed4996/Genome_analysis_local_rep/results/03_genome_annotation/repeatmasker_softmasked//pilon_assembly_improvement.fasta.masked : chr # 201  "tig00000277_pilon" chrStart: 60030976
+/home/joed4996/Genome_analysis_local_rep/results/03_genome_annotation/repeatmasker_softmasked//pilon_assembly_improvement.fasta.masked : chr # 202  "tig00000278_pilon" chrStart: 60293120
+/home/joed4996/Genome_analysis_local_rep/results/03_genome_annotation/repeatmasker_softmasked//pilon_assembly_improvement.fasta.masked : chr # 203  "tig00000279_pilon" chrStart: 60555264
+/home/joed4996/Genome_analysis_local_rep/results/03_genome_annotation/repeatmasker_softmasked//pilon_assembly_improvement.fasta.masked : chr # 204  "tig00000280_pilon" chrStart: 60817408
+/home/joed4996/Genome_analysis_local_rep/results/03_genome_annotation/repeatmasker_softmasked//pilon_assembly_improvement.fasta.masked : chr # 205  "tig00000281_pilon" chrStart: 61079552
+/home/joed4996/Genome_analysis_local_rep/results/03_genome_annotation/repeatmasker_softmasked//pilon_assembly_improvement.fasta.masked : chr # 206  "tig00000282_pilon" chrStart: 61341696
+/home/joed4996/Genome_analysis_local_rep/results/03_genome_annotation/repeatmasker_softmasked//pilon_assembly_improvement.fasta.masked : chr # 207  "tig00000283_pilon" chrStart: 61603840
+/home/joed4996/Genome_analysis_local_rep/results/03_genome_annotation/repeatmasker_softmasked//pilon_assembly_improvement.fasta.masked : chr # 208  "tig00000284_pilon" chrStart: 61865984
+/home/joed4996/Genome_analysis_local_rep/results/03_genome_annotation/repeatmasker_softmasked//pilon_assembly_improvement.fasta.masked : chr # 209  "tig00000285_pilon" chrStart: 62128128
+/home/joed4996/Genome_analysis_local_rep/results/03_genome_annotation/repeatmasker_softmasked//pilon_assembly_improvement.fasta.masked : chr # 210  "tig00000287_pilon" chrStart: 62390272
+/home/joed4996/Genome_analysis_local_rep/results/03_genome_annotation/repeatmasker_softmasked//pilon_assembly_improvement.fasta.masked : chr # 211  "tig00000288_pilon" chrStart: 62652416
+/home/joed4996/Genome_analysis_local_rep/results/03_genome_annotation/repeatmasker_softmasked//pilon_assembly_improvement.fasta.masked : chr # 212  "tig00000289_pilon" chrStart: 62914560
+/home/joed4996/Genome_analysis_local_rep/results/03_genome_annotation/repeatmasker_softmasked//pilon_assembly_improvement.fasta.masked : chr # 213  "tig00000292_pilon" chrStart: 63176704
+/home/joed4996/Genome_analysis_local_rep/results/03_genome_annotation/repeatmasker_softmasked//pilon_assembly_improvement.fasta.masked : chr # 214  "tig00000293_pilon" chrStart: 63438848
+/home/joed4996/Genome_analysis_local_rep/results/03_genome_annotation/repeatmasker_softmasked//pilon_assembly_improvement.fasta.masked : chr # 215  "tig00000294_pilon" chrStart: 63700992
+/home/joed4996/Genome_analysis_local_rep/results/03_genome_annotation/repeatmasker_softmasked//pilon_assembly_improvement.fasta.masked : chr # 216  "tig00000295_pilon" chrStart: 63963136
+/home/joed4996/Genome_analysis_local_rep/results/03_genome_annotation/repeatmasker_softmasked//pilon_assembly_improvement.fasta.masked : chr # 217  "tig00000297_pilon" chrStart: 64225280
+/home/joed4996/Genome_analysis_local_rep/results/03_genome_annotation/repeatmasker_softmasked//pilon_assembly_improvement.fasta.masked : chr # 218  "tig00000300_pilon" chrStart: 64487424
+/home/joed4996/Genome_analysis_local_rep/results/03_genome_annotation/repeatmasker_softmasked//pilon_assembly_improvement.fasta.masked : chr # 219  "tig00000302_pilon" chrStart: 64749568
+/home/joed4996/Genome_analysis_local_rep/results/03_genome_annotation/repeatmasker_softmasked//pilon_assembly_improvement.fasta.masked : chr # 220  "tig00000304_pilon" chrStart: 65011712
+/home/joed4996/Genome_analysis_local_rep/results/03_genome_annotation/repeatmasker_softmasked//pilon_assembly_improvement.fasta.masked : chr # 221  "tig00000305_pilon" chrStart: 65273856
+/home/joed4996/Genome_analysis_local_rep/results/03_genome_annotation/repeatmasker_softmasked//pilon_assembly_improvement.fasta.masked : chr # 222  "tig00000307_pilon" chrStart: 65536000
+/home/joed4996/Genome_analysis_local_rep/results/03_genome_annotation/repeatmasker_softmasked//pilon_assembly_improvement.fasta.masked : chr # 223  "tig00000308_pilon" chrStart: 65798144
+/home/joed4996/Genome_analysis_local_rep/results/03_genome_annotation/repeatmasker_softmasked//pilon_assembly_improvement.fasta.masked : chr # 224  "tig00000310_pilon" chrStart: 66060288
+/home/joed4996/Genome_analysis_local_rep/results/03_genome_annotation/repeatmasker_softmasked//pilon_assembly_improvement.fasta.masked : chr # 225  "tig00000312_pilon" chrStart: 66322432
+/home/joed4996/Genome_analysis_local_rep/results/03_genome_annotation/repeatmasker_softmasked//pilon_assembly_improvement.fasta.masked : chr # 226  "tig00000313_pilon" chrStart: 66584576
+/home/joed4996/Genome_analysis_local_rep/results/03_genome_annotation/repeatmasker_softmasked//pilon_assembly_improvement.fasta.masked : chr # 227  "tig00000314_pilon" chrStart: 66846720
+/home/joed4996/Genome_analysis_local_rep/results/03_genome_annotation/repeatmasker_softmasked//pilon_assembly_improvement.fasta.masked : chr # 228  "tig00000315_pilon" chrStart: 67108864
+/home/joed4996/Genome_analysis_local_rep/results/03_genome_annotation/repeatmasker_softmasked//pilon_assembly_improvement.fasta.masked : chr # 229  "tig00000318_pilon" chrStart: 67371008
+/home/joed4996/Genome_analysis_local_rep/results/03_genome_annotation/repeatmasker_softmasked//pilon_assembly_improvement.fasta.masked : chr # 230  "tig00000319_pilon" chrStart: 67633152
+/home/joed4996/Genome_analysis_local_rep/results/03_genome_annotation/repeatmasker_softmasked//pilon_assembly_improvement.fasta.masked : chr # 231  "tig00000320_pilon" chrStart: 67895296
+/home/joed4996/Genome_analysis_local_rep/results/03_genome_annotation/repeatmasker_softmasked//pilon_assembly_improvement.fasta.masked : chr # 232  "tig00000321_pilon" chrStart: 68157440
+/home/joed4996/Genome_analysis_local_rep/results/03_genome_annotation/repeatmasker_softmasked//pilon_assembly_improvement.fasta.masked : chr # 233  "tig00000323_pilon" chrStart: 68419584
+/home/joed4996/Genome_analysis_local_rep/results/03_genome_annotation/repeatmasker_softmasked//pilon_assembly_improvement.fasta.masked : chr # 234  "tig00000325_pilon" chrStart: 68681728
+/home/joed4996/Genome_analysis_local_rep/results/03_genome_annotation/repeatmasker_softmasked//pilon_assembly_improvement.fasta.masked : chr # 235  "tig00000326_pilon" chrStart: 68943872
+/home/joed4996/Genome_analysis_local_rep/results/03_genome_annotation/repeatmasker_softmasked//pilon_assembly_improvement.fasta.masked : chr # 236  "tig00000327_pilon" chrStart: 69206016
+/home/joed4996/Genome_analysis_local_rep/results/03_genome_annotation/repeatmasker_softmasked//pilon_assembly_improvement.fasta.masked : chr # 237  "tig00000328_pilon" chrStart: 69468160
+/home/joed4996/Genome_analysis_local_rep/results/03_genome_annotation/repeatmasker_softmasked//pilon_assembly_improvement.fasta.masked : chr # 238  "tig00000329_pilon" chrStart: 69730304
+/home/joed4996/Genome_analysis_local_rep/results/03_genome_annotation/repeatmasker_softmasked//pilon_assembly_improvement.fasta.masked : chr # 239  "tig00000330_pilon" chrStart: 69992448
+/home/joed4996/Genome_analysis_local_rep/results/03_genome_annotation/repeatmasker_softmasked//pilon_assembly_improvement.fasta.masked : chr # 240  "tig00000331_pilon" chrStart: 70254592
+/home/joed4996/Genome_analysis_local_rep/results/03_genome_annotation/repeatmasker_softmasked//pilon_assembly_improvement.fasta.masked : chr # 241  "tig00000332_pilon" chrStart: 70516736
+/home/joed4996/Genome_analysis_local_rep/results/03_genome_annotation/repeatmasker_softmasked//pilon_assembly_improvement.fasta.masked : chr # 242  "tig00000333_pilon" chrStart: 70778880
+/home/joed4996/Genome_analysis_local_rep/results/03_genome_annotation/repeatmasker_softmasked//pilon_assembly_improvement.fasta.masked : chr # 243  "tig00000335_pilon" chrStart: 71041024
+/home/joed4996/Genome_analysis_local_rep/results/03_genome_annotation/repeatmasker_softmasked//pilon_assembly_improvement.fasta.masked : chr # 244  "tig00000336_pilon" chrStart: 71303168
+/home/joed4996/Genome_analysis_local_rep/results/03_genome_annotation/repeatmasker_softmasked//pilon_assembly_improvement.fasta.masked : chr # 245  "tig00000338_pilon" chrStart: 71565312
+/home/joed4996/Genome_analysis_local_rep/results/03_genome_annotation/repeatmasker_softmasked//pilon_assembly_improvement.fasta.masked : chr # 246  "tig00000340_pilon" chrStart: 71827456
+/home/joed4996/Genome_analysis_local_rep/results/03_genome_annotation/repeatmasker_softmasked//pilon_assembly_improvement.fasta.masked : chr # 247  "tig00000341_pilon" chrStart: 72089600
+/home/joed4996/Genome_analysis_local_rep/results/03_genome_annotation/repeatmasker_softmasked//pilon_assembly_improvement.fasta.masked : chr # 248  "tig00000342_pilon" chrStart: 72351744
+/home/joed4996/Genome_analysis_local_rep/results/03_genome_annotation/repeatmasker_softmasked//pilon_assembly_improvement.fasta.masked : chr # 249  "tig00000343_pilon" chrStart: 72613888
+/home/joed4996/Genome_analysis_local_rep/results/03_genome_annotation/repeatmasker_softmasked//pilon_assembly_improvement.fasta.masked : chr # 250  "tig00000345_pilon" chrStart: 72876032
+/home/joed4996/Genome_analysis_local_rep/results/03_genome_annotation/repeatmasker_softmasked//pilon_assembly_improvement.fasta.masked : chr # 251  "tig00000346_pilon" chrStart: 73138176
+/home/joed4996/Genome_analysis_local_rep/results/03_genome_annotation/repeatmasker_softmasked//pilon_assembly_improvement.fasta.masked : chr # 252  "tig00000347_pilon" chrStart: 73400320
+/home/joed4996/Genome_analysis_local_rep/results/03_genome_annotation/repeatmasker_softmasked//pilon_assembly_improvement.fasta.masked : chr # 253  "tig00000349_pilon" chrStart: 73662464
+/home/joed4996/Genome_analysis_local_rep/results/03_genome_annotation/repeatmasker_softmasked//pilon_assembly_improvement.fasta.masked : chr # 254  "tig00000350_pilon" chrStart: 73924608
+/home/joed4996/Genome_analysis_local_rep/results/03_genome_annotation/repeatmasker_softmasked//pilon_assembly_improvement.fasta.masked : chr # 255  "tig00000351_pilon" chrStart: 74186752
+/home/joed4996/Genome_analysis_local_rep/results/03_genome_annotation/repeatmasker_softmasked//pilon_assembly_improvement.fasta.masked : chr # 256  "tig00000352_pilon" chrStart: 74448896
+/home/joed4996/Genome_analysis_local_rep/results/03_genome_annotation/repeatmasker_softmasked//pilon_assembly_improvement.fasta.masked : chr # 257  "tig00000353_pilon" chrStart: 74711040
+/home/joed4996/Genome_analysis_local_rep/results/03_genome_annotation/repeatmasker_softmasked//pilon_assembly_improvement.fasta.masked : chr # 258  "tig00000354_pilon" chrStart: 74973184
+/home/joed4996/Genome_analysis_local_rep/results/03_genome_annotation/repeatmasker_softmasked//pilon_assembly_improvement.fasta.masked : chr # 259  "tig00000355_pilon" chrStart: 75235328
+/home/joed4996/Genome_analysis_local_rep/results/03_genome_annotation/repeatmasker_softmasked//pilon_assembly_improvement.fasta.masked : chr # 260  "tig00000356_pilon" chrStart: 75497472
+/home/joed4996/Genome_analysis_local_rep/results/03_genome_annotation/repeatmasker_softmasked//pilon_assembly_improvement.fasta.masked : chr # 261  "tig00000357_pilon" chrStart: 75759616
+/home/joed4996/Genome_analysis_local_rep/results/03_genome_annotation/repeatmasker_softmasked//pilon_assembly_improvement.fasta.masked : chr # 262  "tig00000358_pilon" chrStart: 76021760
+/home/joed4996/Genome_analysis_local_rep/results/03_genome_annotation/repeatmasker_softmasked//pilon_assembly_improvement.fasta.masked : chr # 263  "tig00000360_pilon" chrStart: 76283904
+/home/joed4996/Genome_analysis_local_rep/results/03_genome_annotation/repeatmasker_softmasked//pilon_assembly_improvement.fasta.masked : chr # 264  "tig00000361_pilon" chrStart: 76546048
+/home/joed4996/Genome_analysis_local_rep/results/03_genome_annotation/repeatmasker_softmasked//pilon_assembly_improvement.fasta.masked : chr # 265  "tig00000362_pilon" chrStart: 76808192
+/home/joed4996/Genome_analysis_local_rep/results/03_genome_annotation/repeatmasker_softmasked//pilon_assembly_improvement.fasta.masked : chr # 266  "tig00000363_pilon" chrStart: 77070336
+/home/joed4996/Genome_analysis_local_rep/results/03_genome_annotation/repeatmasker_softmasked//pilon_assembly_improvement.fasta.masked : chr # 267  "tig00000365_pilon" chrStart: 77332480
+/home/joed4996/Genome_analysis_local_rep/results/03_genome_annotation/repeatmasker_softmasked//pilon_assembly_improvement.fasta.masked : chr # 268  "tig00000367_pilon" chrStart: 77594624
+/home/joed4996/Genome_analysis_local_rep/results/03_genome_annotation/repeatmasker_softmasked//pilon_assembly_improvement.fasta.masked : chr # 269  "tig00000368_pilon" chrStart: 77856768
+/home/joed4996/Genome_analysis_local_rep/results/03_genome_annotation/repeatmasker_softmasked//pilon_assembly_improvement.fasta.masked : chr # 270  "tig00000370_pilon" chrStart: 78118912
+/home/joed4996/Genome_analysis_local_rep/results/03_genome_annotation/repeatmasker_softmasked//pilon_assembly_improvement.fasta.masked : chr # 271  "tig00000371_pilon" chrStart: 78381056
+/home/joed4996/Genome_analysis_local_rep/results/03_genome_annotation/repeatmasker_softmasked//pilon_assembly_improvement.fasta.masked : chr # 272  "tig00000372_pilon" chrStart: 78643200
+/home/joed4996/Genome_analysis_local_rep/results/03_genome_annotation/repeatmasker_softmasked//pilon_assembly_improvement.fasta.masked : chr # 273  "tig00000373_pilon" chrStart: 78905344
+/home/joed4996/Genome_analysis_local_rep/results/03_genome_annotation/repeatmasker_softmasked//pilon_assembly_improvement.fasta.masked : chr # 274  "tig00000374_pilon" chrStart: 79167488
+/home/joed4996/Genome_analysis_local_rep/results/03_genome_annotation/repeatmasker_softmasked//pilon_assembly_improvement.fasta.masked : chr # 275  "tig00000376_pilon" chrStart: 79429632
+/home/joed4996/Genome_analysis_local_rep/results/03_genome_annotation/repeatmasker_softmasked//pilon_assembly_improvement.fasta.masked : chr # 276  "tig00000378_pilon" chrStart: 79691776
+/home/joed4996/Genome_analysis_local_rep/results/03_genome_annotation/repeatmasker_softmasked//pilon_assembly_improvement.fasta.masked : chr # 277  "tig00000380_pilon" chrStart: 79953920
+/home/joed4996/Genome_analysis_local_rep/results/03_genome_annotation/repeatmasker_softmasked//pilon_assembly_improvement.fasta.masked : chr # 278  "tig00000382_pilon" chrStart: 80216064
+/home/joed4996/Genome_analysis_local_rep/results/03_genome_annotation/repeatmasker_softmasked//pilon_assembly_improvement.fasta.masked : chr # 279  "tig00000383_pilon" chrStart: 80478208
+/home/joed4996/Genome_analysis_local_rep/results/03_genome_annotation/repeatmasker_softmasked//pilon_assembly_improvement.fasta.masked : chr # 280  "tig00000384_pilon" chrStart: 80740352
+/home/joed4996/Genome_analysis_local_rep/results/03_genome_annotation/repeatmasker_softmasked//pilon_assembly_improvement.fasta.masked : chr # 281  "tig00000386_pilon" chrStart: 81002496
+/home/joed4996/Genome_analysis_local_rep/results/03_genome_annotation/repeatmasker_softmasked//pilon_assembly_improvement.fasta.masked : chr # 282  "tig00000387_pilon" chrStart: 81264640
+/home/joed4996/Genome_analysis_local_rep/results/03_genome_annotation/repeatmasker_softmasked//pilon_assembly_improvement.fasta.masked : chr # 283  "tig00000388_pilon" chrStart: 81526784
+/home/joed4996/Genome_analysis_local_rep/results/03_genome_annotation/repeatmasker_softmasked//pilon_assembly_improvement.fasta.masked : chr # 284  "tig00000389_pilon" chrStart: 81788928
+/home/joed4996/Genome_analysis_local_rep/results/03_genome_annotation/repeatmasker_softmasked//pilon_assembly_improvement.fasta.masked : chr # 285  "tig00000390_pilon" chrStart: 82051072
+/home/joed4996/Genome_analysis_local_rep/results/03_genome_annotation/repeatmasker_softmasked//pilon_assembly_improvement.fasta.masked : chr # 286  "tig00000391_pilon" chrStart: 82313216
+/home/joed4996/Genome_analysis_local_rep/results/03_genome_annotation/repeatmasker_softmasked//pilon_assembly_improvement.fasta.masked : chr # 287  "tig00000392_pilon" chrStart: 82575360
+/home/joed4996/Genome_analysis_local_rep/results/03_genome_annotation/repeatmasker_softmasked//pilon_assembly_improvement.fasta.masked : chr # 288  "tig00000394_pilon" chrStart: 82837504
+/home/joed4996/Genome_analysis_local_rep/results/03_genome_annotation/repeatmasker_softmasked//pilon_assembly_improvement.fasta.masked : chr # 289  "tig00000395_pilon" chrStart: 83099648
+/home/joed4996/Genome_analysis_local_rep/results/03_genome_annotation/repeatmasker_softmasked//pilon_assembly_improvement.fasta.masked : chr # 290  "tig00000396_pilon" chrStart: 83361792
+/home/joed4996/Genome_analysis_local_rep/results/03_genome_annotation/repeatmasker_softmasked//pilon_assembly_improvement.fasta.masked : chr # 291  "tig00000397_pilon" chrStart: 83623936
+/home/joed4996/Genome_analysis_local_rep/results/03_genome_annotation/repeatmasker_softmasked//pilon_assembly_improvement.fasta.masked : chr # 292  "tig00000399_pilon" chrStart: 83886080
+/home/joed4996/Genome_analysis_local_rep/results/03_genome_annotation/repeatmasker_softmasked//pilon_assembly_improvement.fasta.masked : chr # 293  "tig00000400_pilon" chrStart: 84148224
+/home/joed4996/Genome_analysis_local_rep/results/03_genome_annotation/repeatmasker_softmasked//pilon_assembly_improvement.fasta.masked : chr # 294  "tig00000401_pilon" chrStart: 84410368
+/home/joed4996/Genome_analysis_local_rep/results/03_genome_annotation/repeatmasker_softmasked//pilon_assembly_improvement.fasta.masked : chr # 295  "tig00000402_pilon" chrStart: 84672512
+/home/joed4996/Genome_analysis_local_rep/results/03_genome_annotation/repeatmasker_softmasked//pilon_assembly_improvement.fasta.masked : chr # 296  "tig00000403_pilon" chrStart: 84934656
+/home/joed4996/Genome_analysis_local_rep/results/03_genome_annotation/repeatmasker_softmasked//pilon_assembly_improvement.fasta.masked : chr # 297  "tig00000404_pilon" chrStart: 85196800
+/home/joed4996/Genome_analysis_local_rep/results/03_genome_annotation/repeatmasker_softmasked//pilon_assembly_improvement.fasta.masked : chr # 298  "tig00000406_pilon" chrStart: 85458944
+/home/joed4996/Genome_analysis_local_rep/results/03_genome_annotation/repeatmasker_softmasked//pilon_assembly_improvement.fasta.masked : chr # 299  "tig00000407_pilon" chrStart: 85721088
+/home/joed4996/Genome_analysis_local_rep/results/03_genome_annotation/repeatmasker_softmasked//pilon_assembly_improvement.fasta.masked : chr # 300  "tig00000408_pilon" chrStart: 85983232
+/home/joed4996/Genome_analysis_local_rep/results/03_genome_annotation/repeatmasker_softmasked//pilon_assembly_improvement.fasta.masked : chr # 301  "tig00000409_pilon" chrStart: 86245376
+/home/joed4996/Genome_analysis_local_rep/results/03_genome_annotation/repeatmasker_softmasked//pilon_assembly_improvement.fasta.masked : chr # 302  "tig00000413_pilon" chrStart: 86507520
+/home/joed4996/Genome_analysis_local_rep/results/03_genome_annotation/repeatmasker_softmasked//pilon_assembly_improvement.fasta.masked : chr # 303  "tig00000415_pilon" chrStart: 86769664
+/home/joed4996/Genome_analysis_local_rep/results/03_genome_annotation/repeatmasker_softmasked//pilon_assembly_improvement.fasta.masked : chr # 304  "tig00000416_pilon" chrStart: 87031808
+/home/joed4996/Genome_analysis_local_rep/results/03_genome_annotation/repeatmasker_softmasked//pilon_assembly_improvement.fasta.masked : chr # 305  "tig00000417_pilon" chrStart: 87293952
+/home/joed4996/Genome_analysis_local_rep/results/03_genome_annotation/repeatmasker_softmasked//pilon_assembly_improvement.fasta.masked : chr # 306  "tig00000419_pilon" chrStart: 87556096
+/home/joed4996/Genome_analysis_local_rep/results/03_genome_annotation/repeatmasker_softmasked//pilon_assembly_improvement.fasta.masked : chr # 307  "tig00000421_pilon" chrStart: 87818240
+/home/joed4996/Genome_analysis_local_rep/results/03_genome_annotation/repeatmasker_softmasked//pilon_assembly_improvement.fasta.masked : chr # 308  "tig00000423_pilon" chrStart: 88080384
+/home/joed4996/Genome_analysis_local_rep/results/03_genome_annotation/repeatmasker_softmasked//pilon_assembly_improvement.fasta.masked : chr # 309  "tig00000424_pilon" chrStart: 88342528
+/home/joed4996/Genome_analysis_local_rep/results/03_genome_annotation/repeatmasker_softmasked//pilon_assembly_improvement.fasta.masked : chr # 310  "tig00000425_pilon" chrStart: 88604672
+/home/joed4996/Genome_analysis_local_rep/results/03_genome_annotation/repeatmasker_softmasked//pilon_assembly_improvement.fasta.masked : chr # 311  "tig00000426_pilon" chrStart: 88866816
+/home/joed4996/Genome_analysis_local_rep/results/03_genome_annotation/repeatmasker_softmasked//pilon_assembly_improvement.fasta.masked : chr # 312  "tig00000427_pilon" chrStart: 89128960
+/home/joed4996/Genome_analysis_local_rep/results/03_genome_annotation/repeatmasker_softmasked//pilon_assembly_improvement.fasta.masked : chr # 313  "tig00000430_pilon" chrStart: 89391104
+/home/joed4996/Genome_analysis_local_rep/results/03_genome_annotation/repeatmasker_softmasked//pilon_assembly_improvement.fasta.masked : chr # 314  "tig00000431_pilon" chrStart: 89653248
+/home/joed4996/Genome_analysis_local_rep/results/03_genome_annotation/repeatmasker_softmasked//pilon_assembly_improvement.fasta.masked : chr # 315  "tig00000432_pilon" chrStart: 89915392
+/home/joed4996/Genome_analysis_local_rep/results/03_genome_annotation/repeatmasker_softmasked//pilon_assembly_improvement.fasta.masked : chr # 316  "tig00000434_pilon" chrStart: 90177536
+/home/joed4996/Genome_analysis_local_rep/results/03_genome_annotation/repeatmasker_softmasked//pilon_assembly_improvement.fasta.masked : chr # 317  "tig00000435_pilon" chrStart: 90439680
+/home/joed4996/Genome_analysis_local_rep/results/03_genome_annotation/repeatmasker_softmasked//pilon_assembly_improvement.fasta.masked : chr # 318  "tig00000437_pilon" chrStart: 90701824
+/home/joed4996/Genome_analysis_local_rep/results/03_genome_annotation/repeatmasker_softmasked//pilon_assembly_improvement.fasta.masked : chr # 319  "tig00000438_pilon" chrStart: 90963968
+/home/joed4996/Genome_analysis_local_rep/results/03_genome_annotation/repeatmasker_softmasked//pilon_assembly_improvement.fasta.masked : chr # 320  "tig00000439_pilon" chrStart: 91226112
+/home/joed4996/Genome_analysis_local_rep/results/03_genome_annotation/repeatmasker_softmasked//pilon_assembly_improvement.fasta.masked : chr # 321  "tig00000440_pilon" chrStart: 91488256
+/home/joed4996/Genome_analysis_local_rep/results/03_genome_annotation/repeatmasker_softmasked//pilon_assembly_improvement.fasta.masked : chr # 322  "tig00000441_pilon" chrStart: 91750400
+/home/joed4996/Genome_analysis_local_rep/results/03_genome_annotation/repeatmasker_softmasked//pilon_assembly_improvement.fasta.masked : chr # 323  "tig00000442_pilon" chrStart: 92012544
+/home/joed4996/Genome_analysis_local_rep/results/03_genome_annotation/repeatmasker_softmasked//pilon_assembly_improvement.fasta.masked : chr # 324  "tig00000444_pilon" chrStart: 92274688
+/home/joed4996/Genome_analysis_local_rep/results/03_genome_annotation/repeatmasker_softmasked//pilon_assembly_improvement.fasta.masked : chr # 325  "tig00000445_pilon" chrStart: 92536832
+/home/joed4996/Genome_analysis_local_rep/results/03_genome_annotation/repeatmasker_softmasked//pilon_assembly_improvement.fasta.masked : chr # 326  "tig00000446_pilon" chrStart: 92798976
+/home/joed4996/Genome_analysis_local_rep/results/03_genome_annotation/repeatmasker_softmasked//pilon_assembly_improvement.fasta.masked : chr # 327  "tig00000447_pilon" chrStart: 93061120
+/home/joed4996/Genome_analysis_local_rep/results/03_genome_annotation/repeatmasker_softmasked//pilon_assembly_improvement.fasta.masked : chr # 328  "tig00000448_pilon" chrStart: 93323264
+/home/joed4996/Genome_analysis_local_rep/results/03_genome_annotation/repeatmasker_softmasked//pilon_assembly_improvement.fasta.masked : chr # 329  "tig00000449_pilon" chrStart: 93585408
+/home/joed4996/Genome_analysis_local_rep/results/03_genome_annotation/repeatmasker_softmasked//pilon_assembly_improvement.fasta.masked : chr # 330  "tig00000450_pilon" chrStart: 93847552
+/home/joed4996/Genome_analysis_local_rep/results/03_genome_annotation/repeatmasker_softmasked//pilon_assembly_improvement.fasta.masked : chr # 331  "tig00000452_pilon" chrStart: 94109696
+/home/joed4996/Genome_analysis_local_rep/results/03_genome_annotation/repeatmasker_softmasked//pilon_assembly_improvement.fasta.masked : chr # 332  "tig00000453_pilon" chrStart: 94371840
+/home/joed4996/Genome_analysis_local_rep/results/03_genome_annotation/repeatmasker_softmasked//pilon_assembly_improvement.fasta.masked : chr # 333  "tig00000454_pilon" chrStart: 94633984
+/home/joed4996/Genome_analysis_local_rep/results/03_genome_annotation/repeatmasker_softmasked//pilon_assembly_improvement.fasta.masked : chr # 334  "tig00000457_pilon" chrStart: 94896128
+/home/joed4996/Genome_analysis_local_rep/results/03_genome_annotation/repeatmasker_softmasked//pilon_assembly_improvement.fasta.masked : chr # 335  "tig00000458_pilon" chrStart: 95158272
+/home/joed4996/Genome_analysis_local_rep/results/03_genome_annotation/repeatmasker_softmasked//pilon_assembly_improvement.fasta.masked : chr # 336  "tig00000461_pilon" chrStart: 95420416
+/home/joed4996/Genome_analysis_local_rep/results/03_genome_annotation/repeatmasker_softmasked//pilon_assembly_improvement.fasta.masked : chr # 337  "tig00000463_pilon" chrStart: 95682560
+/home/joed4996/Genome_analysis_local_rep/results/03_genome_annotation/repeatmasker_softmasked//pilon_assembly_improvement.fasta.masked : chr # 338  "tig00000464_pilon" chrStart: 95944704
+/home/joed4996/Genome_analysis_local_rep/results/03_genome_annotation/repeatmasker_softmasked//pilon_assembly_improvement.fasta.masked : chr # 339  "tig00000465_pilon" chrStart: 96206848
+/home/joed4996/Genome_analysis_local_rep/results/03_genome_annotation/repeatmasker_softmasked//pilon_assembly_improvement.fasta.masked : chr # 340  "tig00000466_pilon" chrStart: 96468992
+/home/joed4996/Genome_analysis_local_rep/results/03_genome_annotation/repeatmasker_softmasked//pilon_assembly_improvement.fasta.masked : chr # 341  "tig00000468_pilon" chrStart: 96731136
+/home/joed4996/Genome_analysis_local_rep/results/03_genome_annotation/repeatmasker_softmasked//pilon_assembly_improvement.fasta.masked : chr # 342  "tig00000472_pilon" chrStart: 96993280
+/home/joed4996/Genome_analysis_local_rep/results/03_genome_annotation/repeatmasker_softmasked//pilon_assembly_improvement.fasta.masked : chr # 343  "tig00000473_pilon" chrStart: 97255424
+/home/joed4996/Genome_analysis_local_rep/results/03_genome_annotation/repeatmasker_softmasked//pilon_assembly_improvement.fasta.masked : chr # 344  "tig00000474_pilon" chrStart: 97517568
+/home/joed4996/Genome_analysis_local_rep/results/03_genome_annotation/repeatmasker_softmasked//pilon_assembly_improvement.fasta.masked : chr # 345  "tig00000475_pilon" chrStart: 97779712
+/home/joed4996/Genome_analysis_local_rep/results/03_genome_annotation/repeatmasker_softmasked//pilon_assembly_improvement.fasta.masked : chr # 346  "tig00000476_pilon" chrStart: 98041856
+/home/joed4996/Genome_analysis_local_rep/results/03_genome_annotation/repeatmasker_softmasked//pilon_assembly_improvement.fasta.masked : chr # 347  "tig00000477_pilon" chrStart: 98304000
+/home/joed4996/Genome_analysis_local_rep/results/03_genome_annotation/repeatmasker_softmasked//pilon_assembly_improvement.fasta.masked : chr # 348  "tig00000478_pilon" chrStart: 98566144
+/home/joed4996/Genome_analysis_local_rep/results/03_genome_annotation/repeatmasker_softmasked//pilon_assembly_improvement.fasta.masked : chr # 349  "tig00000480_pilon" chrStart: 98828288
+/home/joed4996/Genome_analysis_local_rep/results/03_genome_annotation/repeatmasker_softmasked//pilon_assembly_improvement.fasta.masked : chr # 350  "tig00000482_pilon" chrStart: 99090432
+/home/joed4996/Genome_analysis_local_rep/results/03_genome_annotation/repeatmasker_softmasked//pilon_assembly_improvement.fasta.masked : chr # 351  "tig00000483_pilon" chrStart: 99352576
+/home/joed4996/Genome_analysis_local_rep/results/03_genome_annotation/repeatmasker_softmasked//pilon_assembly_improvement.fasta.masked : chr # 352  "tig00000485_pilon" chrStart: 99614720
+/home/joed4996/Genome_analysis_local_rep/results/03_genome_annotation/repeatmasker_softmasked//pilon_assembly_improvement.fasta.masked : chr # 353  "tig00000487_pilon" chrStart: 99876864
+/home/joed4996/Genome_analysis_local_rep/results/03_genome_annotation/repeatmasker_softmasked//pilon_assembly_improvement.fasta.masked : chr # 354  "tig00000489_pilon" chrStart: 100139008
+/home/joed4996/Genome_analysis_local_rep/results/03_genome_annotation/repeatmasker_softmasked//pilon_assembly_improvement.fasta.masked : chr # 355  "tig00000490_pilon" chrStart: 100401152
+/home/joed4996/Genome_analysis_local_rep/results/03_genome_annotation/repeatmasker_softmasked//pilon_assembly_improvement.fasta.masked : chr # 356  "tig00000491_pilon" chrStart: 100663296
+/home/joed4996/Genome_analysis_local_rep/results/03_genome_annotation/repeatmasker_softmasked//pilon_assembly_improvement.fasta.masked : chr # 357  "tig00000495_pilon" chrStart: 100925440
+/home/joed4996/Genome_analysis_local_rep/results/03_genome_annotation/repeatmasker_softmasked//pilon_assembly_improvement.fasta.masked : chr # 358  "tig00000498_pilon" chrStart: 101187584
+/home/joed4996/Genome_analysis_local_rep/results/03_genome_annotation/repeatmasker_softmasked//pilon_assembly_improvement.fasta.masked : chr # 359  "tig00000501_pilon" chrStart: 101449728
+/home/joed4996/Genome_analysis_local_rep/results/03_genome_annotation/repeatmasker_softmasked//pilon_assembly_improvement.fasta.masked : chr # 360  "tig00000504_pilon" chrStart: 101711872
+/home/joed4996/Genome_analysis_local_rep/results/03_genome_annotation/repeatmasker_softmasked//pilon_assembly_improvement.fasta.masked : chr # 361  "tig00000505_pilon" chrStart: 101974016
+/home/joed4996/Genome_analysis_local_rep/results/03_genome_annotation/repeatmasker_softmasked//pilon_assembly_improvement.fasta.masked : chr # 362  "tig00000507_pilon" chrStart: 102236160
+/home/joed4996/Genome_analysis_local_rep/results/03_genome_annotation/repeatmasker_softmasked//pilon_assembly_improvement.fasta.masked : chr # 363  "tig00000508_pilon" chrStart: 102498304
+/home/joed4996/Genome_analysis_local_rep/results/03_genome_annotation/repeatmasker_softmasked//pilon_assembly_improvement.fasta.masked : chr # 364  "tig00000510_pilon" chrStart: 102760448
+/home/joed4996/Genome_analysis_local_rep/results/03_genome_annotation/repeatmasker_softmasked//pilon_assembly_improvement.fasta.masked : chr # 365  "tig00000511_pilon" chrStart: 103022592
+/home/joed4996/Genome_analysis_local_rep/results/03_genome_annotation/repeatmasker_softmasked//pilon_assembly_improvement.fasta.masked : chr # 366  "tig00000512_pilon" chrStart: 103284736
+/home/joed4996/Genome_analysis_local_rep/results/03_genome_annotation/repeatmasker_softmasked//pilon_assembly_improvement.fasta.masked : chr # 367  "tig00000513_pilon" chrStart: 103546880
+/home/joed4996/Genome_analysis_local_rep/results/03_genome_annotation/repeatmasker_softmasked//pilon_assembly_improvement.fasta.masked : chr # 368  "tig00000515_pilon" chrStart: 103809024
+/home/joed4996/Genome_analysis_local_rep/results/03_genome_annotation/repeatmasker_softmasked//pilon_assembly_improvement.fasta.masked : chr # 369  "tig00000516_pilon" chrStart: 104071168
+/home/joed4996/Genome_analysis_local_rep/results/03_genome_annotation/repeatmasker_softmasked//pilon_assembly_improvement.fasta.masked : chr # 370  "tig00000518_pilon" chrStart: 104333312
+/home/joed4996/Genome_analysis_local_rep/results/03_genome_annotation/repeatmasker_softmasked//pilon_assembly_improvement.fasta.masked : chr # 371  "tig00000519_pilon" chrStart: 104595456
+/home/joed4996/Genome_analysis_local_rep/results/03_genome_annotation/repeatmasker_softmasked//pilon_assembly_improvement.fasta.masked : chr # 372  "tig00000520_pilon" chrStart: 104857600
+/home/joed4996/Genome_analysis_local_rep/results/03_genome_annotation/repeatmasker_softmasked//pilon_assembly_improvement.fasta.masked : chr # 373  "tig00000521_pilon" chrStart: 105119744
+/home/joed4996/Genome_analysis_local_rep/results/03_genome_annotation/repeatmasker_softmasked//pilon_assembly_improvement.fasta.masked : chr # 374  "tig00000522_pilon" chrStart: 105381888
+/home/joed4996/Genome_analysis_local_rep/results/03_genome_annotation/repeatmasker_softmasked//pilon_assembly_improvement.fasta.masked : chr # 375  "tig00000524_pilon" chrStart: 105644032
+/home/joed4996/Genome_analysis_local_rep/results/03_genome_annotation/repeatmasker_softmasked//pilon_assembly_improvement.fasta.masked : chr # 376  "tig00000526_pilon" chrStart: 105906176
+/home/joed4996/Genome_analysis_local_rep/results/03_genome_annotation/repeatmasker_softmasked//pilon_assembly_improvement.fasta.masked : chr # 377  "tig00000527_pilon" chrStart: 106168320
+/home/joed4996/Genome_analysis_local_rep/results/03_genome_annotation/repeatmasker_softmasked//pilon_assembly_improvement.fasta.masked : chr # 378  "tig00000528_pilon" chrStart: 106430464
+/home/joed4996/Genome_analysis_local_rep/results/03_genome_annotation/repeatmasker_softmasked//pilon_assembly_improvement.fasta.masked : chr # 379  "tig00000530_pilon" chrStart: 106692608
+/home/joed4996/Genome_analysis_local_rep/results/03_genome_annotation/repeatmasker_softmasked//pilon_assembly_improvement.fasta.masked : chr # 380  "tig00000531_pilon" chrStart: 106954752
+/home/joed4996/Genome_analysis_local_rep/results/03_genome_annotation/repeatmasker_softmasked//pilon_assembly_improvement.fasta.masked : chr # 381  "tig00000532_pilon" chrStart: 107216896
+/home/joed4996/Genome_analysis_local_rep/results/03_genome_annotation/repeatmasker_softmasked//pilon_assembly_improvement.fasta.masked : chr # 382  "tig00000533_pilon" chrStart: 107479040
+/home/joed4996/Genome_analysis_local_rep/results/03_genome_annotation/repeatmasker_softmasked//pilon_assembly_improvement.fasta.masked : chr # 383  "tig00000534_pilon" chrStart: 107741184
+/home/joed4996/Genome_analysis_local_rep/results/03_genome_annotation/repeatmasker_softmasked//pilon_assembly_improvement.fasta.masked : chr # 384  "tig00000536_pilon" chrStart: 108003328
+/home/joed4996/Genome_analysis_local_rep/results/03_genome_annotation/repeatmasker_softmasked//pilon_assembly_improvement.fasta.masked : chr # 385  "tig00000537_pilon" chrStart: 108265472
+/home/joed4996/Genome_analysis_local_rep/results/03_genome_annotation/repeatmasker_softmasked//pilon_assembly_improvement.fasta.masked : chr # 386  "tig00000539_pilon" chrStart: 108527616
+/home/joed4996/Genome_analysis_local_rep/results/03_genome_annotation/repeatmasker_softmasked//pilon_assembly_improvement.fasta.masked : chr # 387  "tig00000540_pilon" chrStart: 108789760
+/home/joed4996/Genome_analysis_local_rep/results/03_genome_annotation/repeatmasker_softmasked//pilon_assembly_improvement.fasta.masked : chr # 388  "tig00000541_pilon" chrStart: 109051904
+/home/joed4996/Genome_analysis_local_rep/results/03_genome_annotation/repeatmasker_softmasked//pilon_assembly_improvement.fasta.masked : chr # 389  "tig00000542_pilon" chrStart: 109314048
+/home/joed4996/Genome_analysis_local_rep/results/03_genome_annotation/repeatmasker_softmasked//pilon_assembly_improvement.fasta.masked : chr # 390  "tig00000544_pilon" chrStart: 109576192
+/home/joed4996/Genome_analysis_local_rep/results/03_genome_annotation/repeatmasker_softmasked//pilon_assembly_improvement.fasta.masked : chr # 391  "tig00000547_pilon" chrStart: 109838336
+/home/joed4996/Genome_analysis_local_rep/results/03_genome_annotation/repeatmasker_softmasked//pilon_assembly_improvement.fasta.masked : chr # 392  "tig00000549_pilon" chrStart: 110100480
+/home/joed4996/Genome_analysis_local_rep/results/03_genome_annotation/repeatmasker_softmasked//pilon_assembly_improvement.fasta.masked : chr # 393  "tig00000551_pilon" chrStart: 110362624
+/home/joed4996/Genome_analysis_local_rep/results/03_genome_annotation/repeatmasker_softmasked//pilon_assembly_improvement.fasta.masked : chr # 394  "tig00000552_pilon" chrStart: 110624768
+/home/joed4996/Genome_analysis_local_rep/results/03_genome_annotation/repeatmasker_softmasked//pilon_assembly_improvement.fasta.masked : chr # 395  "tig00000554_pilon" chrStart: 110886912
+/home/joed4996/Genome_analysis_local_rep/results/03_genome_annotation/repeatmasker_softmasked//pilon_assembly_improvement.fasta.masked : chr # 396  "tig00000555_pilon" chrStart: 111149056
+/home/joed4996/Genome_analysis_local_rep/results/03_genome_annotation/repeatmasker_softmasked//pilon_assembly_improvement.fasta.masked : chr # 397  "tig00000557_pilon" chrStart: 111411200
+/home/joed4996/Genome_analysis_local_rep/results/03_genome_annotation/repeatmasker_softmasked//pilon_assembly_improvement.fasta.masked : chr # 398  "tig00000558_pilon" chrStart: 111673344
+/home/joed4996/Genome_analysis_local_rep/results/03_genome_annotation/repeatmasker_softmasked//pilon_assembly_improvement.fasta.masked : chr # 399  "tig00000559_pilon" chrStart: 111935488
+/home/joed4996/Genome_analysis_local_rep/results/03_genome_annotation/repeatmasker_softmasked//pilon_assembly_improvement.fasta.masked : chr # 400  "tig00000560_pilon" chrStart: 112197632
+/home/joed4996/Genome_analysis_local_rep/results/03_genome_annotation/repeatmasker_softmasked//pilon_assembly_improvement.fasta.masked : chr # 401  "tig00000562_pilon" chrStart: 112459776
+/home/joed4996/Genome_analysis_local_rep/results/03_genome_annotation/repeatmasker_softmasked//pilon_assembly_improvement.fasta.masked : chr # 402  "tig00000565_pilon" chrStart: 112721920
+/home/joed4996/Genome_analysis_local_rep/results/03_genome_annotation/repeatmasker_softmasked//pilon_assembly_improvement.fasta.masked : chr # 403  "tig00000567_pilon" chrStart: 112984064
+/home/joed4996/Genome_analysis_local_rep/results/03_genome_annotation/repeatmasker_softmasked//pilon_assembly_improvement.fasta.masked : chr # 404  "tig00000569_pilon" chrStart: 113246208
+/home/joed4996/Genome_analysis_local_rep/results/03_genome_annotation/repeatmasker_softmasked//pilon_assembly_improvement.fasta.masked : chr # 405  "tig00000571_pilon" chrStart: 113508352
+/home/joed4996/Genome_analysis_local_rep/results/03_genome_annotation/repeatmasker_softmasked//pilon_assembly_improvement.fasta.masked : chr # 406  "tig00000573_pilon" chrStart: 113770496
+/home/joed4996/Genome_analysis_local_rep/results/03_genome_annotation/repeatmasker_softmasked//pilon_assembly_improvement.fasta.masked : chr # 407  "tig00000574_pilon" chrStart: 114032640
+/home/joed4996/Genome_analysis_local_rep/results/03_genome_annotation/repeatmasker_softmasked//pilon_assembly_improvement.fasta.masked : chr # 408  "tig00000576_pilon" chrStart: 114294784
+/home/joed4996/Genome_analysis_local_rep/results/03_genome_annotation/repeatmasker_softmasked//pilon_assembly_improvement.fasta.masked : chr # 409  "tig00000579_pilon" chrStart: 114556928
+/home/joed4996/Genome_analysis_local_rep/results/03_genome_annotation/repeatmasker_softmasked//pilon_assembly_improvement.fasta.masked : chr # 410  "tig00000580_pilon" chrStart: 114819072
+/home/joed4996/Genome_analysis_local_rep/results/03_genome_annotation/repeatmasker_softmasked//pilon_assembly_improvement.fasta.masked : chr # 411  "tig00000581_pilon" chrStart: 115081216
+/home/joed4996/Genome_analysis_local_rep/results/03_genome_annotation/repeatmasker_softmasked//pilon_assembly_improvement.fasta.masked : chr # 412  "tig00000582_pilon" chrStart: 115343360
+/home/joed4996/Genome_analysis_local_rep/results/03_genome_annotation/repeatmasker_softmasked//pilon_assembly_improvement.fasta.masked : chr # 413  "tig00000583_pilon" chrStart: 115605504
+/home/joed4996/Genome_analysis_local_rep/results/03_genome_annotation/repeatmasker_softmasked//pilon_assembly_improvement.fasta.masked : chr # 414  "tig00000585_pilon" chrStart: 115867648
+/home/joed4996/Genome_analysis_local_rep/results/03_genome_annotation/repeatmasker_softmasked//pilon_assembly_improvement.fasta.masked : chr # 415  "tig00000587_pilon" chrStart: 116129792
+/home/joed4996/Genome_analysis_local_rep/results/03_genome_annotation/repeatmasker_softmasked//pilon_assembly_improvement.fasta.masked : chr # 416  "tig00000588_pilon" chrStart: 116391936
+/home/joed4996/Genome_analysis_local_rep/results/03_genome_annotation/repeatmasker_softmasked//pilon_assembly_improvement.fasta.masked : chr # 417  "tig00000590_pilon" chrStart: 116654080
+/home/joed4996/Genome_analysis_local_rep/results/03_genome_annotation/repeatmasker_softmasked//pilon_assembly_improvement.fasta.masked : chr # 418  "tig00000591_pilon" chrStart: 116916224
+/home/joed4996/Genome_analysis_local_rep/results/03_genome_annotation/repeatmasker_softmasked//pilon_assembly_improvement.fasta.masked : chr # 419  "tig00000593_pilon" chrStart: 117178368
+/home/joed4996/Genome_analysis_local_rep/results/03_genome_annotation/repeatmasker_softmasked//pilon_assembly_improvement.fasta.masked : chr # 420  "tig00000595_pilon" chrStart: 117440512
+/home/joed4996/Genome_analysis_local_rep/results/03_genome_annotation/repeatmasker_softmasked//pilon_assembly_improvement.fasta.masked : chr # 421  "tig00000596_pilon" chrStart: 117702656
+/home/joed4996/Genome_analysis_local_rep/results/03_genome_annotation/repeatmasker_softmasked//pilon_assembly_improvement.fasta.masked : chr # 422  "tig00000597_pilon" chrStart: 117964800
+/home/joed4996/Genome_analysis_local_rep/results/03_genome_annotation/repeatmasker_softmasked//pilon_assembly_improvement.fasta.masked : chr # 423  "tig00000598_pilon" chrStart: 118226944
+/home/joed4996/Genome_analysis_local_rep/results/03_genome_annotation/repeatmasker_softmasked//pilon_assembly_improvement.fasta.masked : chr # 424  "tig00000602_pilon" chrStart: 118489088
+/home/joed4996/Genome_analysis_local_rep/results/03_genome_annotation/repeatmasker_softmasked//pilon_assembly_improvement.fasta.masked : chr # 425  "tig00000606_pilon" chrStart: 118751232
+/home/joed4996/Genome_analysis_local_rep/results/03_genome_annotation/repeatmasker_softmasked//pilon_assembly_improvement.fasta.masked : chr # 426  "tig00000607_pilon" chrStart: 119013376
+/home/joed4996/Genome_analysis_local_rep/results/03_genome_annotation/repeatmasker_softmasked//pilon_assembly_improvement.fasta.masked : chr # 427  "tig00000609_pilon" chrStart: 119275520
+/home/joed4996/Genome_analysis_local_rep/results/03_genome_annotation/repeatmasker_softmasked//pilon_assembly_improvement.fasta.masked : chr # 428  "tig00000611_pilon" chrStart: 119537664
+/home/joed4996/Genome_analysis_local_rep/results/03_genome_annotation/repeatmasker_softmasked//pilon_assembly_improvement.fasta.masked : chr # 429  "tig00000613_pilon" chrStart: 119799808
+/home/joed4996/Genome_analysis_local_rep/results/03_genome_annotation/repeatmasker_softmasked//pilon_assembly_improvement.fasta.masked : chr # 430  "tig00000615_pilon" chrStart: 120061952
+/home/joed4996/Genome_analysis_local_rep/results/03_genome_annotation/repeatmasker_softmasked//pilon_assembly_improvement.fasta.masked : chr # 431  "tig00000616_pilon" chrStart: 120324096
+/home/joed4996/Genome_analysis_local_rep/results/03_genome_annotation/repeatmasker_softmasked//pilon_assembly_improvement.fasta.masked : chr # 432  "tig00000618_pilon" chrStart: 120586240
+/home/joed4996/Genome_analysis_local_rep/results/03_genome_annotation/repeatmasker_softmasked//pilon_assembly_improvement.fasta.masked : chr # 433  "tig00000619_pilon" chrStart: 120848384
+/home/joed4996/Genome_analysis_local_rep/results/03_genome_annotation/repeatmasker_softmasked//pilon_assembly_improvement.fasta.masked : chr # 434  "tig00000621_pilon" chrStart: 121110528
+/home/joed4996/Genome_analysis_local_rep/results/03_genome_annotation/repeatmasker_softmasked//pilon_assembly_improvement.fasta.masked : chr # 435  "tig00000622_pilon" chrStart: 121372672
+/home/joed4996/Genome_analysis_local_rep/results/03_genome_annotation/repeatmasker_softmasked//pilon_assembly_improvement.fasta.masked : chr # 436  "tig00000624_pilon" chrStart: 121634816
+/home/joed4996/Genome_analysis_local_rep/results/03_genome_annotation/repeatmasker_softmasked//pilon_assembly_improvement.fasta.masked : chr # 437  "tig00000625_pilon" chrStart: 121896960
+/home/joed4996/Genome_analysis_local_rep/results/03_genome_annotation/repeatmasker_softmasked//pilon_assembly_improvement.fasta.masked : chr # 438  "tig00000626_pilon" chrStart: 122159104
+/home/joed4996/Genome_analysis_local_rep/results/03_genome_annotation/repeatmasker_softmasked//pilon_assembly_improvement.fasta.masked : chr # 439  "tig00000627_pilon" chrStart: 122421248
+/home/joed4996/Genome_analysis_local_rep/results/03_genome_annotation/repeatmasker_softmasked//pilon_assembly_improvement.fasta.masked : chr # 440  "tig00000628_pilon" chrStart: 122683392
+/home/joed4996/Genome_analysis_local_rep/results/03_genome_annotation/repeatmasker_softmasked//pilon_assembly_improvement.fasta.masked : chr # 441  "tig00000629_pilon" chrStart: 122945536
+/home/joed4996/Genome_analysis_local_rep/results/03_genome_annotation/repeatmasker_softmasked//pilon_assembly_improvement.fasta.masked : chr # 442  "tig00000630_pilon" chrStart: 123207680
+/home/joed4996/Genome_analysis_local_rep/results/03_genome_annotation/repeatmasker_softmasked//pilon_assembly_improvement.fasta.masked : chr # 443  "tig00000632_pilon" chrStart: 123469824
+/home/joed4996/Genome_analysis_local_rep/results/03_genome_annotation/repeatmasker_softmasked//pilon_assembly_improvement.fasta.masked : chr # 444  "tig00000634_pilon" chrStart: 123731968
+/home/joed4996/Genome_analysis_local_rep/results/03_genome_annotation/repeatmasker_softmasked//pilon_assembly_improvement.fasta.masked : chr # 445  "tig00000635_pilon" chrStart: 123994112
+/home/joed4996/Genome_analysis_local_rep/results/03_genome_annotation/repeatmasker_softmasked//pilon_assembly_improvement.fasta.masked : chr # 446  "tig00000637_pilon" chrStart: 124256256
+/home/joed4996/Genome_analysis_local_rep/results/03_genome_annotation/repeatmasker_softmasked//pilon_assembly_improvement.fasta.masked : chr # 447  "tig00000638_pilon" chrStart: 124518400
+/home/joed4996/Genome_analysis_local_rep/results/03_genome_annotation/repeatmasker_softmasked//pilon_assembly_improvement.fasta.masked : chr # 448  "tig00000639_pilon" chrStart: 124780544
+/home/joed4996/Genome_analysis_local_rep/results/03_genome_annotation/repeatmasker_softmasked//pilon_assembly_improvement.fasta.masked : chr # 449  "tig00000640_pilon" chrStart: 125042688
+/home/joed4996/Genome_analysis_local_rep/results/03_genome_annotation/repeatmasker_softmasked//pilon_assembly_improvement.fasta.masked : chr # 450  "tig00000642_pilon" chrStart: 125304832
+/home/joed4996/Genome_analysis_local_rep/results/03_genome_annotation/repeatmasker_softmasked//pilon_assembly_improvement.fasta.masked : chr # 451  "tig00000645_pilon" chrStart: 125566976
+/home/joed4996/Genome_analysis_local_rep/results/03_genome_annotation/repeatmasker_softmasked//pilon_assembly_improvement.fasta.masked : chr # 452  "tig00000646_pilon" chrStart: 125829120
+/home/joed4996/Genome_analysis_local_rep/results/03_genome_annotation/repeatmasker_softmasked//pilon_assembly_improvement.fasta.masked : chr # 453  "tig00000647_pilon" chrStart: 126091264
+/home/joed4996/Genome_analysis_local_rep/results/03_genome_annotation/repeatmasker_softmasked//pilon_assembly_improvement.fasta.masked : chr # 454  "tig00000648_pilon" chrStart: 126353408
+/home/joed4996/Genome_analysis_local_rep/results/03_genome_annotation/repeatmasker_softmasked//pilon_assembly_improvement.fasta.masked : chr # 455  "tig00000649_pilon" chrStart: 126615552
+/home/joed4996/Genome_analysis_local_rep/results/03_genome_annotation/repeatmasker_softmasked//pilon_assembly_improvement.fasta.masked : chr # 456  "tig00000650_pilon" chrStart: 126877696
+/home/joed4996/Genome_analysis_local_rep/results/03_genome_annotation/repeatmasker_softmasked//pilon_assembly_improvement.fasta.masked : chr # 457  "tig00000651_pilon" chrStart: 127139840
+/home/joed4996/Genome_analysis_local_rep/results/03_genome_annotation/repeatmasker_softmasked//pilon_assembly_improvement.fasta.masked : chr # 458  "tig00000652_pilon" chrStart: 127401984
+/home/joed4996/Genome_analysis_local_rep/results/03_genome_annotation/repeatmasker_softmasked//pilon_assembly_improvement.fasta.masked : chr # 459  "tig00000656_pilon" chrStart: 127664128
+/home/joed4996/Genome_analysis_local_rep/results/03_genome_annotation/repeatmasker_softmasked//pilon_assembly_improvement.fasta.masked : chr # 460  "tig00000657_pilon" chrStart: 127926272
+/home/joed4996/Genome_analysis_local_rep/results/03_genome_annotation/repeatmasker_softmasked//pilon_assembly_improvement.fasta.masked : chr # 461  "tig00000658_pilon" chrStart: 128188416
+/home/joed4996/Genome_analysis_local_rep/results/03_genome_annotation/repeatmasker_softmasked//pilon_assembly_improvement.fasta.masked : chr # 462  "tig00000659_pilon" chrStart: 128450560
+/home/joed4996/Genome_analysis_local_rep/results/03_genome_annotation/repeatmasker_softmasked//pilon_assembly_improvement.fasta.masked : chr # 463  "tig00000660_pilon" chrStart: 128712704
+/home/joed4996/Genome_analysis_local_rep/results/03_genome_annotation/repeatmasker_softmasked//pilon_assembly_improvement.fasta.masked : chr # 464  "tig00000661_pilon" chrStart: 128974848
+/home/joed4996/Genome_analysis_local_rep/results/03_genome_annotation/repeatmasker_softmasked//pilon_assembly_improvement.fasta.masked : chr # 465  "tig00000662_pilon" chrStart: 129236992
+/home/joed4996/Genome_analysis_local_rep/results/03_genome_annotation/repeatmasker_softmasked//pilon_assembly_improvement.fasta.masked : chr # 466  "tig00000664_pilon" chrStart: 129499136
+/home/joed4996/Genome_analysis_local_rep/results/03_genome_annotation/repeatmasker_softmasked//pilon_assembly_improvement.fasta.masked : chr # 467  "tig00000665_pilon" chrStart: 129761280
+/home/joed4996/Genome_analysis_local_rep/results/03_genome_annotation/repeatmasker_softmasked//pilon_assembly_improvement.fasta.masked : chr # 468  "tig00000667_pilon" chrStart: 130023424
+/home/joed4996/Genome_analysis_local_rep/results/03_genome_annotation/repeatmasker_softmasked//pilon_assembly_improvement.fasta.masked : chr # 469  "tig00000670_pilon" chrStart: 130285568
+/home/joed4996/Genome_analysis_local_rep/results/03_genome_annotation/repeatmasker_softmasked//pilon_assembly_improvement.fasta.masked : chr # 470  "tig00000671_pilon" chrStart: 130547712
+/home/joed4996/Genome_analysis_local_rep/results/03_genome_annotation/repeatmasker_softmasked//pilon_assembly_improvement.fasta.masked : chr # 471  "tig00000672_pilon" chrStart: 130809856
+/home/joed4996/Genome_analysis_local_rep/results/03_genome_annotation/repeatmasker_softmasked//pilon_assembly_improvement.fasta.masked : chr # 472  "tig00000673_pilon" chrStart: 131072000
+/home/joed4996/Genome_analysis_local_rep/results/03_genome_annotation/repeatmasker_softmasked//pilon_assembly_improvement.fasta.masked : chr # 473  "tig00000674_pilon" chrStart: 131334144
+/home/joed4996/Genome_analysis_local_rep/results/03_genome_annotation/repeatmasker_softmasked//pilon_assembly_improvement.fasta.masked : chr # 474  "tig00000675_pilon" chrStart: 131596288
+/home/joed4996/Genome_analysis_local_rep/results/03_genome_annotation/repeatmasker_softmasked//pilon_assembly_improvement.fasta.masked : chr # 475  "tig00000676_pilon" chrStart: 131858432
+/home/joed4996/Genome_analysis_local_rep/results/03_genome_annotation/repeatmasker_softmasked//pilon_assembly_improvement.fasta.masked : chr # 476  "tig00000678_pilon" chrStart: 132120576
+/home/joed4996/Genome_analysis_local_rep/results/03_genome_annotation/repeatmasker_softmasked//pilon_assembly_improvement.fasta.masked : chr # 477  "tig00000679_pilon" chrStart: 132382720
+/home/joed4996/Genome_analysis_local_rep/results/03_genome_annotation/repeatmasker_softmasked//pilon_assembly_improvement.fasta.masked : chr # 478  "tig00000680_pilon" chrStart: 132644864
+/home/joed4996/Genome_analysis_local_rep/results/03_genome_annotation/repeatmasker_softmasked//pilon_assembly_improvement.fasta.masked : chr # 479  "tig00000681_pilon" chrStart: 132907008
+/home/joed4996/Genome_analysis_local_rep/results/03_genome_annotation/repeatmasker_softmasked//pilon_assembly_improvement.fasta.masked : chr # 480  "tig00000682_pilon" chrStart: 133169152
+/home/joed4996/Genome_analysis_local_rep/results/03_genome_annotation/repeatmasker_softmasked//pilon_assembly_improvement.fasta.masked : chr # 481  "tig00000683_pilon" chrStart: 133431296
+/home/joed4996/Genome_analysis_local_rep/results/03_genome_annotation/repeatmasker_softmasked//pilon_assembly_improvement.fasta.masked : chr # 482  "tig00000687_pilon" chrStart: 133693440
+/home/joed4996/Genome_analysis_local_rep/results/03_genome_annotation/repeatmasker_softmasked//pilon_assembly_improvement.fasta.masked : chr # 483  "tig00000688_pilon" chrStart: 133955584
+/home/joed4996/Genome_analysis_local_rep/results/03_genome_annotation/repeatmasker_softmasked//pilon_assembly_improvement.fasta.masked : chr # 484  "tig00000689_pilon" chrStart: 134217728
+/home/joed4996/Genome_analysis_local_rep/results/03_genome_annotation/repeatmasker_softmasked//pilon_assembly_improvement.fasta.masked : chr # 485  "tig00000692_pilon" chrStart: 134479872
+/home/joed4996/Genome_analysis_local_rep/results/03_genome_annotation/repeatmasker_softmasked//pilon_assembly_improvement.fasta.masked : chr # 486  "tig00000693_pilon" chrStart: 134742016
+/home/joed4996/Genome_analysis_local_rep/results/03_genome_annotation/repeatmasker_softmasked//pilon_assembly_improvement.fasta.masked : chr # 487  "tig00000694_pilon" chrStart: 135004160
+/home/joed4996/Genome_analysis_local_rep/results/03_genome_annotation/repeatmasker_softmasked//pilon_assembly_improvement.fasta.masked : chr # 488  "tig00000695_pilon" chrStart: 135266304
+/home/joed4996/Genome_analysis_local_rep/results/03_genome_annotation/repeatmasker_softmasked//pilon_assembly_improvement.fasta.masked : chr # 489  "tig00000696_pilon" chrStart: 135528448
+/home/joed4996/Genome_analysis_local_rep/results/03_genome_annotation/repeatmasker_softmasked//pilon_assembly_improvement.fasta.masked : chr # 490  "tig00000698_pilon" chrStart: 135790592
+/home/joed4996/Genome_analysis_local_rep/results/03_genome_annotation/repeatmasker_softmasked//pilon_assembly_improvement.fasta.masked : chr # 491  "tig00000699_pilon" chrStart: 136052736
+/home/joed4996/Genome_analysis_local_rep/results/03_genome_annotation/repeatmasker_softmasked//pilon_assembly_improvement.fasta.masked : chr # 492  "tig00000701_pilon" chrStart: 136314880
+/home/joed4996/Genome_analysis_local_rep/results/03_genome_annotation/repeatmasker_softmasked//pilon_assembly_improvement.fasta.masked : chr # 493  "tig00000702_pilon" chrStart: 136577024
+/home/joed4996/Genome_analysis_local_rep/results/03_genome_annotation/repeatmasker_softmasked//pilon_assembly_improvement.fasta.masked : chr # 494  "tig00000703_pilon" chrStart: 136839168
+/home/joed4996/Genome_analysis_local_rep/results/03_genome_annotation/repeatmasker_softmasked//pilon_assembly_improvement.fasta.masked : chr # 495  "tig00000705_pilon" chrStart: 137101312
+/home/joed4996/Genome_analysis_local_rep/results/03_genome_annotation/repeatmasker_softmasked//pilon_assembly_improvement.fasta.masked : chr # 496  "tig00000711_pilon" chrStart: 137363456
+/home/joed4996/Genome_analysis_local_rep/results/03_genome_annotation/repeatmasker_softmasked//pilon_assembly_improvement.fasta.masked : chr # 497  "tig00000712_pilon" chrStart: 137625600
+/home/joed4996/Genome_analysis_local_rep/results/03_genome_annotation/repeatmasker_softmasked//pilon_assembly_improvement.fasta.masked : chr # 498  "tig00000713_pilon" chrStart: 137887744
+/home/joed4996/Genome_analysis_local_rep/results/03_genome_annotation/repeatmasker_softmasked//pilon_assembly_improvement.fasta.masked : chr # 499  "tig00000716_pilon" chrStart: 138149888
+/home/joed4996/Genome_analysis_local_rep/results/03_genome_annotation/repeatmasker_softmasked//pilon_assembly_improvement.fasta.masked : chr # 500  "tig00000719_pilon" chrStart: 138412032
+/home/joed4996/Genome_analysis_local_rep/results/03_genome_annotation/repeatmasker_softmasked//pilon_assembly_improvement.fasta.masked : chr # 501  "tig00000720_pilon" chrStart: 138674176
+/home/joed4996/Genome_analysis_local_rep/results/03_genome_annotation/repeatmasker_softmasked//pilon_assembly_improvement.fasta.masked : chr # 502  "tig00000721_pilon" chrStart: 138936320
+/home/joed4996/Genome_analysis_local_rep/results/03_genome_annotation/repeatmasker_softmasked//pilon_assembly_improvement.fasta.masked : chr # 503  "tig00000722_pilon" chrStart: 139198464
+/home/joed4996/Genome_analysis_local_rep/results/03_genome_annotation/repeatmasker_softmasked//pilon_assembly_improvement.fasta.masked : chr # 504  "tig00000724_pilon" chrStart: 139460608
+/home/joed4996/Genome_analysis_local_rep/results/03_genome_annotation/repeatmasker_softmasked//pilon_assembly_improvement.fasta.masked : chr # 505  "tig00000725_pilon" chrStart: 139722752
+/home/joed4996/Genome_analysis_local_rep/results/03_genome_annotation/repeatmasker_softmasked//pilon_assembly_improvement.fasta.masked : chr # 506  "tig00000726_pilon" chrStart: 139984896
+/home/joed4996/Genome_analysis_local_rep/results/03_genome_annotation/repeatmasker_softmasked//pilon_assembly_improvement.fasta.masked : chr # 507  "tig00000727_pilon" chrStart: 140247040
+/home/joed4996/Genome_analysis_local_rep/results/03_genome_annotation/repeatmasker_softmasked//pilon_assembly_improvement.fasta.masked : chr # 508  "tig00000728_pilon" chrStart: 140509184
+/home/joed4996/Genome_analysis_local_rep/results/03_genome_annotation/repeatmasker_softmasked//pilon_assembly_improvement.fasta.masked : chr # 509  "tig00000729_pilon" chrStart: 140771328
+/home/joed4996/Genome_analysis_local_rep/results/03_genome_annotation/repeatmasker_softmasked//pilon_assembly_improvement.fasta.masked : chr # 510  "tig00000730_pilon" chrStart: 141033472
+/home/joed4996/Genome_analysis_local_rep/results/03_genome_annotation/repeatmasker_softmasked//pilon_assembly_improvement.fasta.masked : chr # 511  "tig00000731_pilon" chrStart: 141295616
+/home/joed4996/Genome_analysis_local_rep/results/03_genome_annotation/repeatmasker_softmasked//pilon_assembly_improvement.fasta.masked : chr # 512  "tig00000743_pilon" chrStart: 141557760
+/home/joed4996/Genome_analysis_local_rep/results/03_genome_annotation/repeatmasker_softmasked//pilon_assembly_improvement.fasta.masked : chr # 513  "tig00000744_pilon" chrStart: 141819904
+/home/joed4996/Genome_analysis_local_rep/results/03_genome_annotation/repeatmasker_softmasked//pilon_assembly_improvement.fasta.masked : chr # 514  "tig00000745_pilon" chrStart: 142082048
+/home/joed4996/Genome_analysis_local_rep/results/03_genome_annotation/repeatmasker_softmasked//pilon_assembly_improvement.fasta.masked : chr # 515  "tig00000755_pilon" chrStart: 142344192
+/home/joed4996/Genome_analysis_local_rep/results/03_genome_annotation/repeatmasker_softmasked//pilon_assembly_improvement.fasta.masked : chr # 516  "tig00000756_pilon" chrStart: 142606336
+/home/joed4996/Genome_analysis_local_rep/results/03_genome_annotation/repeatmasker_softmasked//pilon_assembly_improvement.fasta.masked : chr # 517  "tig00000759_pilon" chrStart: 142868480
+/home/joed4996/Genome_analysis_local_rep/results/03_genome_annotation/repeatmasker_softmasked//pilon_assembly_improvement.fasta.masked : chr # 518  "tig00000760_pilon" chrStart: 143130624
+/home/joed4996/Genome_analysis_local_rep/results/03_genome_annotation/repeatmasker_softmasked//pilon_assembly_improvement.fasta.masked : chr # 519  "tig00000762_pilon" chrStart: 143392768
+/home/joed4996/Genome_analysis_local_rep/results/03_genome_annotation/repeatmasker_softmasked//pilon_assembly_improvement.fasta.masked : chr # 520  "tig00000770_pilon" chrStart: 143654912
+/home/joed4996/Genome_analysis_local_rep/results/03_genome_annotation/repeatmasker_softmasked//pilon_assembly_improvement.fasta.masked : chr # 521  "tig00000773_pilon" chrStart: 143917056
+/home/joed4996/Genome_analysis_local_rep/results/03_genome_annotation/repeatmasker_softmasked//pilon_assembly_improvement.fasta.masked : chr # 522  "tig00000774_pilon" chrStart: 144179200
+/home/joed4996/Genome_analysis_local_rep/results/03_genome_annotation/repeatmasker_softmasked//pilon_assembly_improvement.fasta.masked : chr # 523  "tig00000775_pilon" chrStart: 144441344
+/home/joed4996/Genome_analysis_local_rep/results/03_genome_annotation/repeatmasker_softmasked//pilon_assembly_improvement.fasta.masked : chr # 524  "tig00000780_pilon" chrStart: 144703488
+/home/joed4996/Genome_analysis_local_rep/results/03_genome_annotation/repeatmasker_softmasked//pilon_assembly_improvement.fasta.masked : chr # 525  "tig00000781_pilon" chrStart: 144965632
+/home/joed4996/Genome_analysis_local_rep/results/03_genome_annotation/repeatmasker_softmasked//pilon_assembly_improvement.fasta.masked : chr # 526  "tig00000782_pilon" chrStart: 145227776
+/home/joed4996/Genome_analysis_local_rep/results/03_genome_annotation/repeatmasker_softmasked//pilon_assembly_improvement.fasta.masked : chr # 527  "tig00000783_pilon" chrStart: 145489920
+/home/joed4996/Genome_analysis_local_rep/results/03_genome_annotation/repeatmasker_softmasked//pilon_assembly_improvement.fasta.masked : chr # 528  "tig00000786_pilon" chrStart: 145752064
+/home/joed4996/Genome_analysis_local_rep/results/03_genome_annotation/repeatmasker_softmasked//pilon_assembly_improvement.fasta.masked : chr # 529  "tig00000787_pilon" chrStart: 146014208
+/home/joed4996/Genome_analysis_local_rep/results/03_genome_annotation/repeatmasker_softmasked//pilon_assembly_improvement.fasta.masked : chr # 530  "tig00000797_pilon" chrStart: 146276352
+/home/joed4996/Genome_analysis_local_rep/results/03_genome_annotation/repeatmasker_softmasked//pilon_assembly_improvement.fasta.masked : chr # 531  "tig00000800_pilon" chrStart: 146538496
+/home/joed4996/Genome_analysis_local_rep/results/03_genome_annotation/repeatmasker_softmasked//pilon_assembly_improvement.fasta.masked : chr # 532  "tig00000810_pilon" chrStart: 146800640
+/home/joed4996/Genome_analysis_local_rep/results/03_genome_annotation/repeatmasker_softmasked//pilon_assembly_improvement.fasta.masked : chr # 533  "tig00000811_pilon" chrStart: 147062784
+/home/joed4996/Genome_analysis_local_rep/results/03_genome_annotation/repeatmasker_softmasked//pilon_assembly_improvement.fasta.masked : chr # 534  "tig00000822_pilon" chrStart: 147324928
+/home/joed4996/Genome_analysis_local_rep/results/03_genome_annotation/repeatmasker_softmasked//pilon_assembly_improvement.fasta.masked : chr # 535  "tig00000826_pilon" chrStart: 147587072
+/home/joed4996/Genome_analysis_local_rep/results/03_genome_annotation/repeatmasker_softmasked//pilon_assembly_improvement.fasta.masked : chr # 536  "tig00000827_pilon" chrStart: 147849216
+/home/joed4996/Genome_analysis_local_rep/results/03_genome_annotation/repeatmasker_softmasked//pilon_assembly_improvement.fasta.masked : chr # 537  "tig00000832_pilon" chrStart: 148111360
+/home/joed4996/Genome_analysis_local_rep/results/03_genome_annotation/repeatmasker_softmasked//pilon_assembly_improvement.fasta.masked : chr # 538  "tig00000838_pilon" chrStart: 148373504
+/home/joed4996/Genome_analysis_local_rep/results/03_genome_annotation/repeatmasker_softmasked//pilon_assembly_improvement.fasta.masked : chr # 539  "tig00000839_pilon" chrStart: 148635648
+/home/joed4996/Genome_analysis_local_rep/results/03_genome_annotation/repeatmasker_softmasked//pilon_assembly_improvement.fasta.masked : chr # 540  "tig00000840_pilon" chrStart: 148897792
+/home/joed4996/Genome_analysis_local_rep/results/03_genome_annotation/repeatmasker_softmasked//pilon_assembly_improvement.fasta.masked : chr # 541  "tig00000841_pilon" chrStart: 149159936
+/home/joed4996/Genome_analysis_local_rep/results/03_genome_annotation/repeatmasker_softmasked//pilon_assembly_improvement.fasta.masked : chr # 542  "tig00000844_pilon" chrStart: 149422080
+/home/joed4996/Genome_analysis_local_rep/results/03_genome_annotation/repeatmasker_softmasked//pilon_assembly_improvement.fasta.masked : chr # 543  "tig00000846_pilon" chrStart: 149684224
+/home/joed4996/Genome_analysis_local_rep/results/03_genome_annotation/repeatmasker_softmasked//pilon_assembly_improvement.fasta.masked : chr # 544  "tig00000856_pilon" chrStart: 149946368
+/home/joed4996/Genome_analysis_local_rep/results/03_genome_annotation/repeatmasker_softmasked//pilon_assembly_improvement.fasta.masked : chr # 545  "tig00000857_pilon" chrStart: 150208512
+/home/joed4996/Genome_analysis_local_rep/results/03_genome_annotation/repeatmasker_softmasked//pilon_assembly_improvement.fasta.masked : chr # 546  "tig00000858_pilon" chrStart: 150470656
+/home/joed4996/Genome_analysis_local_rep/results/03_genome_annotation/repeatmasker_softmasked//pilon_assembly_improvement.fasta.masked : chr # 547  "tig00000864_pilon" chrStart: 150732800
+/home/joed4996/Genome_analysis_local_rep/results/03_genome_annotation/repeatmasker_softmasked//pilon_assembly_improvement.fasta.masked : chr # 548  "tig00000875_pilon" chrStart: 150994944
+/home/joed4996/Genome_analysis_local_rep/results/03_genome_annotation/repeatmasker_softmasked//pilon_assembly_improvement.fasta.masked : chr # 549  "tig00000876_pilon" chrStart: 151257088
+/home/joed4996/Genome_analysis_local_rep/results/03_genome_annotation/repeatmasker_softmasked//pilon_assembly_improvement.fasta.masked : chr # 550  "tig00000877_pilon" chrStart: 151519232
+/home/joed4996/Genome_analysis_local_rep/results/03_genome_annotation/repeatmasker_softmasked//pilon_assembly_improvement.fasta.masked : chr # 551  "tig00000878_pilon" chrStart: 151781376
+/home/joed4996/Genome_analysis_local_rep/results/03_genome_annotation/repeatmasker_softmasked//pilon_assembly_improvement.fasta.masked : chr # 552  "tig00000881_pilon" chrStart: 152043520
+/home/joed4996/Genome_analysis_local_rep/results/03_genome_annotation/repeatmasker_softmasked//pilon_assembly_improvement.fasta.masked : chr # 553  "tig00000884_pilon" chrStart: 152305664
+/home/joed4996/Genome_analysis_local_rep/results/03_genome_annotation/repeatmasker_softmasked//pilon_assembly_improvement.fasta.masked : chr # 554  "tig00000888_pilon" chrStart: 152567808
+/home/joed4996/Genome_analysis_local_rep/results/03_genome_annotation/repeatmasker_softmasked//pilon_assembly_improvement.fasta.masked : chr # 555  "tig00000891_pilon" chrStart: 152829952
+/home/joed4996/Genome_analysis_local_rep/results/03_genome_annotation/repeatmasker_softmasked//pilon_assembly_improvement.fasta.masked : chr # 556  "tig00000898_pilon" chrStart: 153092096
+/home/joed4996/Genome_analysis_local_rep/results/03_genome_annotation/repeatmasker_softmasked//pilon_assembly_improvement.fasta.masked : chr # 557  "tig00000900_pilon" chrStart: 153354240
+/home/joed4996/Genome_analysis_local_rep/results/03_genome_annotation/repeatmasker_softmasked//pilon_assembly_improvement.fasta.masked : chr # 558  "tig00000905_pilon" chrStart: 153616384
+/home/joed4996/Genome_analysis_local_rep/results/03_genome_annotation/repeatmasker_softmasked//pilon_assembly_improvement.fasta.masked : chr # 559  "tig00000906_pilon" chrStart: 153878528
+/home/joed4996/Genome_analysis_local_rep/results/03_genome_annotation/repeatmasker_softmasked//pilon_assembly_improvement.fasta.masked : chr # 560  "tig00000909_pilon" chrStart: 154140672
+/home/joed4996/Genome_analysis_local_rep/results/03_genome_annotation/repeatmasker_softmasked//pilon_assembly_improvement.fasta.masked : chr # 561  "tig00000910_pilon" chrStart: 154402816
+/home/joed4996/Genome_analysis_local_rep/results/03_genome_annotation/repeatmasker_softmasked//pilon_assembly_improvement.fasta.masked : chr # 562  "tig00000915_pilon" chrStart: 154664960
+/home/joed4996/Genome_analysis_local_rep/results/03_genome_annotation/repeatmasker_softmasked//pilon_assembly_improvement.fasta.masked : chr # 563  "tig00000916_pilon" chrStart: 154927104
+/home/joed4996/Genome_analysis_local_rep/results/03_genome_annotation/repeatmasker_softmasked//pilon_assembly_improvement.fasta.masked : chr # 564  "tig00000917_pilon" chrStart: 155189248
+/home/joed4996/Genome_analysis_local_rep/results/03_genome_annotation/repeatmasker_softmasked//pilon_assembly_improvement.fasta.masked : chr # 565  "tig00000918_pilon" chrStart: 155451392
+/home/joed4996/Genome_analysis_local_rep/results/03_genome_annotation/repeatmasker_softmasked//pilon_assembly_improvement.fasta.masked : chr # 566  "tig00000931_pilon" chrStart: 155713536
+/home/joed4996/Genome_analysis_local_rep/results/03_genome_annotation/repeatmasker_softmasked//pilon_assembly_improvement.fasta.masked : chr # 567  "tig00000934_pilon" chrStart: 155975680
+/home/joed4996/Genome_analysis_local_rep/results/03_genome_annotation/repeatmasker_softmasked//pilon_assembly_improvement.fasta.masked : chr # 568  "tig00000937_pilon" chrStart: 156237824
+/home/joed4996/Genome_analysis_local_rep/results/03_genome_annotation/repeatmasker_softmasked//pilon_assembly_improvement.fasta.masked : chr # 569  "tig00000946_pilon" chrStart: 156499968
+/home/joed4996/Genome_analysis_local_rep/results/03_genome_annotation/repeatmasker_softmasked//pilon_assembly_improvement.fasta.masked : chr # 570  "tig00000950_pilon" chrStart: 156762112
+/home/joed4996/Genome_analysis_local_rep/results/03_genome_annotation/repeatmasker_softmasked//pilon_assembly_improvement.fasta.masked : chr # 571  "tig00000956_pilon" chrStart: 157024256
+/home/joed4996/Genome_analysis_local_rep/results/03_genome_annotation/repeatmasker_softmasked//pilon_assembly_improvement.fasta.masked : chr # 572  "tig00000961_pilon" chrStart: 157286400
+/home/joed4996/Genome_analysis_local_rep/results/03_genome_annotation/repeatmasker_softmasked//pilon_assembly_improvement.fasta.masked : chr # 573  "tig00000963_pilon" chrStart: 157548544
+/home/joed4996/Genome_analysis_local_rep/results/03_genome_annotation/repeatmasker_softmasked//pilon_assembly_improvement.fasta.masked : chr # 574  "tig00000965_pilon" chrStart: 157810688
+/home/joed4996/Genome_analysis_local_rep/results/03_genome_annotation/repeatmasker_softmasked//pilon_assembly_improvement.fasta.masked : chr # 575  "tig00000968_pilon" chrStart: 158072832
+/home/joed4996/Genome_analysis_local_rep/results/03_genome_annotation/repeatmasker_softmasked//pilon_assembly_improvement.fasta.masked : chr # 576  "tig00000971_pilon" chrStart: 158334976
+/home/joed4996/Genome_analysis_local_rep/results/03_genome_annotation/repeatmasker_softmasked//pilon_assembly_improvement.fasta.masked : chr # 577  "tig00000976_pilon" chrStart: 158597120
+/home/joed4996/Genome_analysis_local_rep/results/03_genome_annotation/repeatmasker_softmasked//pilon_assembly_improvement.fasta.masked : chr # 578  "tig00000979_pilon" chrStart: 158859264
+/home/joed4996/Genome_analysis_local_rep/results/03_genome_annotation/repeatmasker_softmasked//pilon_assembly_improvement.fasta.masked : chr # 579  "tig00000982_pilon" chrStart: 159121408
+/home/joed4996/Genome_analysis_local_rep/results/03_genome_annotation/repeatmasker_softmasked//pilon_assembly_improvement.fasta.masked : chr # 580  "tig00000985_pilon" chrStart: 159383552
+/home/joed4996/Genome_analysis_local_rep/results/03_genome_annotation/repeatmasker_softmasked//pilon_assembly_improvement.fasta.masked : chr # 581  "tig00000989_pilon" chrStart: 159645696
+/home/joed4996/Genome_analysis_local_rep/results/03_genome_annotation/repeatmasker_softmasked//pilon_assembly_improvement.fasta.masked : chr # 582  "tig00000997_pilon" chrStart: 159907840
+/home/joed4996/Genome_analysis_local_rep/results/03_genome_annotation/repeatmasker_softmasked//pilon_assembly_improvement.fasta.masked : chr # 583  "tig00000998_pilon" chrStart: 160169984
+/home/joed4996/Genome_analysis_local_rep/results/03_genome_annotation/repeatmasker_softmasked//pilon_assembly_improvement.fasta.masked : chr # 584  "tig00001001_pilon" chrStart: 160432128
+/home/joed4996/Genome_analysis_local_rep/results/03_genome_annotation/repeatmasker_softmasked//pilon_assembly_improvement.fasta.masked : chr # 585  "tig00001006_pilon" chrStart: 160694272
+/home/joed4996/Genome_analysis_local_rep/results/03_genome_annotation/repeatmasker_softmasked//pilon_assembly_improvement.fasta.masked : chr # 586  "tig00001007_pilon" chrStart: 160956416
+/home/joed4996/Genome_analysis_local_rep/results/03_genome_annotation/repeatmasker_softmasked//pilon_assembly_improvement.fasta.masked : chr # 587  "tig00001008_pilon" chrStart: 161218560
+/home/joed4996/Genome_analysis_local_rep/results/03_genome_annotation/repeatmasker_softmasked//pilon_assembly_improvement.fasta.masked : chr # 588  "tig00001009_pilon" chrStart: 161480704
+/home/joed4996/Genome_analysis_local_rep/results/03_genome_annotation/repeatmasker_softmasked//pilon_assembly_improvement.fasta.masked : chr # 589  "tig00001010_pilon" chrStart: 161742848
+/home/joed4996/Genome_analysis_local_rep/results/03_genome_annotation/repeatmasker_softmasked//pilon_assembly_improvement.fasta.masked : chr # 590  "tig00001012_pilon" chrStart: 162004992
+/home/joed4996/Genome_analysis_local_rep/results/03_genome_annotation/repeatmasker_softmasked//pilon_assembly_improvement.fasta.masked : chr # 591  "tig00001019_pilon" chrStart: 162267136
+/home/joed4996/Genome_analysis_local_rep/results/03_genome_annotation/repeatmasker_softmasked//pilon_assembly_improvement.fasta.masked : chr # 592  "tig00001022_pilon" chrStart: 162529280
+/home/joed4996/Genome_analysis_local_rep/results/03_genome_annotation/repeatmasker_softmasked//pilon_assembly_improvement.fasta.masked : chr # 593  "tig00001023_pilon" chrStart: 162791424
+/home/joed4996/Genome_analysis_local_rep/results/03_genome_annotation/repeatmasker_softmasked//pilon_assembly_improvement.fasta.masked : chr # 594  "tig00001028_pilon" chrStart: 163053568
+/home/joed4996/Genome_analysis_local_rep/results/03_genome_annotation/repeatmasker_softmasked//pilon_assembly_improvement.fasta.masked : chr # 595  "tig00001034_pilon" chrStart: 163315712
+/home/joed4996/Genome_analysis_local_rep/results/03_genome_annotation/repeatmasker_softmasked//pilon_assembly_improvement.fasta.masked : chr # 596  "tig00001040_pilon" chrStart: 163577856
+/home/joed4996/Genome_analysis_local_rep/results/03_genome_annotation/repeatmasker_softmasked//pilon_assembly_improvement.fasta.masked : chr # 597  "tig00001042_pilon" chrStart: 163840000
+/home/joed4996/Genome_analysis_local_rep/results/03_genome_annotation/repeatmasker_softmasked//pilon_assembly_improvement.fasta.masked : chr # 598  "tig00001045_pilon" chrStart: 164102144
+/home/joed4996/Genome_analysis_local_rep/results/03_genome_annotation/repeatmasker_softmasked//pilon_assembly_improvement.fasta.masked : chr # 599  "tig00001046_pilon" chrStart: 164364288
+/home/joed4996/Genome_analysis_local_rep/results/03_genome_annotation/repeatmasker_softmasked//pilon_assembly_improvement.fasta.masked : chr # 600  "tig00001054_pilon" chrStart: 164626432
+/home/joed4996/Genome_analysis_local_rep/results/03_genome_annotation/repeatmasker_softmasked//pilon_assembly_improvement.fasta.masked : chr # 601  "tig00001056_pilon" chrStart: 164888576
+/home/joed4996/Genome_analysis_local_rep/results/03_genome_annotation/repeatmasker_softmasked//pilon_assembly_improvement.fasta.masked : chr # 602  "tig00001059_pilon" chrStart: 165150720
+/home/joed4996/Genome_analysis_local_rep/results/03_genome_annotation/repeatmasker_softmasked//pilon_assembly_improvement.fasta.masked : chr # 603  "tig00001060_pilon" chrStart: 165412864
+/home/joed4996/Genome_analysis_local_rep/results/03_genome_annotation/repeatmasker_softmasked//pilon_assembly_improvement.fasta.masked : chr # 604  "tig00001062_pilon" chrStart: 165675008
+/home/joed4996/Genome_analysis_local_rep/results/03_genome_annotation/repeatmasker_softmasked//pilon_assembly_improvement.fasta.masked : chr # 605  "tig00001065_pilon" chrStart: 165937152
+/home/joed4996/Genome_analysis_local_rep/results/03_genome_annotation/repeatmasker_softmasked//pilon_assembly_improvement.fasta.masked : chr # 606  "tig00001070_pilon" chrStart: 166199296
+/home/joed4996/Genome_analysis_local_rep/results/03_genome_annotation/repeatmasker_softmasked//pilon_assembly_improvement.fasta.masked : chr # 607  "tig00001079_pilon" chrStart: 166461440
+/home/joed4996/Genome_analysis_local_rep/results/03_genome_annotation/repeatmasker_softmasked//pilon_assembly_improvement.fasta.masked : chr # 608  "tig00001080_pilon" chrStart: 166723584
+/home/joed4996/Genome_analysis_local_rep/results/03_genome_annotation/repeatmasker_softmasked//pilon_assembly_improvement.fasta.masked : chr # 609  "tig00001085_pilon" chrStart: 166985728
+/home/joed4996/Genome_analysis_local_rep/results/03_genome_annotation/repeatmasker_softmasked//pilon_assembly_improvement.fasta.masked : chr # 610  "tig00001088_pilon" chrStart: 167247872
+/home/joed4996/Genome_analysis_local_rep/results/03_genome_annotation/repeatmasker_softmasked//pilon_assembly_improvement.fasta.masked : chr # 611  "tig00001089_pilon" chrStart: 167510016
+/home/joed4996/Genome_analysis_local_rep/results/03_genome_annotation/repeatmasker_softmasked//pilon_assembly_improvement.fasta.masked : chr # 612  "tig00001090_pilon" chrStart: 167772160
+/home/joed4996/Genome_analysis_local_rep/results/03_genome_annotation/repeatmasker_softmasked//pilon_assembly_improvement.fasta.masked : chr # 613  "tig00001091_pilon" chrStart: 168034304
+/home/joed4996/Genome_analysis_local_rep/results/03_genome_annotation/repeatmasker_softmasked//pilon_assembly_improvement.fasta.masked : chr # 614  "tig00001094_pilon" chrStart: 168296448
+/home/joed4996/Genome_analysis_local_rep/results/03_genome_annotation/repeatmasker_softmasked//pilon_assembly_improvement.fasta.masked : chr # 615  "tig00001095_pilon" chrStart: 168558592
+/home/joed4996/Genome_analysis_local_rep/results/03_genome_annotation/repeatmasker_softmasked//pilon_assembly_improvement.fasta.masked : chr # 616  "tig00001096_pilon" chrStart: 168820736
+/home/joed4996/Genome_analysis_local_rep/results/03_genome_annotation/repeatmasker_softmasked//pilon_assembly_improvement.fasta.masked : chr # 617  "tig00001097_pilon" chrStart: 169082880
+/home/joed4996/Genome_analysis_local_rep/results/03_genome_annotation/repeatmasker_softmasked//pilon_assembly_improvement.fasta.masked : chr # 618  "tig00001099_pilon" chrStart: 169345024
+/home/joed4996/Genome_analysis_local_rep/results/03_genome_annotation/repeatmasker_softmasked//pilon_assembly_improvement.fasta.masked : chr # 619  "tig00001105_pilon" chrStart: 169607168
+/home/joed4996/Genome_analysis_local_rep/results/03_genome_annotation/repeatmasker_softmasked//pilon_assembly_improvement.fasta.masked : chr # 620  "tig00001106_pilon" chrStart: 169869312
+/home/joed4996/Genome_analysis_local_rep/results/03_genome_annotation/repeatmasker_softmasked//pilon_assembly_improvement.fasta.masked : chr # 621  "tig00001107_pilon" chrStart: 170131456
+/home/joed4996/Genome_analysis_local_rep/results/03_genome_annotation/repeatmasker_softmasked//pilon_assembly_improvement.fasta.masked : chr # 622  "tig00001109_pilon" chrStart: 170393600
+/home/joed4996/Genome_analysis_local_rep/results/03_genome_annotation/repeatmasker_softmasked//pilon_assembly_improvement.fasta.masked : chr # 623  "tig00001111_pilon" chrStart: 170655744
+/home/joed4996/Genome_analysis_local_rep/results/03_genome_annotation/repeatmasker_softmasked//pilon_assembly_improvement.fasta.masked : chr # 624  "tig00001116_pilon" chrStart: 170917888
+/home/joed4996/Genome_analysis_local_rep/results/03_genome_annotation/repeatmasker_softmasked//pilon_assembly_improvement.fasta.masked : chr # 625  "tig00001122_pilon" chrStart: 171180032
+/home/joed4996/Genome_analysis_local_rep/results/03_genome_annotation/repeatmasker_softmasked//pilon_assembly_improvement.fasta.masked : chr # 626  "tig00001131_pilon" chrStart: 171442176
+/home/joed4996/Genome_analysis_local_rep/results/03_genome_annotation/repeatmasker_softmasked//pilon_assembly_improvement.fasta.masked : chr # 627  "tig00001132_pilon" chrStart: 171704320
+/home/joed4996/Genome_analysis_local_rep/results/03_genome_annotation/repeatmasker_softmasked//pilon_assembly_improvement.fasta.masked : chr # 628  "tig00001135_pilon" chrStart: 171966464
+/home/joed4996/Genome_analysis_local_rep/results/03_genome_annotation/repeatmasker_softmasked//pilon_assembly_improvement.fasta.masked : chr # 629  "tig00001138_pilon" chrStart: 172228608
+/home/joed4996/Genome_analysis_local_rep/results/03_genome_annotation/repeatmasker_softmasked//pilon_assembly_improvement.fasta.masked : chr # 630  "tig00001140_pilon" chrStart: 172490752
+/home/joed4996/Genome_analysis_local_rep/results/03_genome_annotation/repeatmasker_softmasked//pilon_assembly_improvement.fasta.masked : chr # 631  "tig00001143_pilon" chrStart: 172752896
+/home/joed4996/Genome_analysis_local_rep/results/03_genome_annotation/repeatmasker_softmasked//pilon_assembly_improvement.fasta.masked : chr # 632  "tig00001147_pilon" chrStart: 173015040
+/home/joed4996/Genome_analysis_local_rep/results/03_genome_annotation/repeatmasker_softmasked//pilon_assembly_improvement.fasta.masked : chr # 633  "tig00001153_pilon" chrStart: 173277184
+/home/joed4996/Genome_analysis_local_rep/results/03_genome_annotation/repeatmasker_softmasked//pilon_assembly_improvement.fasta.masked : chr # 634  "tig00001158_pilon" chrStart: 173539328
+/home/joed4996/Genome_analysis_local_rep/results/03_genome_annotation/repeatmasker_softmasked//pilon_assembly_improvement.fasta.masked : chr # 635  "tig00001161_pilon" chrStart: 173801472
+/home/joed4996/Genome_analysis_local_rep/results/03_genome_annotation/repeatmasker_softmasked//pilon_assembly_improvement.fasta.masked : chr # 636  "tig00001162_pilon" chrStart: 174063616
+/home/joed4996/Genome_analysis_local_rep/results/03_genome_annotation/repeatmasker_softmasked//pilon_assembly_improvement.fasta.masked : chr # 637  "tig00001165_pilon" chrStart: 174325760
+/home/joed4996/Genome_analysis_local_rep/results/03_genome_annotation/repeatmasker_softmasked//pilon_assembly_improvement.fasta.masked : chr # 638  "tig00001172_pilon" chrStart: 174587904
+/home/joed4996/Genome_analysis_local_rep/results/03_genome_annotation/repeatmasker_softmasked//pilon_assembly_improvement.fasta.masked : chr # 639  "tig00001175_pilon" chrStart: 174850048
+/home/joed4996/Genome_analysis_local_rep/results/03_genome_annotation/repeatmasker_softmasked//pilon_assembly_improvement.fasta.masked : chr # 640  "tig00001176_pilon" chrStart: 175112192
+/home/joed4996/Genome_analysis_local_rep/results/03_genome_annotation/repeatmasker_softmasked//pilon_assembly_improvement.fasta.masked : chr # 641  "tig00001177_pilon" chrStart: 175374336
+/home/joed4996/Genome_analysis_local_rep/results/03_genome_annotation/repeatmasker_softmasked//pilon_assembly_improvement.fasta.masked : chr # 642  "tig00001178_pilon" chrStart: 175636480
+/home/joed4996/Genome_analysis_local_rep/results/03_genome_annotation/repeatmasker_softmasked//pilon_assembly_improvement.fasta.masked : chr # 643  "tig00001179_pilon" chrStart: 175898624
+/home/joed4996/Genome_analysis_local_rep/results/03_genome_annotation/repeatmasker_softmasked//pilon_assembly_improvement.fasta.masked : chr # 644  "tig00001183_pilon" chrStart: 176160768
+/home/joed4996/Genome_analysis_local_rep/results/03_genome_annotation/repeatmasker_softmasked//pilon_assembly_improvement.fasta.masked : chr # 645  "tig00001188_pilon" chrStart: 176422912
+/home/joed4996/Genome_analysis_local_rep/results/03_genome_annotation/repeatmasker_softmasked//pilon_assembly_improvement.fasta.masked : chr # 646  "tig00001191_pilon" chrStart: 176685056
+/home/joed4996/Genome_analysis_local_rep/results/03_genome_annotation/repeatmasker_softmasked//pilon_assembly_improvement.fasta.masked : chr # 647  "tig00001192_pilon" chrStart: 176947200
+/home/joed4996/Genome_analysis_local_rep/results/03_genome_annotation/repeatmasker_softmasked//pilon_assembly_improvement.fasta.masked : chr # 648  "tig00001196_pilon" chrStart: 177209344
+/home/joed4996/Genome_analysis_local_rep/results/03_genome_annotation/repeatmasker_softmasked//pilon_assembly_improvement.fasta.masked : chr # 649  "tig00001199_pilon" chrStart: 177471488
+/home/joed4996/Genome_analysis_local_rep/results/03_genome_annotation/repeatmasker_softmasked//pilon_assembly_improvement.fasta.masked : chr # 650  "tig00001200_pilon" chrStart: 177733632
+/home/joed4996/Genome_analysis_local_rep/results/03_genome_annotation/repeatmasker_softmasked//pilon_assembly_improvement.fasta.masked : chr # 651  "tig00001203_pilon" chrStart: 177995776
+/home/joed4996/Genome_analysis_local_rep/results/03_genome_annotation/repeatmasker_softmasked//pilon_assembly_improvement.fasta.masked : chr # 652  "tig00001214_pilon" chrStart: 178257920
+/home/joed4996/Genome_analysis_local_rep/results/03_genome_annotation/repeatmasker_softmasked//pilon_assembly_improvement.fasta.masked : chr # 653  "tig00001215_pilon" chrStart: 178520064
+/home/joed4996/Genome_analysis_local_rep/results/03_genome_annotation/repeatmasker_softmasked//pilon_assembly_improvement.fasta.masked : chr # 654  "tig00001219_pilon" chrStart: 178782208
+/home/joed4996/Genome_analysis_local_rep/results/03_genome_annotation/repeatmasker_softmasked//pilon_assembly_improvement.fasta.masked : chr # 655  "tig00001221_pilon" chrStart: 179044352
+/home/joed4996/Genome_analysis_local_rep/results/03_genome_annotation/repeatmasker_softmasked//pilon_assembly_improvement.fasta.masked : chr # 656  "tig00001224_pilon" chrStart: 179306496
+/home/joed4996/Genome_analysis_local_rep/results/03_genome_annotation/repeatmasker_softmasked//pilon_assembly_improvement.fasta.masked : chr # 657  "tig00001230_pilon" chrStart: 179568640
+/home/joed4996/Genome_analysis_local_rep/results/03_genome_annotation/repeatmasker_softmasked//pilon_assembly_improvement.fasta.masked : chr # 658  "tig00001233_pilon" chrStart: 179830784
+/home/joed4996/Genome_analysis_local_rep/results/03_genome_annotation/repeatmasker_softmasked//pilon_assembly_improvement.fasta.masked : chr # 659  "tig00001234_pilon" chrStart: 180092928
+/home/joed4996/Genome_analysis_local_rep/results/03_genome_annotation/repeatmasker_softmasked//pilon_assembly_improvement.fasta.masked : chr # 660  "tig00001241_pilon" chrStart: 180355072
+/home/joed4996/Genome_analysis_local_rep/results/03_genome_annotation/repeatmasker_softmasked//pilon_assembly_improvement.fasta.masked : chr # 661  "tig00001242_pilon" chrStart: 180617216
+/home/joed4996/Genome_analysis_local_rep/results/03_genome_annotation/repeatmasker_softmasked//pilon_assembly_improvement.fasta.masked : chr # 662  "tig00002182_pilon" chrStart: 180879360
+/home/joed4996/Genome_analysis_local_rep/results/03_genome_annotation/repeatmasker_softmasked//pilon_assembly_improvement.fasta.masked : chr # 663  "tig00002183_pilon" chrStart: 181141504
+/home/joed4996/Genome_analysis_local_rep/results/03_genome_annotation/repeatmasker_softmasked//pilon_assembly_improvement.fasta.masked : chr # 664  "tig00002184_pilon" chrStart: 181403648
+/home/joed4996/Genome_analysis_local_rep/results/03_genome_annotation/repeatmasker_softmasked//pilon_assembly_improvement.fasta.masked : chr # 665  "tig00002185_pilon" chrStart: 181665792
+/home/joed4996/Genome_analysis_local_rep/results/03_genome_annotation/repeatmasker_softmasked//pilon_assembly_improvement.fasta.masked : chr # 666  "tig00002186_pilon" chrStart: 181927936
+/home/joed4996/Genome_analysis_local_rep/results/03_genome_annotation/repeatmasker_softmasked//pilon_assembly_improvement.fasta.masked : chr # 667  "tig00002187_pilon" chrStart: 182190080
+/home/joed4996/Genome_analysis_local_rep/results/03_genome_annotation/repeatmasker_softmasked//pilon_assembly_improvement.fasta.masked : chr # 668  "tig00002188_pilon" chrStart: 182452224
+/home/joed4996/Genome_analysis_local_rep/results/03_genome_annotation/repeatmasker_softmasked//pilon_assembly_improvement.fasta.masked : chr # 669  "tig00002189_pilon" chrStart: 182714368
+/home/joed4996/Genome_analysis_local_rep/results/03_genome_annotation/repeatmasker_softmasked//pilon_assembly_improvement.fasta.masked : chr # 670  "tig00002190_pilon" chrStart: 182976512
+/home/joed4996/Genome_analysis_local_rep/results/03_genome_annotation/repeatmasker_softmasked//pilon_assembly_improvement.fasta.masked : chr # 671  "tig00002191_pilon" chrStart: 183238656
+/home/joed4996/Genome_analysis_local_rep/results/03_genome_annotation/repeatmasker_softmasked//pilon_assembly_improvement.fasta.masked : chr # 672  "tig00002192_pilon" chrStart: 183500800
+/home/joed4996/Genome_analysis_local_rep/results/03_genome_annotation/repeatmasker_softmasked//pilon_assembly_improvement.fasta.masked : chr # 673  "tig00002193_pilon" chrStart: 183762944
+/home/joed4996/Genome_analysis_local_rep/results/03_genome_annotation/repeatmasker_softmasked//pilon_assembly_improvement.fasta.masked : chr # 674  "tig00002194_pilon" chrStart: 184025088
+/home/joed4996/Genome_analysis_local_rep/results/03_genome_annotation/repeatmasker_softmasked//pilon_assembly_improvement.fasta.masked : chr # 675  "tig00002195_pilon" chrStart: 184287232
+/home/joed4996/Genome_analysis_local_rep/results/03_genome_annotation/repeatmasker_softmasked//pilon_assembly_improvement.fasta.masked : chr # 676  "tig00002196_pilon" chrStart: 184549376
+/home/joed4996/Genome_analysis_local_rep/results/03_genome_annotation/repeatmasker_softmasked//pilon_assembly_improvement.fasta.masked : chr # 677  "tig00002197_pilon" chrStart: 184811520
+/home/joed4996/Genome_analysis_local_rep/results/03_genome_annotation/repeatmasker_softmasked//pilon_assembly_improvement.fasta.masked : chr # 678  "tig00002198_pilon" chrStart: 185073664
+/home/joed4996/Genome_analysis_local_rep/results/03_genome_annotation/repeatmasker_softmasked//pilon_assembly_improvement.fasta.masked : chr # 679  "tig00002199_pilon" chrStart: 185335808
+/home/joed4996/Genome_analysis_local_rep/results/03_genome_annotation/repeatmasker_softmasked//pilon_assembly_improvement.fasta.masked : chr # 680  "tig00002200_pilon" chrStart: 185597952
+/home/joed4996/Genome_analysis_local_rep/results/03_genome_annotation/repeatmasker_softmasked//pilon_assembly_improvement.fasta.masked : chr # 681  "tig00002201_pilon" chrStart: 185860096
+/home/joed4996/Genome_analysis_local_rep/results/03_genome_annotation/repeatmasker_softmasked//pilon_assembly_improvement.fasta.masked : chr # 682  "tig00002202_pilon" chrStart: 186122240
+/home/joed4996/Genome_analysis_local_rep/results/03_genome_annotation/repeatmasker_softmasked//pilon_assembly_improvement.fasta.masked : chr # 683  "tig00002203_pilon" chrStart: 186384384
+/home/joed4996/Genome_analysis_local_rep/results/03_genome_annotation/repeatmasker_softmasked//pilon_assembly_improvement.fasta.masked : chr # 684  "tig00002204_pilon" chrStart: 186646528
+/home/joed4996/Genome_analysis_local_rep/results/03_genome_annotation/repeatmasker_softmasked//pilon_assembly_improvement.fasta.masked : chr # 685  "tig00002205_pilon" chrStart: 186908672
+/home/joed4996/Genome_analysis_local_rep/results/03_genome_annotation/repeatmasker_softmasked//pilon_assembly_improvement.fasta.masked : chr # 686  "tig00002206_pilon" chrStart: 187170816
+/home/joed4996/Genome_analysis_local_rep/results/03_genome_annotation/repeatmasker_softmasked//pilon_assembly_improvement.fasta.masked : chr # 687  "tig00002207_pilon" chrStart: 187432960
+Chromosome sequence lengths: 
+tig00000001_pilon	788557
+tig00000002_pilon	621642
+tig00000003_pilon	24055
+tig00000004_pilon	14451
+tig00000005_pilon	18504
+tig00000007_pilon	25617
+tig00000009_pilon	17680
+tig00000011_pilon	593987
+tig00000013_pilon	557948
+tig00000015_pilon	26535
+tig00000016_pilon	490184
+tig00000017_pilon	15602
+tig00000018_pilon	530967
+tig00000019_pilon	17833
+tig00000021_pilon	48249
+tig00000024_pilon	532029
+tig00000025_pilon	462290
+tig00000026_pilon	13356
+tig00000027_pilon	409678
+tig00000028_pilon	25887
+tig00000029_pilon	26379
+tig00000030_pilon	13745
+tig00000031_pilon	16193
+tig00000033_pilon	377785
+tig00000035_pilon	9452
+tig00000036_pilon	378158
+tig00000038_pilon	315553
+tig00000039_pilon	338921
+tig00000041_pilon	360117
+tig00000042_pilon	346616
+tig00000043_pilon	22019
+tig00000045_pilon	364373
+tig00000047_pilon	41471
+tig00000048_pilon	287907
+tig00000049_pilon	344831
+tig00000050_pilon	326384
+tig00000052_pilon	26000
+tig00000053_pilon	19430
+tig00000054_pilon	21041
+tig00000055_pilon	9767
+tig00000057_pilon	314903
+tig00000058_pilon	12388
+tig00000059_pilon	254332
+tig00000060_pilon	32723
+tig00000061_pilon	8988
+tig00000062_pilon	218579
+tig00000063_pilon	20843
+tig00000064_pilon	19633
+tig00000065_pilon	24172
+tig00000066_pilon	12874
+tig00000067_pilon	42750
+tig00000068_pilon	40313
+tig00000069_pilon	22578
+tig00000071_pilon	23614
+tig00000072_pilon	276378
+tig00000074_pilon	233746
+tig00000075_pilon	241522
+tig00000076_pilon	20427
+tig00000077_pilon	246843
+tig00000078_pilon	29037
+tig00000079_pilon	20073
+tig00000081_pilon	243857
+tig00000082_pilon	257879
+tig00000083_pilon	23605
+tig00000084_pilon	31117
+tig00000085_pilon	230109
+tig00000086_pilon	253830
+tig00000090_pilon	234721
+tig00000091_pilon	27548
+tig00000092_pilon	19308
+tig00000093_pilon	228087
+tig00000094_pilon	202368
+tig00000095_pilon	187166
+tig00000096_pilon	20213
+tig00000098_pilon	8515
+tig00000099_pilon	234277
+tig00000100_pilon	225835
+tig00000101_pilon	28943
+tig00000104_pilon	11227
+tig00000105_pilon	22672
+tig00000106_pilon	29107
+tig00000108_pilon	31674
+tig00000110_pilon	180832
+tig00000111_pilon	15062
+tig00000112_pilon	12261
+tig00000114_pilon	198644
+tig00000115_pilon	14138
+tig00000116_pilon	209451
+tig00000117_pilon	178999
+tig00000118_pilon	192640
+tig00000120_pilon	139579
+tig00000123_pilon	141800
+tig00000125_pilon	22089
+tig00000127_pilon	161905
+tig00000128_pilon	26717
+tig00000129_pilon	19859
+tig00000130_pilon	156060
+tig00000132_pilon	27632
+tig00000133_pilon	151425
+tig00000135_pilon	33198
+tig00000136_pilon	32150
+tig00000137_pilon	140364
+tig00000139_pilon	27335
+tig00000140_pilon	22668
+tig00000141_pilon	30084
+tig00000142_pilon	13204
+tig00000143_pilon	122192
+tig00000144_pilon	15004
+tig00000145_pilon	116663
+tig00000146_pilon	128361
+tig00000147_pilon	155588
+tig00000149_pilon	10990
+tig00000151_pilon	102857
+tig00000152_pilon	105973
+tig00000153_pilon	19527
+tig00000155_pilon	109638
+tig00000156_pilon	21804
+tig00000157_pilon	87069
+tig00000159_pilon	102674
+tig00000160_pilon	79679
+tig00000161_pilon	10420
+tig00000162_pilon	87164
+tig00000163_pilon	22541
+tig00000166_pilon	113097
+tig00000167_pilon	70193
+tig00000168_pilon	18710
+tig00000169_pilon	14381
+tig00000171_pilon	83369
+tig00000173_pilon	17315
+tig00000175_pilon	96304
+tig00000176_pilon	18666
+tig00000178_pilon	91526
+tig00000179_pilon	90048
+tig00000180_pilon	87418
+tig00000182_pilon	54428
+tig00000183_pilon	58464
+tig00000185_pilon	22570
+tig00000187_pilon	67586
+tig00000188_pilon	18821
+tig00000189_pilon	12323
+tig00000190_pilon	69194
+tig00000191_pilon	83327
+tig00000193_pilon	66983
+tig00000194_pilon	83314
+tig00000195_pilon	66794
+tig00000196_pilon	49388
+tig00000198_pilon	97086
+tig00000199_pilon	88668
+tig00000201_pilon	13316
+tig00000203_pilon	71693
+tig00000205_pilon	45039
+tig00000206_pilon	50289
+tig00000208_pilon	20164
+tig00000210_pilon	19127
+tig00000211_pilon	55826
+tig00000212_pilon	58876
+tig00000215_pilon	60807
+tig00000216_pilon	25916
+tig00000217_pilon	18142
+tig00000218_pilon	59638
+tig00000219_pilon	24023
+tig00000220_pilon	13160
+tig00000221_pilon	49981
+tig00000222_pilon	59362
+tig00000223_pilon	17682
+tig00000225_pilon	14180
+tig00000226_pilon	15963
+tig00000227_pilon	22581
+tig00000228_pilon	49255
+tig00000230_pilon	69784
+tig00000231_pilon	55719
+tig00000232_pilon	35803
+tig00000234_pilon	14669
+tig00000236_pilon	52067
+tig00000238_pilon	21686
+tig00000239_pilon	45604
+tig00000240_pilon	34650
+tig00000242_pilon	52826
+tig00000244_pilon	46208
+tig00000245_pilon	16110
+tig00000246_pilon	21125
+tig00000247_pilon	13618
+tig00000250_pilon	36979
+tig00000252_pilon	68655
+tig00000254_pilon	11500
+tig00000255_pilon	12857
+tig00000257_pilon	38641
+tig00000258_pilon	61061
+tig00000259_pilon	29438
+tig00000260_pilon	58568
+tig00000262_pilon	42678
+tig00000263_pilon	52955
+tig00000264_pilon	55181
+tig00000266_pilon	35395
+tig00000267_pilon	28963
+tig00000268_pilon	33693
+tig00000269_pilon	38161
+tig00000271_pilon	37981
+tig00000272_pilon	23910
+tig00000274_pilon	33710
+tig00000276_pilon	13801
+tig00000277_pilon	41468
+tig00000278_pilon	35849
+tig00000279_pilon	8802
+tig00000280_pilon	12972
+tig00000281_pilon	33247
+tig00000282_pilon	47489
+tig00000283_pilon	28434
+tig00000284_pilon	15497
+tig00000285_pilon	27623
+tig00000287_pilon	18529
+tig00000288_pilon	35985
+tig00000289_pilon	49343
+tig00000292_pilon	27484
+tig00000293_pilon	29024
+tig00000294_pilon	23472
+tig00000295_pilon	30453
+tig00000297_pilon	21029
+tig00000300_pilon	18248
+tig00000302_pilon	22572
+tig00000304_pilon	20281
+tig00000305_pilon	36922
+tig00000307_pilon	13538
+tig00000308_pilon	24189
+tig00000310_pilon	26325
+tig00000312_pilon	28784
+tig00000313_pilon	19717
+tig00000314_pilon	45518
+tig00000315_pilon	11808
+tig00000318_pilon	15530
+tig00000319_pilon	27367
+tig00000320_pilon	23589
+tig00000321_pilon	12938
+tig00000323_pilon	18435
+tig00000325_pilon	14030
+tig00000326_pilon	16326
+tig00000327_pilon	25903
+tig00000328_pilon	14845
+tig00000329_pilon	28862
+tig00000330_pilon	30861
+tig00000331_pilon	41655
+tig00000332_pilon	19968
+tig00000333_pilon	23304
+tig00000335_pilon	10779
+tig00000336_pilon	19869
+tig00000338_pilon	31538
+tig00000340_pilon	10530
+tig00000341_pilon	17070
+tig00000342_pilon	9192
+tig00000343_pilon	21527
+tig00000345_pilon	12663
+tig00000346_pilon	26729
+tig00000347_pilon	21518
+tig00000349_pilon	16125
+tig00000350_pilon	25864
+tig00000351_pilon	15486
+tig00000352_pilon	15999
+tig00000353_pilon	13652
+tig00000354_pilon	26119
+tig00000355_pilon	15379
+tig00000356_pilon	21559
+tig00000357_pilon	10286
+tig00000358_pilon	9364
+tig00000360_pilon	31114
+tig00000361_pilon	28541
+tig00000362_pilon	18746
+tig00000363_pilon	31185
+tig00000365_pilon	11428
+tig00000367_pilon	15745
+tig00000368_pilon	15291
+tig00000370_pilon	8347
+tig00000371_pilon	19386
+tig00000372_pilon	13505
+tig00000373_pilon	12535
+tig00000374_pilon	32135
+tig00000376_pilon	16238
+tig00000378_pilon	9836
+tig00000380_pilon	28180
+tig00000382_pilon	20337
+tig00000383_pilon	15281
+tig00000384_pilon	26063
+tig00000386_pilon	13178
+tig00000387_pilon	14731
+tig00000388_pilon	12578
+tig00000389_pilon	15728
+tig00000390_pilon	9099
+tig00000391_pilon	9366
+tig00000392_pilon	3323
+tig00000394_pilon	18445
+tig00000395_pilon	10718
+tig00000396_pilon	11978
+tig00000397_pilon	29752
+tig00000399_pilon	24186
+tig00000400_pilon	26590
+tig00000401_pilon	11303
+tig00000402_pilon	14829
+tig00000403_pilon	27831
+tig00000404_pilon	17167
+tig00000406_pilon	14739
+tig00000407_pilon	11133
+tig00000408_pilon	14291
+tig00000409_pilon	13513
+tig00000413_pilon	23846
+tig00000415_pilon	14051
+tig00000416_pilon	17694
+tig00000417_pilon	12775
+tig00000419_pilon	12090
+tig00000421_pilon	17262
+tig00000423_pilon	3832
+tig00000424_pilon	17413
+tig00000425_pilon	11820
+tig00000426_pilon	16683
+tig00000427_pilon	7217
+tig00000430_pilon	8489
+tig00000431_pilon	15478
+tig00000432_pilon	7506
+tig00000434_pilon	5922
+tig00000435_pilon	4493
+tig00000437_pilon	14403
+tig00000438_pilon	12227
+tig00000439_pilon	15483
+tig00000440_pilon	10856
+tig00000441_pilon	16824
+tig00000442_pilon	10907
+tig00000444_pilon	11012
+tig00000445_pilon	13339
+tig00000446_pilon	12390
+tig00000447_pilon	14616
+tig00000448_pilon	16534
+tig00000449_pilon	15533
+tig00000450_pilon	12599
+tig00000452_pilon	9104
+tig00000453_pilon	12934
+tig00000454_pilon	8136
+tig00000457_pilon	8107
+tig00000458_pilon	16508
+tig00000461_pilon	8829
+tig00000463_pilon	17055
+tig00000464_pilon	12688
+tig00000465_pilon	13784
+tig00000466_pilon	9253
+tig00000468_pilon	3309
+tig00000472_pilon	14741
+tig00000473_pilon	12152
+tig00000474_pilon	19218
+tig00000475_pilon	9126
+tig00000476_pilon	15423
+tig00000477_pilon	10813
+tig00000478_pilon	3841
+tig00000480_pilon	8450
+tig00000482_pilon	8963
+tig00000483_pilon	10330
+tig00000485_pilon	7935
+tig00000487_pilon	5830
+tig00000489_pilon	5040
+tig00000490_pilon	9713
+tig00000491_pilon	12480
+tig00000495_pilon	15232
+tig00000498_pilon	6902
+tig00000501_pilon	4743
+tig00000504_pilon	13872
+tig00000505_pilon	33118
+tig00000507_pilon	8701
+tig00000508_pilon	7557
+tig00000510_pilon	13450
+tig00000511_pilon	2033
+tig00000512_pilon	11812
+tig00000513_pilon	14111
+tig00000515_pilon	12611
+tig00000516_pilon	10788
+tig00000518_pilon	13951
+tig00000519_pilon	23855
+tig00000520_pilon	9684
+tig00000521_pilon	11057
+tig00000522_pilon	11319
+tig00000524_pilon	14834
+tig00000526_pilon	14479
+tig00000527_pilon	21766
+tig00000528_pilon	10731
+tig00000530_pilon	10516
+tig00000531_pilon	1417
+tig00000532_pilon	12137
+tig00000533_pilon	3455
+tig00000534_pilon	6996
+tig00000536_pilon	8412
+tig00000537_pilon	12939
+tig00000539_pilon	6177
+tig00000540_pilon	16507
+tig00000541_pilon	19735
+tig00000542_pilon	11329
+tig00000544_pilon	9028
+tig00000547_pilon	18305
+tig00000549_pilon	10548
+tig00000551_pilon	6371
+tig00000552_pilon	9629
+tig00000554_pilon	7484
+tig00000555_pilon	3093
+tig00000557_pilon	10878
+tig00000558_pilon	6618
+tig00000559_pilon	13586
+tig00000560_pilon	9400
+tig00000562_pilon	13494
+tig00000565_pilon	10331
+tig00000567_pilon	8141
+tig00000569_pilon	11046
+tig00000571_pilon	5587
+tig00000573_pilon	12779
+tig00000574_pilon	8402
+tig00000576_pilon	12313
+tig00000579_pilon	6845
+tig00000580_pilon	12392
+tig00000581_pilon	1781
+tig00000582_pilon	20125
+tig00000583_pilon	9675
+tig00000585_pilon	7586
+tig00000587_pilon	8162
+tig00000588_pilon	14116
+tig00000590_pilon	5962
+tig00000591_pilon	9370
+tig00000593_pilon	8967
+tig00000595_pilon	3899
+tig00000596_pilon	10972
+tig00000597_pilon	2542
+tig00000598_pilon	4811
+tig00000602_pilon	2641
+tig00000606_pilon	4373
+tig00000607_pilon	14538
+tig00000609_pilon	10736
+tig00000611_pilon	7541
+tig00000613_pilon	6570
+tig00000615_pilon	17144
+tig00000616_pilon	15936
+tig00000618_pilon	12523
+tig00000619_pilon	21163
+tig00000621_pilon	10696
+tig00000622_pilon	6696
+tig00000624_pilon	14997
+tig00000625_pilon	15308
+tig00000626_pilon	15951
+tig00000627_pilon	5927
+tig00000628_pilon	4819
+tig00000629_pilon	8818
+tig00000630_pilon	2210
+tig00000632_pilon	4181
+tig00000634_pilon	6040
+tig00000635_pilon	9112
+tig00000637_pilon	5609
+tig00000638_pilon	4994
+tig00000639_pilon	12224
+tig00000640_pilon	12684
+tig00000642_pilon	8929
+tig00000645_pilon	10342
+tig00000646_pilon	7156
+tig00000647_pilon	9684
+tig00000648_pilon	7701
+tig00000649_pilon	12419
+tig00000650_pilon	8346
+tig00000651_pilon	9289
+tig00000652_pilon	1965
+tig00000656_pilon	6143
+tig00000657_pilon	11679
+tig00000658_pilon	3588
+tig00000659_pilon	11815
+tig00000660_pilon	2211
+tig00000661_pilon	7455
+tig00000662_pilon	1082
+tig00000664_pilon	7478
+tig00000665_pilon	2340
+tig00000667_pilon	6911
+tig00000670_pilon	1709
+tig00000671_pilon	6218
+tig00000672_pilon	2092
+tig00000673_pilon	1794
+tig00000674_pilon	4902
+tig00000675_pilon	4314
+tig00000676_pilon	8578
+tig00000678_pilon	3400
+tig00000679_pilon	9459
+tig00000680_pilon	10778
+tig00000681_pilon	10253
+tig00000682_pilon	5626
+tig00000683_pilon	10135
+tig00000687_pilon	22788
+tig00000688_pilon	12429
+tig00000689_pilon	15467
+tig00000692_pilon	15806
+tig00000693_pilon	10999
+tig00000694_pilon	8430
+tig00000695_pilon	18507
+tig00000696_pilon	8219
+tig00000698_pilon	15958
+tig00000699_pilon	8038
+tig00000701_pilon	7601
+tig00000702_pilon	9585
+tig00000703_pilon	4348
+tig00000705_pilon	4377
+tig00000711_pilon	16712
+tig00000712_pilon	15288
+tig00000713_pilon	12360
+tig00000716_pilon	10267
+tig00000719_pilon	7454
+tig00000720_pilon	8293
+tig00000721_pilon	7330
+tig00000722_pilon	27222
+tig00000724_pilon	7429
+tig00000725_pilon	8579
+tig00000726_pilon	10363
+tig00000727_pilon	14981
+tig00000728_pilon	16935
+tig00000729_pilon	16696
+tig00000730_pilon	7760
+tig00000731_pilon	4340
+tig00000743_pilon	9941
+tig00000744_pilon	8512
+tig00000745_pilon	14696
+tig00000755_pilon	10603
+tig00000756_pilon	8259
+tig00000759_pilon	7422
+tig00000760_pilon	3408
+tig00000762_pilon	16935
+tig00000770_pilon	6146
+tig00000773_pilon	2358
+tig00000774_pilon	5030
+tig00000775_pilon	3104
+tig00000780_pilon	7111
+tig00000781_pilon	5798
+tig00000782_pilon	14565
+tig00000783_pilon	13217
+tig00000786_pilon	10577
+tig00000787_pilon	4346
+tig00000797_pilon	1970
+tig00000800_pilon	5435
+tig00000810_pilon	4016
+tig00000811_pilon	13935
+tig00000822_pilon	5230
+tig00000826_pilon	7553
+tig00000827_pilon	1869
+tig00000832_pilon	4637
+tig00000838_pilon	1380
+tig00000839_pilon	4071
+tig00000840_pilon	3306
+tig00000841_pilon	5957
+tig00000844_pilon	10929
+tig00000846_pilon	3110
+tig00000856_pilon	4804
+tig00000857_pilon	3573
+tig00000858_pilon	8478
+tig00000864_pilon	2757
+tig00000875_pilon	3747
+tig00000876_pilon	5769
+tig00000877_pilon	7983
+tig00000878_pilon	6454
+tig00000881_pilon	4270
+tig00000884_pilon	4373
+tig00000888_pilon	21112
+tig00000891_pilon	1822
+tig00000898_pilon	7767
+tig00000900_pilon	10689
+tig00000905_pilon	10849
+tig00000906_pilon	9731
+tig00000909_pilon	6010
+tig00000910_pilon	3689
+tig00000915_pilon	7239
+tig00000916_pilon	8818
+tig00000917_pilon	13019
+tig00000918_pilon	10395
+tig00000931_pilon	12243
+tig00000934_pilon	14536
+tig00000937_pilon	3435
+tig00000946_pilon	1241
+tig00000950_pilon	9107
+tig00000956_pilon	2657
+tig00000961_pilon	4497
+tig00000963_pilon	6758
+tig00000965_pilon	3952
+tig00000968_pilon	4246
+tig00000971_pilon	1955
+tig00000976_pilon	17349
+tig00000979_pilon	10942
+tig00000982_pilon	5997
+tig00000985_pilon	6787
+tig00000989_pilon	5229
+tig00000997_pilon	3362
+tig00000998_pilon	5663
+tig00001001_pilon	11183
+tig00001006_pilon	1966
+tig00001007_pilon	4076
+tig00001008_pilon	6184
+tig00001009_pilon	6138
+tig00001010_pilon	4878
+tig00001012_pilon	8466
+tig00001019_pilon	3431
+tig00001022_pilon	2608
+tig00001023_pilon	3684
+tig00001028_pilon	8941
+tig00001034_pilon	5572
+tig00001040_pilon	2588
+tig00001042_pilon	3851
+tig00001045_pilon	5624
+tig00001046_pilon	4389
+tig00001054_pilon	1189
+tig00001056_pilon	10377
+tig00001059_pilon	3178
+tig00001060_pilon	7874
+tig00001062_pilon	13228
+tig00001065_pilon	9616
+tig00001070_pilon	6042
+tig00001079_pilon	8145
+tig00001080_pilon	3611
+tig00001085_pilon	7991
+tig00001088_pilon	14575
+tig00001089_pilon	4863
+tig00001090_pilon	1831
+tig00001091_pilon	9973
+tig00001094_pilon	8362
+tig00001095_pilon	13696
+tig00001096_pilon	1914
+tig00001097_pilon	3644
+tig00001099_pilon	3688
+tig00001105_pilon	2387
+tig00001106_pilon	8755
+tig00001107_pilon	1616
+tig00001109_pilon	7533
+tig00001111_pilon	18509
+tig00001116_pilon	7161
+tig00001122_pilon	6859
+tig00001131_pilon	12229
+tig00001132_pilon	11405
+tig00001135_pilon	5091
+tig00001138_pilon	1116
+tig00001140_pilon	8468
+tig00001143_pilon	1679
+tig00001147_pilon	6409
+tig00001153_pilon	11985
+tig00001158_pilon	9864
+tig00001161_pilon	13966
+tig00001162_pilon	14955
+tig00001165_pilon	5809
+tig00001172_pilon	11442
+tig00001175_pilon	6926
+tig00001176_pilon	16754
+tig00001177_pilon	17127
+tig00001178_pilon	4173
+tig00001179_pilon	2187
+tig00001183_pilon	12206
+tig00001188_pilon	5261
+tig00001191_pilon	3950
+tig00001192_pilon	12296
+tig00001196_pilon	4133
+tig00001199_pilon	10886
+tig00001200_pilon	9565
+tig00001203_pilon	12950
+tig00001214_pilon	14943
+tig00001215_pilon	1477
+tig00001219_pilon	4087
+tig00001221_pilon	1688
+tig00001224_pilon	6817
+tig00001230_pilon	9725
+tig00001233_pilon	3074
+tig00001234_pilon	11231
+tig00001241_pilon	12554
+tig00001242_pilon	11515
+tig00002182_pilon	13634
+tig00002183_pilon	21826
+tig00002184_pilon	19583
+tig00002185_pilon	15201
+tig00002186_pilon	15491
+tig00002187_pilon	26225
+tig00002188_pilon	55962
+tig00002189_pilon	10947
+tig00002190_pilon	31855
+tig00002191_pilon	16106
+tig00002192_pilon	5934
+tig00002193_pilon	18368
+tig00002194_pilon	8983
+tig00002195_pilon	6032
+tig00002196_pilon	3677
+tig00002197_pilon	11958
+tig00002198_pilon	12573
+tig00002199_pilon	12668
+tig00002200_pilon	13623
+tig00002201_pilon	14985
+tig00002202_pilon	11898
+tig00002203_pilon	11104
+tig00002204_pilon	13357
+tig00002205_pilon	20803
+tig00002206_pilon	11321
+tig00002207_pilon	12432
+Genome sequence total length = 26279748
+Genome size with padding = 187695104
+Estimated genome size with padding and SJs: total=genome+SJ=388695104 = 187695104 + 201000000
+GstrandBit=32
+Number of SA indices: 52559496
+May 12 19:47:43 ... starting to sort Suffix Array. This may take a long time...
+Number of chunks: 1;   chunks size limit: 18374765752 bytes
+May 12 19:47:44 ... sorting Suffix Array chunks and saving them to disk...
+Writing 420475968 bytes into /proj/genomeanalysis2023/nobackup/work/jonathane/star_diff_expression/star_genome_index_dir//SA_0 ; empty space on disk = 2211419441553408 bytes ... done
+May 12 19:48:14 ... loading chunks from disk, packing SA...
+May 12 19:48:16 ... finished generating suffix array
+May 12 19:48:16 ... generating Suffix Array index
+May 12 19:48:18 ... completed Suffix Array index
+May 12 19:48:18 ... writing Genome to disk ...
+Writing 187695104 bytes into /proj/genomeanalysis2023/nobackup/work/jonathane/star_diff_expression/star_genome_index_dir//Genome ; empty space on disk = 2211417042427904 bytes ... done
+SA size in bytes: 216807924
+May 12 19:48:18 ... writing Suffix Array to disk ...
+Writing 216807924 bytes into /proj/genomeanalysis2023/nobackup/work/jonathane/star_diff_expression/star_genome_index_dir//SA ; empty space on disk = 2211417042427904 bytes ... done
+May 12 19:48:18 ... writing SAindex to disk
+Writing 8 bytes into /proj/genomeanalysis2023/nobackup/work/jonathane/star_diff_expression/star_genome_index_dir//SAindex ; empty space on disk = 2211417042427904 bytes ... done
+Writing 96 bytes into /proj/genomeanalysis2023/nobackup/work/jonathane/star_diff_expression/star_genome_index_dir//SAindex ; empty space on disk = 2211417042427904 bytes ... done
+Writing 24466771 bytes into /proj/genomeanalysis2023/nobackup/work/jonathane/star_diff_expression/star_genome_index_dir//SAindex ; empty space on disk = 2211417042427904 bytes ... done
+May 12 19:48:18 ..... finished successfully
+DONE: Genome generation, EXITING

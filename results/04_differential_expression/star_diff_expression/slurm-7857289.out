@@ -1,0 +1,319 @@
+#!/bin/bash -l
+#SBATCH -A uppmax2023-2-8 -M snowy # Specifying the project ID for Genome Analysis
+#SBATCH -p core
+#SBATCH -n 16
+#SBATCH -t 00:30:00 # Unclear how long the job will take
+#SBATCH -J Star_durian_diff_expression # Job_name
+#SBATCH --mail-type=ALL
+#SBATCH --mail-user jonathan.edwall.4996@student.uu.se
+
+cat $0
+echo USER = $USER
+echo QOS = $SLURM_JOB_QOS
+
+
+# Changing directory to working directory (output files will also be saved in this directory)
+cd /proj/genomeanalysis2023/nobackup/work/jonathane/star_diff_expression/
+#export $HOME/Genome_analysis_local_rep/results/03_genome_annotation/04_differential_expression/star_diff_expression
+
+# Loading the modules
+module load bioinfo-tools star
+module load bioinfo-tools samtools
+mkdir /proj/genomeanalysis2023/nobackup/work/jonathane/star_diff_expression/star_genome_index_dir/
+
+
+masked_assembly_dir=$HOME/Genome_analysis_local_rep/results/03_genome_annotation/repeatmasker_softmasked/
+genome_index_dir=/proj/genomeanalysis2023/nobackup/work/jonathane/star_diff_expression/star_genome_index_dir/
+
+trimmed_cDNA_dir=$HOME/Genome_analysis_local_rep/results/01_preprocessing/trimmomatic_star/
+pre_trimmed_cDNA_dir=$HOME/Genome_analysis_local_rep/data/raw_external_data/transcriptomic_data/trimmed/
+
+
+ 
+
+#1: Generating genome indices
+STAR \
+--genomeFastaFiles $masked_assembly_dir/pilon_assembly_improvement.fasta.masked \
+--genomeDir $genome_index_dir \
+--runMode genomeGenerate \
+--genomeSAindexNbases 11
+
+##########################################
+#### Monthong cultivar
+##########################################
+
+#2: Monthong: Aril 1
+# Mapping the RNA (cDNA) to the masked assembly
+STAR \
+--runThreadN 16 \
+--genomeDir $genome_index_dir/ \
+--readFilesIn $pre_trimmed_cDNA_dir/SRR6156069_scaffold_10*fastq.gz \
+--readFilesCommand zcat \
+--outFileNamePrefix ./monthong_aril_1_ \
+--outSAMtype BAM SortedByCoordinate 
+
+samtools index monthong_aril_1_Aligned.sortedByCoord.out.bam monthong_aril_1_Aligned.sortedByCoord.out.bai
+
+#3: Monthong: Aril 2
+# Mapping the RNA (cDNA) to the masked assembly
+STAR \
+--runThreadN 16 \
+--genomeDir $genome_index_dir/ \
+--readFilesIn $pre_trimmed_cDNA_dir/SRR6156066_scaffold_10*fastq.gz \
+--readFilesCommand zcat \
+--outFileNamePrefix ./monthong_aril_2_ \
+--outSAMtype BAM SortedByCoordinate 
+
+samtools index monthong_aril_2_Aligned.sortedByCoord.out.bam monthong_aril_2_Aligned.sortedByCoord.out.bai
+
+#4: Monthong: Aril 3
+# Mapping the RNA (cDNA) to the masked assembly
+STAR \
+--runThreadN 16 \
+--genomeDir $genome_index_dir/ \
+--readFilesIn $pre_trimmed_cDNA_dir/SRR6156067_scaffold_10*fastq.gz \
+--readFilesCommand zcat \
+--outFileNamePrefix ./monthong_aril_3_ \
+--outSAMtype BAM SortedByCoordinate 
+
+samtools index monthong_aril_3_Aligned.sortedByCoord.out.bam monthong_aril_3_Aligned.sortedByCoord.out.bai
+
+
+##########################################
+#### Musang king cultivar
+##########################################
+
+#5: Musang king: Leaf
+# Mapping the RNA (cDNA) to the masked assembly
+STAR \
+--runThreadN 16 \
+--genomeDir $genome_index_dir/ \
+--readFilesIn $pre_trimmed_cDNA_dir/SRR6040092_scaffold_10*fastq.gz \
+--readFilesCommand zcat \
+--outFileNamePrefix ./musang_king_leaf_ \
+--outSAMtype BAM SortedByCoordinate 
+
+samtools index musang_king_leaf_Aligned.sortedByCoord.out.bam musang_king_leaf_Aligned.sortedByCoord.out.bai
+
+#6: Musang King: Root
+# Mapping the RNA (cDNA) to the masked assembly
+STAR \
+--runThreadN 16 \
+--genomeDir $genome_index_dir/ \
+--readFilesIn $pre_trimmed_cDNA_dir/SRR6040093_scaffold_10*fastq.gz \
+--readFilesCommand zcat \
+--outFileNamePrefix ./musang_king_root_ \
+--outSAMtype BAM SortedByCoordinate \
+
+samtools index musang_king_root_Aligned.sortedByCoord.out.bam musang_king_root_Aligned.sortedByCoord.out.bai
+
+#7: Musang King: Stem
+# Mapping the RNA (cDNA) to the masked assembly
+STAR \
+--runThreadN 16 \
+--genomeDir $genome_index_dir/ \
+--readFilesIn $pre_trimmed_cDNA_dir/SRR6040096_scaffold_10*fastq.gz \
+--readFilesCommand zcat \
+--outFileNamePrefix ./musang_king_stem_ \
+--outSAMtype BAM SortedByCoordinate 
+
+samtools index musang_king_stem_Aligned.sortedByCoord.out.bam musang_king_stem_Aligned.sortedByCoord.out.bai
+
+#8:   Musang King: Aril 1
+# Mapping the RNA (cDNA) to the masked assembly
+STAR \
+--runThreadN 16 \
+--limitBAMsortRAM 2292618942 \
+--genomeDir $genome_index_dir/ \
+--readFilesIn $trimmed_cDNA_dir/illumina_cDNA_trimmed_*P.fq.gz \
+--readFilesCommand zcat \
+--outFileNamePrefix ./musang_king_aril_1_ \
+--outSAMtype BAM SortedByCoordinate 
+
+samtools index musang_king_aril_1_Aligned.sortedByCoord.out.bam musang_king_aril_1_Aligned.sortedByCoord.out.bai
+
+#9: Musang King: Musang King: Aril 2
+# Mapping the RNA (cDNA) to the masked assembly
+STAR \
+--runThreadN 16 \
+--limitBAMsortRAM 2292618942 \
+--genomeDir $genome_index_dir/ \
+--readFilesIn $pre_trimmed_cDNA_dir/SRR6040094_scaffold_10*fastq.gz \
+--readFilesCommand zcat \
+--outFileNamePrefix ./musang_king_aril_2_ \
+--outSAMtype BAM SortedByCoordinate 
+
+samtools index musang_king_aril_2_Aligned.sortedByCoord.out.bam musang_king_aril_2_Aligned.sortedByCoord.out.bai
+
+#10: Musang King: Musang King: Aril 3
+# Mapping the RNA (cDNA) to the masked assembly
+STAR \
+--runThreadN 16 \
+--limitBAMsortRAM 2292618942 \
+--genomeDir $genome_index_dir/ \
+--readFilesIn $pre_trimmed_cDNA_dir/SRR6040097_scaffold_10*fastq.gz \
+--readFilesCommand zcat \
+--outFileNamePrefix ./musang_king_aril_3_ \
+--outSAMtype BAM SortedByCoordinate 
+
+samtools index musang_king_aril_3_Aligned.sortedByCoord.out.bam musang_king_aril_3_Aligned.sortedByCoord.out.bai
+
+
+
+ls -l # Checking if outputs was generated
+
+module list # Useful for keeping track of the versions used
+echo JOB = $SLURM_JOBID # makes the individual runs easier to identify
+
+USER = joed4996
+QOS = normal
+	STAR --genomeFastaFiles /home/joed4996/Genome_analysis_local_rep/results/03_genome_annotation/repeatmasker_softmasked//pilon_assembly_improvement.fasta.masked --genomeDir /proj/genomeanalysis2023/nobackup/work/jonathane/star_diff_expression/star_genome_index_dir/ --runMode genomeGenerate --genomeSAindexNbases 11
+	STAR version: 2.7.9a   compiled: 2021-10-20T18:01:41+0200 rackham5.uppmax.uu.se:/sw/bioinfo/star/2.7.9a/src/STAR-2.7.9a/source
+May 12 19:47:42 ..... started STAR run
+May 12 19:47:42 ... starting to generate Genome files
+May 12 19:47:43 ... starting to sort Suffix Array. This may take a long time...
+May 12 19:47:44 ... sorting Suffix Array chunks and saving them to disk...
+May 12 19:48:14 ... loading chunks from disk, packing SA...
+May 12 19:48:16 ... finished generating suffix array
+May 12 19:48:16 ... generating Suffix Array index
+May 12 19:48:18 ... completed Suffix Array index
+May 12 19:48:18 ... writing Genome to disk ...
+May 12 19:48:18 ... writing Suffix Array to disk ...
+May 12 19:48:18 ... writing SAindex to disk
+May 12 19:48:18 ..... finished successfully
+	STAR --runThreadN 16 --genomeDir /proj/genomeanalysis2023/nobackup/work/jonathane/star_diff_expression/star_genome_index_dir// --readFilesIn /home/joed4996/Genome_analysis_local_rep/data/raw_external_data/transcriptomic_data/trimmed//SRR6156069_scaffold_10.1.fastq.gz /home/joed4996/Genome_analysis_local_rep/data/raw_external_data/transcriptomic_data/trimmed//SRR6156069_scaffold_10.2.fastq.gz --readFilesCommand zcat --outFileNamePrefix ./monthong_aril_1_ --outSAMtype BAM SortedByCoordinate
+	STAR version: 2.7.9a   compiled: 2021-10-20T18:01:41+0200 rackham5.uppmax.uu.se:/sw/bioinfo/star/2.7.9a/src/STAR-2.7.9a/source
+May 12 19:48:18 ..... started STAR run
+May 12 19:48:18 ..... loading genome
+May 12 19:48:19 ..... started mapping
+May 12 19:48:45 ..... finished mapping
+May 12 19:48:45 ..... started sorting BAM
+May 12 19:48:49 ..... finished successfully
+	STAR --runThreadN 16 --genomeDir /proj/genomeanalysis2023/nobackup/work/jonathane/star_diff_expression/star_genome_index_dir// --readFilesIn /home/joed4996/Genome_analysis_local_rep/data/raw_external_data/transcriptomic_data/trimmed//SRR6156066_scaffold_10.1.fastq.gz /home/joed4996/Genome_analysis_local_rep/data/raw_external_data/transcriptomic_data/trimmed//SRR6156066_scaffold_10.2.fastq.gz --readFilesCommand zcat --outFileNamePrefix ./monthong_aril_2_ --outSAMtype BAM SortedByCoordinate
+	STAR version: 2.7.9a   compiled: 2021-10-20T18:01:41+0200 rackham5.uppmax.uu.se:/sw/bioinfo/star/2.7.9a/src/STAR-2.7.9a/source
+May 12 19:48:56 ..... started STAR run
+May 12 19:48:56 ..... loading genome
+May 12 19:48:57 ..... started mapping
+May 12 19:49:21 ..... finished mapping
+May 12 19:49:22 ..... started sorting BAM
+May 12 19:49:25 ..... finished successfully
+	STAR --runThreadN 16 --genomeDir /proj/genomeanalysis2023/nobackup/work/jonathane/star_diff_expression/star_genome_index_dir// --readFilesIn /home/joed4996/Genome_analysis_local_rep/data/raw_external_data/transcriptomic_data/trimmed//SRR6156067_scaffold_10.1.fastq.gz /home/joed4996/Genome_analysis_local_rep/data/raw_external_data/transcriptomic_data/trimmed//SRR6156067_scaffold_10.2.fastq.gz --readFilesCommand zcat --outFileNamePrefix ./monthong_aril_3_ --outSAMtype BAM SortedByCoordinate
+	STAR version: 2.7.9a   compiled: 2021-10-20T18:01:41+0200 rackham5.uppmax.uu.se:/sw/bioinfo/star/2.7.9a/src/STAR-2.7.9a/source
+May 12 19:49:31 ..... started STAR run
+May 12 19:49:31 ..... loading genome
+May 12 19:49:31 ..... started mapping
+May 12 19:49:45 ..... finished mapping
+May 12 19:49:46 ..... started sorting BAM
+May 12 19:49:48 ..... finished successfully
+	STAR --runThreadN 16 --genomeDir /proj/genomeanalysis2023/nobackup/work/jonathane/star_diff_expression/star_genome_index_dir// --readFilesIn /home/joed4996/Genome_analysis_local_rep/data/raw_external_data/transcriptomic_data/trimmed//SRR6040092_scaffold_10.1.fastq.gz /home/joed4996/Genome_analysis_local_rep/data/raw_external_data/transcriptomic_data/trimmed//SRR6040092_scaffold_10.2.fastq.gz --readFilesCommand zcat --outFileNamePrefix ./musang_king_leaf_ --outSAMtype BAM SortedByCoordinate
+	STAR version: 2.7.9a   compiled: 2021-10-20T18:01:41+0200 rackham5.uppmax.uu.se:/sw/bioinfo/star/2.7.9a/src/STAR-2.7.9a/source
+May 12 19:49:51 ..... started STAR run
+May 12 19:49:51 ..... loading genome
+May 12 19:49:52 ..... started mapping
+May 12 19:50:29 ..... finished mapping
+May 12 19:50:29 ..... started sorting BAM
+May 12 19:50:34 ..... finished successfully
+	STAR --runThreadN 16 --genomeDir /proj/genomeanalysis2023/nobackup/work/jonathane/star_diff_expression/star_genome_index_dir// --readFilesIn /home/joed4996/Genome_analysis_local_rep/data/raw_external_data/transcriptomic_data/trimmed//SRR6040093_scaffold_10.1.fastq.gz /home/joed4996/Genome_analysis_local_rep/data/raw_external_data/transcriptomic_data/trimmed//SRR6040093_scaffold_10.2.fastq.gz --readFilesCommand zcat --outFileNamePrefix ./musang_king_root_ --outSAMtype BAM SortedByCoordinate
+	STAR version: 2.7.9a   compiled: 2021-10-20T18:01:41+0200 rackham5.uppmax.uu.se:/sw/bioinfo/star/2.7.9a/src/STAR-2.7.9a/source
+May 12 19:50:43 ..... started STAR run
+May 12 19:50:43 ..... loading genome
+May 12 19:50:44 ..... started mapping
+May 12 19:51:10 ..... finished mapping
+May 12 19:51:10 ..... started sorting BAM
+May 12 19:51:14 ..... finished successfully
+	STAR --runThreadN 16 --genomeDir /proj/genomeanalysis2023/nobackup/work/jonathane/star_diff_expression/star_genome_index_dir// --readFilesIn /home/joed4996/Genome_analysis_local_rep/data/raw_external_data/transcriptomic_data/trimmed//SRR6040096_scaffold_10.1.fastq.gz /home/joed4996/Genome_analysis_local_rep/data/raw_external_data/transcriptomic_data/trimmed//SRR6040096_scaffold_10.2.fastq.gz --readFilesCommand zcat --outFileNamePrefix ./musang_king_stem_ --outSAMtype BAM SortedByCoordinate
+	STAR version: 2.7.9a   compiled: 2021-10-20T18:01:41+0200 rackham5.uppmax.uu.se:/sw/bioinfo/star/2.7.9a/src/STAR-2.7.9a/source
+May 12 19:51:20 ..... started STAR run
+May 12 19:51:20 ..... loading genome
+May 12 19:51:21 ..... started mapping
+May 12 19:51:55 ..... finished mapping
+May 12 19:51:55 ..... started sorting BAM
+May 12 19:52:06 ..... finished successfully
+	STAR --runThreadN 16 --limitBAMsortRAM 2292618942 --genomeDir /proj/genomeanalysis2023/nobackup/work/jonathane/star_diff_expression/star_genome_index_dir// --readFilesIn /home/joed4996/Genome_analysis_local_rep/results/01_preprocessing/trimmomatic_star//illumina_cDNA_trimmed_1P.fq.gz /home/joed4996/Genome_analysis_local_rep/results/01_preprocessing/trimmomatic_star//illumina_cDNA_trimmed_2P.fq.gz --readFilesCommand zcat --outFileNamePrefix ./musang_king_aril_1_ --outSAMtype BAM SortedByCoordinate
+	STAR version: 2.7.9a   compiled: 2021-10-20T18:01:41+0200 rackham5.uppmax.uu.se:/sw/bioinfo/star/2.7.9a/src/STAR-2.7.9a/source
+May 12 19:52:19 ..... started STAR run
+May 12 19:52:19 ..... loading genome
+May 12 19:52:20 ..... started mapping
+May 12 19:53:51 ..... finished mapping
+May 12 19:53:51 ..... started sorting BAM
+May 12 19:54:24 ..... finished successfully
+	STAR --runThreadN 16 --limitBAMsortRAM 2292618942 --genomeDir /proj/genomeanalysis2023/nobackup/work/jonathane/star_diff_expression/star_genome_index_dir// --readFilesIn /home/joed4996/Genome_analysis_local_rep/data/raw_external_data/transcriptomic_data/trimmed//SRR6040094_scaffold_10.1.fastq.gz /home/joed4996/Genome_analysis_local_rep/data/raw_external_data/transcriptomic_data/trimmed//SRR6040094_scaffold_10.2.fastq.gz --readFilesCommand zcat --outFileNamePrefix ./musang_king_aril_2_ --outSAMtype BAM SortedByCoordinate
+	STAR version: 2.7.9a   compiled: 2021-10-20T18:01:41+0200 rackham5.uppmax.uu.se:/sw/bioinfo/star/2.7.9a/src/STAR-2.7.9a/source
+May 12 19:54:57 ..... started STAR run
+May 12 19:54:57 ..... loading genome
+May 12 19:54:57 ..... started mapping
+May 12 19:56:10 ..... finished mapping
+May 12 19:56:11 ..... started sorting BAM
+May 12 19:56:42 ..... finished successfully
+	STAR --runThreadN 16 --limitBAMsortRAM 2292618942 --genomeDir /proj/genomeanalysis2023/nobackup/work/jonathane/star_diff_expression/star_genome_index_dir// --readFilesIn /home/joed4996/Genome_analysis_local_rep/data/raw_external_data/transcriptomic_data/trimmed//SRR6040097_scaffold_10.1.fastq.gz /home/joed4996/Genome_analysis_local_rep/data/raw_external_data/transcriptomic_data/trimmed//SRR6040097_scaffold_10.2.fastq.gz --readFilesCommand zcat --outFileNamePrefix ./musang_king_aril_3_ --outSAMtype BAM SortedByCoordinate
+	STAR version: 2.7.9a   compiled: 2021-10-20T18:01:41+0200 rackham5.uppmax.uu.se:/sw/bioinfo/star/2.7.9a/src/STAR-2.7.9a/source
+May 12 19:57:18 ..... started STAR run
+May 12 19:57:18 ..... loading genome
+May 12 19:57:18 ..... started mapping
+May 12 19:57:39 ..... finished mapping
+May 12 19:57:39 ..... started sorting BAM
+May 12 19:57:41 ..... finished successfully
+total 5458537
+-rw-rw-r-- 1 joed4996 p_genomeanalysis2023      75352 May 12 19:48 monthong_aril_1_Aligned.sortedByCoord.out.bai
+-rw-rw-r-- 1 joed4996 p_genomeanalysis2023  276332709 May 12 19:48 monthong_aril_1_Aligned.sortedByCoord.out.bam
+-rw-rw-r-- 1 joed4996 p_genomeanalysis2023       2006 May 12 19:48 monthong_aril_1_Log.final.out
+-rw-rw-r-- 1 joed4996 p_genomeanalysis2023      33907 May 12 19:48 monthong_aril_1_Log.out
+-rw-rw-r-- 1 joed4996 p_genomeanalysis2023        246 May 12 19:48 monthong_aril_1_Log.progress.out
+-rw-rw-r-- 1 joed4996 p_genomeanalysis2023     363791 May 12 19:48 monthong_aril_1_SJ.out.tab
+-rw-rw-r-- 1 joed4996 p_genomeanalysis2023      63800 May 12 19:49 monthong_aril_2_Aligned.sortedByCoord.out.bai
+-rw-rw-r-- 1 joed4996 p_genomeanalysis2023  205987558 May 12 19:49 monthong_aril_2_Aligned.sortedByCoord.out.bam
+-rw-rw-r-- 1 joed4996 p_genomeanalysis2023       2006 May 12 19:49 monthong_aril_2_Log.final.out
+-rw-rw-r-- 1 joed4996 p_genomeanalysis2023      33910 May 12 19:49 monthong_aril_2_Log.out
+-rw-rw-r-- 1 joed4996 p_genomeanalysis2023        246 May 12 19:49 monthong_aril_2_Log.progress.out
+-rw-rw-r-- 1 joed4996 p_genomeanalysis2023     319254 May 12 19:49 monthong_aril_2_SJ.out.tab
+-rw-rw-r-- 1 joed4996 p_genomeanalysis2023      59872 May 12 19:49 monthong_aril_3_Aligned.sortedByCoord.out.bai
+-rw-rw-r-- 1 joed4996 p_genomeanalysis2023  122642055 May 12 19:49 monthong_aril_3_Aligned.sortedByCoord.out.bam
+-rw-rw-r-- 1 joed4996 p_genomeanalysis2023       2002 May 12 19:49 monthong_aril_3_Log.final.out
+-rw-rw-r-- 1 joed4996 p_genomeanalysis2023      33898 May 12 19:49 monthong_aril_3_Log.out
+-rw-rw-r-- 1 joed4996 p_genomeanalysis2023        246 May 12 19:49 monthong_aril_3_Log.progress.out
+-rw-rw-r-- 1 joed4996 p_genomeanalysis2023     295969 May 12 19:49 monthong_aril_3_SJ.out.tab
+-rw-rw-r-- 1 joed4996 p_genomeanalysis2023     104344 May 12 19:54 musang_king_aril_1_Aligned.sortedByCoord.out.bai
+-rw-rw-r-- 1 joed4996 p_genomeanalysis2023 1680176653 May 12 19:54 musang_king_aril_1_Aligned.sortedByCoord.out.bam
+-rw-rw-r-- 1 joed4996 p_genomeanalysis2023       2011 May 12 19:54 musang_king_aril_1_Log.final.out
+-rw-rw-r-- 1 joed4996 p_genomeanalysis2023      33801 May 12 19:54 musang_king_aril_1_Log.out
+-rw-rw-r-- 1 joed4996 p_genomeanalysis2023        482 May 12 19:54 musang_king_aril_1_Log.progress.out
+-rw-rw-r-- 1 joed4996 p_genomeanalysis2023     786074 May 12 19:53 musang_king_aril_1_SJ.out.tab
+-rw-rw-r-- 1 joed4996 p_genomeanalysis2023     100320 May 12 19:57 musang_king_aril_2_Aligned.sortedByCoord.out.bai
+-rw-rw-r-- 1 joed4996 p_genomeanalysis2023 1885602511 May 12 19:56 musang_king_aril_2_Aligned.sortedByCoord.out.bam
+-rw-rw-r-- 1 joed4996 p_genomeanalysis2023       2009 May 12 19:56 musang_king_aril_2_Log.final.out
+-rw-rw-r-- 1 joed4996 p_genomeanalysis2023      33990 May 12 19:56 musang_king_aril_2_Log.out
+-rw-rw-r-- 1 joed4996 p_genomeanalysis2023        364 May 12 19:56 musang_king_aril_2_Log.progress.out
+-rw-rw-r-- 1 joed4996 p_genomeanalysis2023     540501 May 12 19:56 musang_king_aril_2_SJ.out.tab
+-rw-rw-r-- 1 joed4996 p_genomeanalysis2023      52656 May 12 19:57 musang_king_aril_3_Aligned.sortedByCoord.out.bai
+-rw-rw-r-- 1 joed4996 p_genomeanalysis2023   94182630 May 12 19:57 musang_king_aril_3_Aligned.sortedByCoord.out.bam
+-rw-rw-r-- 1 joed4996 p_genomeanalysis2023       2001 May 12 19:57 musang_king_aril_3_Log.final.out
+-rw-rw-r-- 1 joed4996 p_genomeanalysis2023      34000 May 12 19:57 musang_king_aril_3_Log.out
+-rw-rw-r-- 1 joed4996 p_genomeanalysis2023        246 May 12 19:57 musang_king_aril_3_Log.progress.out
+-rw-rw-r-- 1 joed4996 p_genomeanalysis2023     261327 May 12 19:57 musang_king_aril_3_SJ.out.tab
+-rw-rw-r-- 1 joed4996 p_genomeanalysis2023      89344 May 12 19:50 musang_king_leaf_Aligned.sortedByCoord.out.bai
+-rw-rw-r-- 1 joed4996 p_genomeanalysis2023  403167122 May 12 19:50 musang_king_leaf_Aligned.sortedByCoord.out.bam
+-rw-rw-r-- 1 joed4996 p_genomeanalysis2023       2005 May 12 19:50 musang_king_leaf_Log.final.out
+-rw-rw-r-- 1 joed4996 p_genomeanalysis2023      33899 May 12 19:50 musang_king_leaf_Log.out
+-rw-rw-r-- 1 joed4996 p_genomeanalysis2023        246 May 12 19:50 musang_king_leaf_Log.progress.out
+-rw-rw-r-- 1 joed4996 p_genomeanalysis2023     462913 May 12 19:50 musang_king_leaf_SJ.out.tab
+-rw-rw-r-- 1 joed4996 p_genomeanalysis2023      88792 May 12 19:51 musang_king_root_Aligned.sortedByCoord.out.bai
+-rw-rw-r-- 1 joed4996 p_genomeanalysis2023  284255674 May 12 19:51 musang_king_root_Aligned.sortedByCoord.out.bam
+-rw-rw-r-- 1 joed4996 p_genomeanalysis2023       2006 May 12 19:51 musang_king_root_Log.final.out
+-rw-rw-r-- 1 joed4996 p_genomeanalysis2023      33902 May 12 19:51 musang_king_root_Log.out
+-rw-rw-r-- 1 joed4996 p_genomeanalysis2023        246 May 12 19:51 musang_king_root_Log.progress.out
+-rw-rw-r-- 1 joed4996 p_genomeanalysis2023     487118 May 12 19:51 musang_king_root_SJ.out.tab
+-rw-rw-r-- 1 joed4996 p_genomeanalysis2023      95056 May 12 19:52 musang_king_stem_Aligned.sortedByCoord.out.bai
+-rw-rw-r-- 1 joed4996 p_genomeanalysis2023  632293306 May 12 19:52 musang_king_stem_Aligned.sortedByCoord.out.bam
+-rw-rw-r-- 1 joed4996 p_genomeanalysis2023       2005 May 12 19:52 musang_king_stem_Log.final.out
+-rw-rw-r-- 1 joed4996 p_genomeanalysis2023      33903 May 12 19:52 musang_king_stem_Log.out
+-rw-rw-r-- 1 joed4996 p_genomeanalysis2023        246 May 12 19:52 musang_king_stem_Log.progress.out
+-rw-rw-r-- 1 joed4996 p_genomeanalysis2023     411213 May 12 19:51 musang_king_stem_SJ.out.tab
+-rw-rw-r-- 1 joed4996 p_genomeanalysis2023      14676 May 12 19:57 slurm-7857289.out
+drwxrwsr-x 2 joed4996 p_genomeanalysis2023       4096 May 12 19:48 star_genome_index_dir
+
+Currently Loaded Modules:
+  1) bioinfo-tools   2) star/2.7.9a   3) samtools/1.17
+
+ 
+
+JOB = 7857289
