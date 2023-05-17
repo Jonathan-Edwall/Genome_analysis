@@ -1,0 +1,62 @@
+#!/bin/bash -l
+#SBATCH -A uppmax2023-2-8 -M snowy # Specifying the project ID for Genome Analysis
+#SBATCH -p core
+#SBATCH -n 2
+#SBATCH -t 01:00:00 # 1 hour job?
+#SBATCH -J trimmomatic_star # Job_name
+#SBATCH --mail-type=ALL
+#SBATCH --mail-user jonathan.edwall.4996@student.uu.se
+
+cat $0
+echo USER = $USER
+echo QOS = $SLURM_JOB_QOS
+
+# Loading the modules
+module load bioinfo-tools trimmomatic
+
+#Changing the working directory
+Rna_untrimmed_reads_dir=$HOME/Genome_analysis_local_rep/data/raw_external_data/transcriptomic_data/untrimmed
+
+export /home/joed4996/Genome_analysis_local_rep/results/01_preprocessing/trimmomatic_star
+
+
+# cd /home/joed4996/Genome_analysis_local_rep/data/raw_external_data/genomic_data/illumina_data
+java -jar $TRIMMOMATIC_ROOT/trimmomatic.jar PE \
+$Rna_untrimmed_reads_dir/SRR6040095_scaffold_10*fastq.gz \
+-baseout illumina_cDNA_trimmed.fq.gz \
+LEADING:3 \
+TRAILING:3 \
+SLIDINGWINDOW:4:15 \
+MINLEN:36 \
+\
+
+#SNIC_TMP # Changing working directory to node-local storage
+
+ls -l # Checking if outputs was generated
+
+module list # Useful for keeping track of the versions used
+echo JOB = $SLURM_JOBID # makes the individual runs easier to identify
+USER = joed4996
+QOS = normal
+trimmomatic/0.39 loaded, see 'module help trimmomatic/0.39' for more information.
+/var/spool/slurmd/job7731290/slurm_script: line 20: export: `/home/joed4996/Genome_analysis_local_rep/results/01_preprocessing/trimmomatic_star': not a valid identifier
+TrimmomaticPE: Started with arguments:
+ /home/joed4996/Genome_analysis_local_rep/data/raw_external_data/transcriptomic_data/untrimmed/SRR6040095_scaffold_10.1.fastq.gz /home/joed4996/Genome_analysis_local_rep/data/raw_external_data/transcriptomic_data/untrimmed/SRR6040095_scaffold_10.2.fastq.gz -baseout illumina_cDNA_trimmed.fq.gz LEADING:3 TRAILING:3 SLIDINGWINDOW:4:15 MINLEN:36
+Multiple cores found: Using 2 threads
+Using templated Output files: illumina_cDNA_trimmed_1P.fq.gz illumina_cDNA_trimmed_1U.fq.gz illumina_cDNA_trimmed_2P.fq.gz illumina_cDNA_trimmed_2U.fq.gz
+Quality encoding detected as phred33
+Input Read Pairs: 13044149 Both Surviving: 13037315 (99.95%) Forward Only Surviving: 795 (0.01%) Reverse Only Surviving: 5907 (0.05%) Dropped: 132 (0.00%)
+TrimmomaticPE: Completed successfully
+total 1535316
+-rw-rw-r-- 1 joed4996 joed4996 806039163 Apr 25 13:51 illumina_cDNA_trimmed_1P.fq.gz
+-rw-rw-r-- 1 joed4996 joed4996     65461 Apr 25 13:51 illumina_cDNA_trimmed_1U.fq.gz
+-rw-rw-r-- 1 joed4996 joed4996 759394368 Apr 25 13:51 illumina_cDNA_trimmed_2P.fq.gz
+-rw-rw-r-- 1 joed4996 joed4996    471983 Apr 25 13:51 illumina_cDNA_trimmed_2U.fq.gz
+-rw-rw-r-- 1 joed4996 joed4996      2252 Apr 25 13:51 slurm-7731290.out
+
+Currently Loaded Modules:
+  1) bioinfo-tools   2) trimmomatic/0.39
+
+ 
+
+JOB = 7731290

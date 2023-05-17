@@ -1,0 +1,77 @@
+#!/bin/bash -l
+#SBATCH -A uppmax2023-2-8 -M snowy # Specifying the project ID for Genome Analysis
+#SBATCH -p core
+#SBATCH -n 2
+#SBATCH -t 01:00:00 # 1 hour job?
+#SBATCH -J trimmomatic # Job_name
+#SBATCH --mail-type=ALL
+#SBATCH --mail-user jonathan.edwall.4996@student.uu.se
+
+cat $0
+echo USER = $USER
+echo QOS = $SLURM_JOB_QOS
+
+# Loading the modules
+module load bioinfo-tools trimmomatic
+
+#Changing the working directory
+
+
+# cd /home/joed4996/Genome_analysis_local_rep/data/raw_external_data/genomic_data/illumina_data
+java -jar $TRIMMOMATIC_ROOT/trimmomatic.jar PE \
+/home/joed4996/Genome_analysis_local_rep/data/raw_external_data/genomic_data/illumina_data/SRR6058604_scaffold_10.1P.fastq.gz \
+/home/joed4996/Genome_analysis_local_rep/data/raw_external_data/genomic_data/illumina_data/SRR6058604_scaffold_10.2P.fastq.gz \
+-baseout illumina_trimmed.fq.gz \
+LEADING:3 \
+TRAILING:3 \
+SLIDINGWINDOW:4:15 \
+MINLEN:36 \
+\
+
+#SNIC_TMP # Changing working directory to node-local storage
+
+ls -l # Checking if outputs was generated
+
+module list # Useful for keeping track of the versions used
+echo JOB = $SLURM_JOBID # makes the individual runs easier to identify
+USER = joed4996
+QOS = normal
+trimmomatic/0.39 loaded, see 'module help trimmomatic/0.39' for more information.
+TrimmomaticPE: Started with arguments:
+ /home/joed4996/Genome_analysis_local_rep/data/raw_external_data/genomic_data/illumina_data/SRR6058604_scaffold_10.1P.fastq.gz /home/joed4996/Genome_analysis_local_rep/data/raw_external_data/genomic_data/illumina_data/SRR6058604_scaffold_10.2P.fastq.gz -baseout illumina_trimmed.fq.gz LEADING:3 TRAILING:3 SLIDINGWINDOW:4:15 MINLEN:36
+Multiple cores found: Using 2 threads
+Using templated Output files: illumina_trimmed_1P.fq.gz illumina_trimmed_1U.fq.gz illumina_trimmed_2P.fq.gz illumina_trimmed_2U.fq.gz
+Quality encoding detected as phred33
+Input Read Pairs: 4892210 Both Surviving: 4892210 (100.00%) Forward Only Surviving: 0 (0.00%) Reverse Only Surviving: 0 (0.00%) Dropped: 0 (0.00%)
+TrimmomaticPE: Completed successfully
+total 738356
+-rw-rw-r-- 1 joed4996 joed4996      1154 Apr 14 12:38 batch_job_trimmomatic.sh
+-rw-rw-r-- 1 joed4996 joed4996 360892068 Apr 14 12:44 illumina_trimmed_1P.fq.gz
+-rw-rw-r-- 1 joed4996 joed4996        20 Apr 14 12:44 illumina_trimmed_1U.fq.gz
+-rw-rw-r-- 1 joed4996 joed4996 392125366 Apr 14 12:44 illumina_trimmed_2P.fq.gz
+-rw-rw-r-- 1 joed4996 joed4996        20 Apr 14 12:44 illumina_trimmed_2U.fq.gz
+-rw-rw-r-- 1 joed4996 joed4996      3584 Apr 13 16:27 slurm-7655508.out
+-rw-rw-r-- 1 joed4996 joed4996      3594 Apr 13 16:33 slurm-7655512.out
+-rw-rw-r-- 1 joed4996 joed4996      3572 Apr 13 16:33 slurm-7655518.out
+-rw-rw-r-- 1 joed4996 joed4996      4047 Apr 13 16:37 slurm-7655526.out
+-rw-rw-r-- 1 joed4996 joed4996      4046 Apr 13 16:40 slurm-7655527.out
+-rw-rw-r-- 1 joed4996 joed4996      4042 Apr 13 16:40 slurm-7655528.out
+-rw-rw-r-- 1 joed4996 joed4996      4274 Apr 13 16:43 slurm-7655529.out
+-rw-rw-r-- 1 joed4996 joed4996      4048 Apr 13 16:43 slurm-7655531.out
+-rw-rw-r-- 1 joed4996 joed4996      3985 Apr 13 16:45 slurm-7655532.out
+-rw-rw-r-- 1 joed4996 joed4996      4035 Apr 13 16:47 slurm-7655535.out
+-rw-rw-r-- 1 joed4996 joed4996      4034 Apr 13 16:47 slurm-7655537.out
+-rw-rw-r-- 1 joed4996 joed4996      3997 Apr 13 16:55 slurm-7655541.out
+-rw-rw-r-- 1 joed4996 joed4996      3998 Apr 13 16:57 slurm-7655543.out
+-rw-rw-r-- 1 joed4996 joed4996      2938 Apr 14 09:52 slurm-7656052.out
+-rw-rw-r-- 1 joed4996 joed4996      2900 Apr 14 09:56 slurm-7656060.out
+-rw-rw-r-- 1 joed4996 joed4996      3726 Apr 14 12:37 slurm-7656144.out
+-rw-rw-r-- 1 joed4996 joed4996      3790 Apr 14 12:38 slurm-7656145.out
+-rw-rw-r-- 1 joed4996 joed4996      2033 Apr 14 12:44 slurm-7656146.out
+
+Currently Loaded Modules:
+  1) bioinfo-tools   2) trimmomatic/0.39
+
+ 
+
+JOB = 7656146
