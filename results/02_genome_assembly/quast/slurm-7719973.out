@@ -1,0 +1,138 @@
+#!/bin/bash -l
+#SBATCH -A uppmax2023-2-8 -M snowy # Specifying the project ID for Genome Analysis
+#SBATCH -p core
+#SBATCH -n 1
+#SBATCH -t 00:30:00 # Should be less than 15 minute job?
+#SBATCH -J Quast_durian_pilon_no_ref # Job_name
+#SBATCH --mail-type=ALL
+#SBATCH --mail-user jonathan.edwall.4996@student.uu.se
+
+cat $0
+echo USER = $USER
+echo QOS = $SLURM_JOB_QOS
+
+
+cd $HOME
+# Loading the modules
+module load bioinfo-tools quast
+
+#bwa_dir=$HOME/Genome_analysis_local_rep/results/02_genome_assembly/bwa/
+
+canu_assembly_dir=/domus/h1/joed4996/Genome_analysis_local_rep/results/02_genome_assembly/canu
+pilon_assembly_dir=/domus/h1/joed4996/Genome_analysis_local_rep/results/02_genome_assembly/pilon
+
+
+Result_dir=$HOME/Genome_analysis_local_rep/results/02_genome_assembly/quast # Results will be in this directory
+
+
+quast.py \
+--est-ref-size 24200000 \
+--output-dir $Result_dir  \
+$canu_assembly_dir/canu_assembly.contigs.fasta \
+$pilon_assembly_dir/pilon_assembly_improvement.fasta
+
+
+# --est-ref-size 24200000 ==> Estimated reference size of 24.2 Mb (for computing NGx metrics without a reference)
+
+#java -jar $PILON_HOME/pilon.jar \ 
+#--genome $assembly_dir/canu_assembly.contigs.fasta \
+#--bam $bwa_dir/bwa_hybrid_aligned_sorted.bam \
+#--threads 2 \
+#--output pilon_assembly_improvement \
+#--outdir $Result_dir
+
+
+
+
+
+
+ls -l # Checking if outputs was generated
+
+module list # Useful for keeping track of the versions used
+echo JOB = $SLURM_JOBID # makes the individual runs easier to identify
+USER = joed4996
+QOS = normal
+/sw/bioinfo/quast/5.0.2/snowy/bin/quast.py --est-ref-size 24200000 --output-dir /home/joed4996/Genome_analysis_local_rep/results/02_genome_assembly/quast /domus/h1/joed4996/Genome_analysis_local_rep/results/02_genome_assembly/canu/canu_assembly.contigs.fasta /domus/h1/joed4996/Genome_analysis_local_rep/results/02_genome_assembly/pilon/pilon_assembly_improvement.fasta
+
+Version: 5.0.2
+
+System information:
+  OS: Linux-3.10.0-1160.88.1.el7.x86_64-x86_64-with-centos-7.9.2009-Core (linux_64)
+  Python version: 3.7.2
+  CPUs number: 16
+
+Started: 2023-04-24 01:34:11
+
+Logging to /home/joed4996/Genome_analysis_local_rep/results/02_genome_assembly/quast/quast.log
+NOTICE: Maximum number of threads is set to 4 (use --threads option to set it manually)
+
+CWD: /domus/h1/joed4996
+Main parameters: 
+  MODE: default, threads: 4, minimum contig length: 500, minimum alignment length: 65, \
+  ambiguity: one, threshold for extensive misassembly size: 1000
+
+Contigs:
+  Pre-processing...
+  1  /domus/h1/joed4996/Genome_analysis_local_rep/results/02_genome_assembly/canu/canu_assembly.contigs.fasta ==> canu_assembly.contigs
+  2  /domus/h1/joed4996/Genome_analysis_local_rep/results/02_genome_assembly/pilon/pilon_assembly_improvement.fasta ==> pilon_assembly_improvement
+
+2023-04-24 01:34:20
+Running Basic statistics processor...
+  Estimated reference length = 24200000
+  Contig files: 
+    1  canu_assembly.contigs
+    2  pilon_assembly_improvement
+  Calculating N50 and L50...
+    1  canu_assembly.contigs, N50 = 180784, L50 = 40, Total length = 26290650, GC % = 31.69, # N's per 100 kbp =  0.00
+    2  pilon_assembly_improvement, N50 = 180832, L50 = 40, Total length = 26279748, GC % = 31.70, # N's per 100 kbp =  0.00
+  Drawing Nx plot...
+    saved to /home/joed4996/Genome_analysis_local_rep/results/02_genome_assembly/quast/basic_stats/Nx_plot.pdf
+  Drawing NGx plot...
+    saved to /home/joed4996/Genome_analysis_local_rep/results/02_genome_assembly/quast/basic_stats/NGx_plot.pdf
+  Drawing cumulative plot...
+    saved to /home/joed4996/Genome_analysis_local_rep/results/02_genome_assembly/quast/basic_stats/cumulative_plot.pdf
+  Drawing GC content plot...
+    saved to /home/joed4996/Genome_analysis_local_rep/results/02_genome_assembly/quast/basic_stats/GC_content_plot.pdf
+  Drawing canu_assembly.contigs GC content plot...
+    saved to /home/joed4996/Genome_analysis_local_rep/results/02_genome_assembly/quast/basic_stats/canu_assembly.contigs_GC_content_plot.pdf
+  Drawing pilon_assembly_improvement GC content plot...
+    saved to /home/joed4996/Genome_analysis_local_rep/results/02_genome_assembly/quast/basic_stats/pilon_assembly_improvement_GC_content_plot.pdf
+Done.
+
+NOTICE: Genes are not predicted by default. Use --gene-finding or --glimmer option to enable it.
+
+2023-04-24 01:34:25
+Creating large visual summaries...
+This may take a while: press Ctrl-C to skip this step..
+  1 of 2: Creating Icarus viewers...
+  2 of 2: Creating PDF with all tables and plots...
+Done
+
+2023-04-24 01:34:27
+RESULTS:
+  Text versions of total report are saved to /home/joed4996/Genome_analysis_local_rep/results/02_genome_assembly/quast/report.txt, report.tsv, and report.tex
+  Text versions of transposed total report are saved to /home/joed4996/Genome_analysis_local_rep/results/02_genome_assembly/quast/transposed_report.txt, transposed_report.tsv, and transposed_report.tex
+  HTML version (interactive tables and plots) is saved to /home/joed4996/Genome_analysis_local_rep/results/02_genome_assembly/quast/report.html
+  PDF version (tables and plots) is saved to /home/joed4996/Genome_analysis_local_rep/results/02_genome_assembly/quast/report.pdf
+  Icarus (contig browser) is saved to /home/joed4996/Genome_analysis_local_rep/results/02_genome_assembly/quast/icarus.html
+  Log is saved to /home/joed4996/Genome_analysis_local_rep/results/02_genome_assembly/quast/quast.log
+
+Finished: 2023-04-24 01:34:27
+Elapsed time: 0:00:15.644964
+NOTICEs: 2; WARNINGs: 0; non-fatal ERRORs: 0
+
+Thank you for using QUAST!
+total 24
+drwxrwsr-x  5 joed4996 joed4996 4096 Apr 11 15:11 Big_Data_in_Life_Sciences
+drwxrwxr-x  2 joed4996 joed4996 4096 Oct 17  2018 bin
+drwxrwsr-x 11 joed4996 joed4996 4096 Apr 12 20:57 Genome_analysis_local_rep
+drwxr-s---  3 joed4996 joed4996 4096 Jan 16  2022 glob
+drwx--S---  2 joed4996 joed4996 4096 Jan 16  2022 private
+drwxrwsr-x  2 joed4996 joed4996 4096 Mar 30 16:55 test_folder
+
+Currently Loaded Modules:
+  1) bioinfo-tools   2) python/3.7.2   3) quast/5.0.2
+
+ 
+
+JOB = 7719973
