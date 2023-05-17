@@ -1,0 +1,95 @@
+#!/bin/bash -l
+#SBATCH -A uppmax2023-2-8 -M snowy # Specifying the project ID for Genome Analysis
+#SBATCH -p core
+#SBATCH -n 2
+#SBATCH -t 00:15:00 --qos=short  # This is a quick job
+#SBATCH -J Braker_durian # Job_name
+#SBATCH --mail-type=ALL
+#SBATCH --mail-user jonathan.edwall.4996@student.uu.se
+
+cat $0
+echo USER = $USER
+echo QOS = $SLURM_JOB_QOS
+
+
+# Changing working directory to the same as the braker output 
+cd $HOME/Genome_analysis_local_rep/results/03_genome_annotation/braker_softmasked/
+
+
+# Loading modules to run getAnnoFastaFromJoingenes.py, from which we will get an protein-fasta file & coding sequence, from the AUGUSTUS gene prediction
+module load bioinfo-tools
+module load braker
+module load biopython/1.80-py3.10.8
+
+
+#getAnnoFastaFromJoingenes.py -g genome.fa -f augustus.hints.gtf -o test_get_Anno_Fasta
+getAnnoFastaFromJoingenes.py -g genome.fa -f GeneMark-ET/genemark.gtf -o test_get_Anno_Fasta
+
+
+
+
+ls -l # Checking if outputs was generated
+
+module list # Useful for keeping track of the versions used
+echo JOB = $SLURM_JOBID # makes the individual runs easier to identify
+
+
+USER = joed4996
+QOS = short
+augustus/3.4.0 : If you see errors about not being able to write to an augustus directory, see 'module help augustus/3.4.0'
+blast/2.2.31+ : the old-format NCBI blast databases are no longer updated after September 2019, use blast/2.9.0+ to search the latest NCBI databases
+GeneMark/4.68-es : A recent key file is needed to use this software and it must exist in your home directory. See 'module help GeneMark/4.68-es'
+GeneMark/4.68-es : A recent key file is needed to use this software and it must exist in your home directory. See 'module help GeneMark/4.68-es'
+diamond_databases/latest : for available prebuilt databases, see 'module help diamond_databases/latest'
+braker/2.1.6 : GeneMark and augustus may require some setup; see 'module help braker/2.1.6'
+
+The following have been reloaded with a version change:
+  1) biopython/1.78 => biopython/1.80-py3.10.8
+  2) python/3.8.7 => python/3.10.8
+
+total 60184
+drwxrwxr-x 7 joed4996 joed4996     4096 Jul 16  2015 augustus_config
+-rw-rw-r-- 1 joed4996 joed4996 11855677 May  2 13:55 augustus.hints.gff
+-rw-rw-r-- 1 joed4996 joed4996  5525446 May  2 13:55 augustus.hints.gtf
+-rw-rw-r-- 1 joed4996 joed4996      599 May  2 18:50 bad_genes.lst
+-rw-rw-r-- 1 joed4996 joed4996    24768 May  2 13:18 bam_header.map
+-rw-rw-r-- 1 joed4996 joed4996   422577 May  2 13:55 braker.log
+-rw-rw-r-- 1 joed4996 joed4996       77 May  2 13:32 downsample_traingenes.log
+drwxrwsr-x 2 joed4996 joed4996     4096 May  2 14:05 errors
+-rw-rw-r-- 1 joed4996 joed4996      409 May  2 13:32 filterGenemark.stdout
+-rw-rw-r-- 1 joed4996 joed4996   102775 May  2 13:32 firsttest.stdout
+drwxrwsr-x 6 joed4996 joed4996     4096 May  2 14:05 GeneMark-ET
+-rw-rw-r-- 1 joed4996 joed4996     6391 May  2 13:32 GeneMark-ET.stdout
+-rw-rw-r-- 1 joed4996 joed4996  1284119 May  2 13:21 genemark_hintsfile.gff
+-rw-rw-r-- 1 joed4996 joed4996 26818753 May  2 13:18 genome.fa
+-rw-rw-r-- 1 joed4996 joed4996  8077404 May  2 20:08 genome.fa.gz
+-rw-rw-r-- 1 joed4996 joed4996    24768 May  2 13:18 header.map
+-rw-rw-r-- 1 joed4996 joed4996  1284119 May  2 13:21 hintsfile.gff
+drwxrwsr-x 2 joed4996 joed4996     4096 May 16 09:40 my_old_protein_fa
+-rw-rw-r-- 1 joed4996 joed4996    86571 May  2 13:45 optimize_augustus.stdout
+-rw-rw-r-- 1 joed4996 joed4996   113929 May  2 13:45 secondtest.stdout
+-rw-rw-r-- 1 joed4996 joed4996     6007 May  2 13:08 slurm-7797898.out
+-rw-rw-r-- 1 joed4996 joed4996     3919 May  2 13:55 slurm-7797903.out
+-rw-rw-r-- 1 joed4996 joed4996     2023 May 16 09:42 slurm-7866219.out
+drwxrwsr-x 3 joed4996 joed4996     4096 May  2 14:05 species
+-rw-rw-r-- 1 joed4996 joed4996  1251159 May 16 09:42 test_get_Anno_Fasta.aa
+-rw-rw-r-- 1 joed4996 joed4996  3703360 May 16 09:42 test_get_Anno_Fasta.codingseq
+-rw-rw-r-- 1 joed4996 joed4996   658020 May  2 13:32 train.gb
+
+Currently Loaded Modules:
+  1) bioinfo-tools         13) diamond_databases/latest
+  2) augustus/3.4.0        14) diamond/0.9.31
+  3) bamtools/2.5.1        15) cdbfasta/1.00
+  4) blast/2.2.31+         16) ucsc-utilities/v398
+  5) GenomeThreader/1.7.1  17) uppmax
+  6) exonerate/2.4.0       18) MakeHub/1.0.5-20200210-1ecd6bb
+  7) spaln/2.4.0           19) java/sun_jdk1.8.0_151
+  8) samtools/1.12         20) GUSHR/1.0.0
+  9) perl/5.26.2           21) braker/2.1.6
+ 10) perl_modules/5.26.2   22) python/3.10.8
+ 11) GeneMark/4.68-es      23) biopython/1.80-py3.10.8
+ 12) ProtHint/2.6.0
+
+ 
+
+JOB = 7866219

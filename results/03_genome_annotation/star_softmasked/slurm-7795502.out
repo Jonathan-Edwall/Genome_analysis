@@ -1,0 +1,88 @@
+#!/bin/bash -l
+#SBATCH -A uppmax2023-2-8 -M snowy # Specifying the project ID for Genome Analysis
+#SBATCH -p core
+#SBATCH -n 8
+#SBATCH -t 00:15:00 --qos=short # Should be about 15 minute job?
+#SBATCH -J Star_durian_softmasked # Job_name
+#SBATCH --mail-type=ALL
+#SBATCH --mail-user jonathan.edwall.4996@student.uu.se
+
+cat $0
+echo USER = $USER
+echo QOS = $SLURM_JOB_QOS
+
+export $HOME/joed4996/Genome_analysis_local_rep/results/03_genome_annotation/star_softmasked
+
+
+masked_assembly_dir=$HOME/Genome_analysis_local_rep/results/03_genome_annotation/repeatmasker_softmasked
+genome_index_dir=$HOME/Genome_analysis_local_rep/results/03_genome_annotation/star_softmasked_genome_index_dir
+trimmed_cDNA_dir=$HOME/Genome_analysis_local_rep/results/01_preprocessing/trimmomatic_star
+
+# Loading the modules
+module load bioinfo-tools star
+
+
+
+#1: Generating genome indices
+STAR \
+--genomeFastaFiles $masked_assembly_dir/pilon_assembly_improvement.fasta.masked \
+--genomeDir $genome_index_dir \
+--runMode genomeGenerate
+
+
+#2: Mapping the RNA (cDNA) to the masked assembly
+STAR \
+--runThreadN 8 \
+--genomeDir $genome_index_dir/ \
+--readFilesIn $trimmed_cDNA_dir/illumina_cDNA_trimmed_*P.fq.gz \
+--readFilesCommand zcat \
+--outSAMtype BAM Unsorted SortedByCoordinate 
+
+
+
+
+ls -l # Checking if outputs was generated
+
+module list # Useful for keeping track of the versions used
+
+USER = joed4996
+QOS = short
+/var/spool/slurmd/job7795502/slurm_script: line 14: export: `/home/joed4996/joed4996/Genome_analysis_local_rep/results/03_genome_annotation/star_softmasked': not a valid identifier
+	STAR --genomeFastaFiles /home/joed4996/Genome_analysis_local_rep/results/03_genome_annotation/repeatmasker_softmasked/pilon_assembly_improvement.fasta.masked --genomeDir /home/joed4996/Genome_analysis_local_rep/results/03_genome_annotation/star_softmasked_genome_index_dir --runMode genomeGenerate
+	STAR version: 2.7.9a   compiled: 2021-10-20T18:01:41+0200 rackham5.uppmax.uu.se:/sw/bioinfo/star/2.7.9a/src/STAR-2.7.9a/source
+May 02 11:08:13 ..... started STAR run
+May 02 11:08:13 ... starting to generate Genome files
+!!!!! WARNING: --genomeSAindexNbases 14 is too large for the genome size=26279748, which may cause seg-fault at the mapping step. Re-run genome generation with recommended --genomeSAindexNbases 11
+May 02 11:08:14 ... starting to sort Suffix Array. This may take a long time...
+May 02 11:08:15 ... sorting Suffix Array chunks and saving them to disk...
+May 02 11:08:51 ... loading chunks from disk, packing SA...
+May 02 11:08:52 ... finished generating suffix array
+May 02 11:08:52 ... generating Suffix Array index
+May 02 11:09:05 ... completed Suffix Array index
+May 02 11:09:05 ... writing Genome to disk ...
+May 02 11:09:07 ... writing Suffix Array to disk ...
+May 02 11:09:09 ... writing SAindex to disk
+May 02 11:09:24 ..... finished successfully
+	STAR --runThreadN 8 --genomeDir /home/joed4996/Genome_analysis_local_rep/results/03_genome_annotation/star_softmasked_genome_index_dir/ --readFilesIn /home/joed4996/Genome_analysis_local_rep/results/01_preprocessing/trimmomatic_star/illumina_cDNA_trimmed_1P.fq.gz /home/joed4996/Genome_analysis_local_rep/results/01_preprocessing/trimmomatic_star/illumina_cDNA_trimmed_2P.fq.gz --readFilesCommand zcat --outSAMtype BAM Unsorted SortedByCoordinate
+	STAR version: 2.7.9a   compiled: 2021-10-20T18:01:41+0200 rackham5.uppmax.uu.se:/sw/bioinfo/star/2.7.9a/src/STAR-2.7.9a/source
+May 02 11:09:25 ..... started STAR run
+May 02 11:09:25 ..... loading genome
+May 02 11:09:26 ..... started mapping
+May 02 11:13:00 ..... finished mapping
+May 02 11:13:00 ..... started sorting BAM
+May 02 11:14:04 ..... finished successfully
+total 2396632
+-rw-rw-r-- 1 joed4996 joed4996 2052224477 May  2 11:13 Aligned.out.bam
+-rw-rw-r-- 1 joed4996 joed4996  391446528 May  2 11:13 Aligned.sortedByCoord.out.bam
+-rw-rw-r-- 1 joed4996 joed4996       2011 May  2 11:14 Log.final.out
+-rw-rw-r-- 1 joed4996 joed4996      32982 May  2 11:14 Log.out
+-rw-rw-r-- 1 joed4996 joed4996        718 May  2 11:14 Log.progress.out
+-rw-rw-r-- 1 joed4996 joed4996     786074 May  2 11:13 SJ.out.tab
+-rw-rw-r-- 1 joed4996 joed4996       3654 May  2 11:14 slurm-7795502.out
+drwx--S--- 3 joed4996 joed4996       4096 May  2 11:14 _STARtmp
+
+Currently Loaded Modules:
+  1) bioinfo-tools   2) star/2.7.9a
+
+ 
+
