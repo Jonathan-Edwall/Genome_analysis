@@ -1,0 +1,93 @@
+#!/bin/bash -l
+#SBATCH -A uppmax2023-2-8 -M snowy # Specifying the project ID for Genome Analysis
+#SBATCH -p core
+#SBATCH -n 2
+#SBATCH -t 01:00:00 # 1 hour job?
+#SBATCH -J fastqc_first # Job_name
+#SBATCH --mail-type=ALL
+#SBATCH --mail-user jonathan.edwall.4996@student.uu.se
+
+cat $0
+echo USER = $USER
+echo QOS = $SLURM_JOB_QOS
+
+# Loading the modules
+module load bioinfo-tools FastQC
+
+#Changing the working directory
+
+#cd /home/joed4996/Genome_analysis_local_rep/data/raw_external_data/genomic_data/illumina_data
+
+#fastqc -t 2 -o /home/joed4996/Genome_analysis_local_rep/results/01_preprocessing/fastq_1 SRR6058604_scaffold_10.1P.fastq.gz SRR6058604_scaffold_10.2P.fastq.gz
+
+fastqc -t 2 -o /home/joed4996/Genome_analysis_local_rep/results/01_preprocessing/fastq_2 /home/joed4996/Genome_analysis_local_rep/results/01_preprocessing/trimmomatic/illumina_trimmed_1P.fq.gz /home/joed4996/Genome_analysis_local_rep/results/01_preprocessing/trimmomatic/illumina_trimmed_2P.fq.gz 
+
+#SNIC_TMP # Changing working directory to node-local storage
+
+ls -l # Checking if outputs was generated
+
+module list # Useful for keeping track of the versions used
+echo JOB = $SLURM_JOBID # makes the individual runs easier to identify
+USER = joed4996
+QOS = normal
+Started analysis of illumina_trimmed_1P.fq.gz
+Started analysis of illumina_trimmed_2P.fq.gz
+Approx 5% complete for illumina_trimmed_1P.fq.gz
+Approx 5% complete for illumina_trimmed_2P.fq.gz
+Approx 10% complete for illumina_trimmed_1P.fq.gz
+Approx 10% complete for illumina_trimmed_2P.fq.gz
+Approx 15% complete for illumina_trimmed_1P.fq.gz
+Approx 15% complete for illumina_trimmed_2P.fq.gz
+Approx 20% complete for illumina_trimmed_1P.fq.gz
+Approx 20% complete for illumina_trimmed_2P.fq.gz
+Approx 25% complete for illumina_trimmed_1P.fq.gz
+Approx 25% complete for illumina_trimmed_2P.fq.gz
+Approx 30% complete for illumina_trimmed_1P.fq.gz
+Approx 30% complete for illumina_trimmed_2P.fq.gz
+Approx 35% complete for illumina_trimmed_1P.fq.gz
+Approx 35% complete for illumina_trimmed_2P.fq.gz
+Approx 40% complete for illumina_trimmed_1P.fq.gz
+Approx 40% complete for illumina_trimmed_2P.fq.gz
+Approx 45% complete for illumina_trimmed_1P.fq.gz
+Approx 45% complete for illumina_trimmed_2P.fq.gz
+Approx 50% complete for illumina_trimmed_1P.fq.gz
+Approx 50% complete for illumina_trimmed_2P.fq.gz
+Approx 55% complete for illumina_trimmed_1P.fq.gz
+Approx 55% complete for illumina_trimmed_2P.fq.gz
+Approx 60% complete for illumina_trimmed_1P.fq.gz
+Approx 60% complete for illumina_trimmed_2P.fq.gz
+Approx 65% complete for illumina_trimmed_1P.fq.gz
+Approx 65% complete for illumina_trimmed_2P.fq.gz
+Approx 70% complete for illumina_trimmed_1P.fq.gz
+Approx 70% complete for illumina_trimmed_2P.fq.gz
+Approx 75% complete for illumina_trimmed_1P.fq.gz
+Approx 75% complete for illumina_trimmed_2P.fq.gz
+Approx 80% complete for illumina_trimmed_1P.fq.gz
+Approx 80% complete for illumina_trimmed_2P.fq.gz
+Approx 85% complete for illumina_trimmed_1P.fq.gz
+Approx 85% complete for illumina_trimmed_2P.fq.gz
+Approx 90% complete for illumina_trimmed_1P.fq.gz
+Approx 90% complete for illumina_trimmed_2P.fq.gz
+Approx 95% complete for illumina_trimmed_1P.fq.gz
+Approx 95% complete for illumina_trimmed_2P.fq.gz
+Analysis complete for illumina_trimmed_1P.fq.gz
+Analysis complete for illumina_trimmed_2P.fq.gz
+total 884
+-rw-rw-r-- 1 joed4996 joed4996   1209 Apr 14 13:32 batch_job_fastq_second.sh
+-rw-rw-r-- 1 joed4996 joed4996 211081 Apr 14 13:33 illumina_trimmed_1P_fastqc.html
+-rw-rw-r-- 1 joed4996 joed4996 213010 Apr 14 13:33 illumina_trimmed_1P_fastqc.zip
+-rw-rw-r-- 1 joed4996 joed4996 211581 Apr 14 13:33 illumina_trimmed_2P_fastqc.html
+-rw-rw-r-- 1 joed4996 joed4996 214646 Apr 14 13:33 illumina_trimmed_2P_fastqc.zip
+-rw-rw-r-- 1 joed4996 joed4996   1613 Apr 14 12:58 slurm-7656148.out
+-rw-rw-r-- 1 joed4996 joed4996   1783 Apr 14 13:25 slurm-7656162.out
+-rw-rw-r-- 1 joed4996 joed4996   1846 Apr 14 13:25 slurm-7656185.out
+-rw-rw-r-- 1 joed4996 joed4996   1816 Apr 14 13:26 slurm-7656190.out
+-rw-rw-r-- 1 joed4996 joed4996   1942 Apr 14 13:31 slurm-7656193.out
+-rw-rw-r-- 1 joed4996 joed4996   3324 Apr 14 13:33 slurm-7656198.out
+
+Currently Loaded Modules:
+  1) bioinfo-tools   2) FastQC/0.11.9
+
+ 
+
+JOB = 7656198
