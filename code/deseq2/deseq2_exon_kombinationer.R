@@ -14,12 +14,6 @@ setwd("C:/Users/jonat/GitHub/Genome_analysis/results/04_differential_expression/
 # List all files in the directory that match a specific pattern
 sampleFiles <- list.files(pattern = "*_counts.txt")
 print(sampleFiles)
-# temp <- read.table("musang_king_aril_1_counts.txt", header = TRUE)
-# htseq_result <- data.frame(temp[,1])
-# colnames(htseq_result) <- c("Gene ID")
-
-
-
 
 #############################################
 #¤¤¤¤¤¤¤¤¤ Code to manually view the htseq-count result ¤¤¤¤¤¤¤¤¤
@@ -163,8 +157,20 @@ result_df_intra$padj <- ifelse(is.na(result_df_intra$padj), 1, result_df_intra$p
 result_df_intra$log2FoldChange <- ifelse(is.na(result_df_intra$log2FoldChange), 0, result_df_intra$log2FoldChange)
 
 
+###### inter ########
+par(mfrow=c(1,1))
+# Make a basic volcano plot
+with(result_df_inter, plot(log2FoldChange, -log10(pvalue), pch=20, main="Volcano plot", xlim=c(-3,3)))
 
-#result_df_intraet par
+# Add colored points: blue if padj<0.01, red if log2FC>1 and padj<0.05)
+with(subset(result_df_inter, padj<.01 ), points(log2FoldChange, -log10(pvalue), pch=20, col="blue"))
+with(subset(result_df_inter, padj<.01 & abs(log2FoldChange)>2), points(log2FoldChange, -log10(pvalue), pch=20, col="red"))
+
+
+
+###### intra ########
+
+#result_df_intra par
 par(mfrow=c(1,1))
 # Make a basic volcano plot
 with(result_df_intra, plot(log2FoldChange, -log10(pvalue), pch=20, main="Volcano plot", xlim=c(-3,3)))
@@ -175,14 +181,7 @@ with(subset(result_df_intra, padj<.01 & abs(log2FoldChange)>2), points(log2FoldC
 
 
 
-#result_df_interet par
-par(mfrow=c(1,1))
-# Make a basic volcano plot
-with(result_df_inter, plot(log2FoldChange, -log10(pvalue), pch=20, main="Volcano plot", xlim=c(-3,3)))
 
-# Add colored points: blue if padj<0.01, red if log2FC>1 and padj<0.05)
-with(subset(result_df_inter, padj<.01 ), points(log2FoldChange, -log10(pvalue), pch=20, col="blue"))
-with(subset(result_df_inter, padj<.01 & abs(log2FoldChange)>2), points(log2FoldChange, -log10(pvalue), pch=20, col="red"))
 
 
 
